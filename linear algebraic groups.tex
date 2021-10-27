@@ -1,0 +1,117 @@
+\documentclass[10pt,a4paper,twoside,openany,hidelinks]{book}
+
+%JAPANESE
+\usepackage{fontspec}
+\defaultfontfeatures{Ligatures={NoCommon, NoDiscretionary, NoHistoric, NoRequired, NoContextual}}
+\setmainfont{CMU Serif}
+\usepackage{xeCJK}
+\xeCJKsetup{CJKmath=true}
+\setCJKmainfont{MS Mincho} % or some other Japanese font
+
+\usepackage{maths}
+\usepackage{stylish}
+
+%\usepackage{tikz-graph}
+%\GraphInit[vstyle = Shade]
+
+\title{Lecture Notes to Linear Algebraic Groups \\ \large{Winter 2021-2022, Technion IIT}}
+\author{Typed by Elad Tzorani}
+\date{\today}
+
+\usepackage{lipsum}
+\usepackage{stmaryrd}
+
+\tikzset{EdgeStyle/.style   = {thick,
+                               double          = orange,
+                               double distance = 1pt}}
+
+\tikzset{
+    labl0/.style={anchor=south, rotate=-30, inner sep=.5mm}
+}
+
+\tikzset{
+    labl1/.style={anchor=south, rotate=30, inner sep=.5mm}
+}
+
+\tikzset{
+    labl2/.style={anchor=south, rotate=60, inner sep=.5mm}
+}
+
+\tikzset{
+    labl3/.style={anchor=south, rotate=90, inner sep=.5mm}
+}
+
+\tikzset{
+    labl4/.style={anchor=south, rotate=-90, inner sep=.5mm}
+}
+
+\usepackage{scalerel,stackengine}
+
+\begin{comment}
+\stackMath
+\newcommand\widecheck[1]{%
+\savestack{\tmpbox}{\stretchto{%
+  \scaleto{%
+    \scalerel*[\widthof{\ensuremath{#1}}]{\kern-.6pt\bigwedge\kern-.6pt}%
+    {\rule[-\textheight/2]{1ex}{\textheight}}%WIDTH-LIMITED BIG WEDGE
+  }{\textheight}% 
+}{0.5ex}}%
+\stackon[1pt]{#1}{\scalebox{-1}{\tmpbox}}%
+}
+\parskip 1ex
+\end{comment}
+
+\newcommand{\from}{\leftarrow}
+
+\usepackage[nottoc]{tocbibind}
+
+\newcommand{\Ch}[1]{\catname{Ch}\catname{(mod-}#1\catname{)}}
+\newcommand{\Chb}[1]{\catname{Ch}_{{b}}\catname{(mod-}#1\catname{)}}
+\newcommand{\Chm}[1]{{\catname{Ch}_{{-}}\catname{(mod-}R\catname{)}}}
+\newcommand{\Chp}[1]{{\catname{Ch}_{{+}}\catname{(mod-}R\catname{)}}}
+
+\begin{document}
+\frontmatter
+\frontpage{front}{0.8\textwidth}{A cat.}
+\tableofcontents
+\countlectures
+\newpage
+
+\chapter*{Preface}
+\addcontentsline{toc}{chapter}{Preface} \markboth{Preface}{}
+
+\section*{Technicalities}
+\addcontentsline{toc}{section}{Technicalities} %\markboth{Technicalities}{}
+
+These aren't formal notes related to the course and henceforward there is \emph{absolutely no guarantee} that the recorded material is in correspondence with the course expectations, or that these notes lack any mistakes.\\
+In fact, there probably are mistakes in the notes! I would highly appreciate if any comments or corrections were sent to me via email at \href{mailto:tzorani.elad@gmail.com}{tzorani.elad@gmail.com}.\\
+Elad Tzorani.
+
+\section*{Grade}
+
+The course grade will consist of the following.
+
+\begin{itemize}
+\item 60\% for homework
+\item 40\% for giving lectures on more advanced topics at the end of the semester
+\end{itemize}
+
+\mainmatter
+
+\chapter{Linear Algebraic Groups}
+
+\section{Preliminaries}
+
+\subsection{Motivation \& Historical Background}
+
+Algebraic groups developed from the study of Lie groups. The latter were studied by Sophus Lie around 1870 in the context of differential equations. Lie groups can describe symmetries of solutions of differential equations; e.g. solutions of $\nabla y = 0$ are \emph{harmonic functions} and one is interested in linear isomorphisms $g \colon \mbb{R}^n \to \mbb{R}^n$ such that $\Delta\prs{y} = 0$ implies $\Delta\prs{y \circ g} = 0$. Lie noticed that such $g$ form a group $\mcal{O}_n\prs{\mbb{R}} \coloneqq \set{g \in \mrm{GL}_n\prs{\mbb{R}}}{g^T g = I_n}$.
+Such groups for operators different than $\Delta$ are smooth manifolds with smooth group actions, called \emph{Lie groups.}
+
+One of Lie's motivation was to have Galois theory for differentiable equations. It had already been known that in order to find roots of polynomials one uses the symmetries of field extensions.
+
+\subsection{Some Algebraic Geometry}
+
+%TODO
+
+\backmatter
+\end{document}
