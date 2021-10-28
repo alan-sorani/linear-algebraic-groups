@@ -104,14 +104,140 @@ The course grade will consist of the following.
 
 \subsection{Motivation \& Historical Background}
 
+\subsubsection{Linear Algebraic Groups From Differential Equations}
+
 Algebraic groups developed from the study of Lie groups. The latter were studied by Sophus Lie around 1870 in the context of differential equations. Lie groups can describe symmetries of solutions of differential equations; e.g. solutions of $\nabla y = 0$ are \emph{harmonic functions} and one is interested in linear isomorphisms $g \colon \mbb{R}^n \to \mbb{R}^n$ such that $\Delta\prs{y} = 0$ implies $\Delta\prs{y \circ g} = 0$. Lie noticed that such $g$ form a group $\mcal{O}_n\prs{\mbb{R}} \coloneqq \set{g \in \mrm{GL}_n\prs{\mbb{R}}}{g^T g = I_n}$.
 Such groups for operators different than $\Delta$ are smooth manifolds with smooth group actions, called \emph{Lie groups.}
-
 One of Lie's motivation was to have Galois theory for differentiable equations. It had already been known that in order to find roots of polynomials one uses the symmetries of field extensions.
 
-\subsection{Some Algebraic Geometry}
+Around 1880, Picard looked at differentiable equations of the form
+\begin{align*}
+\frac{\prs{\diff y}^n}{\diff x}^n + p_1\prs{x} \frac{\diff y^{n-1}}{\prs{\diff x}^{n-1}} + \ldots + p_n\prs{x} y = 0
+\end{align*}
+for $p_i$ rational functions.
+The solution space for such an equation is the $n$-dimensional space
+\[\spn\set{y_1\prs{x}, \ldots, y_n\prs{x}} \text{.}\]
+Picard looked at a subgroup $G \leq \mrm{GL}_n\prs{\mbb{R}}$
+which preserves the algebraic dependencies of the $y_i$ (i.e. preserves polynomials $p \in \mbb{R}_n\brs{x}$ for which $p\prs{y_1\prs{x}, \ldots, y_n\prs{x}} = 0$). These were the first treatments of algebraic groups.
 
-%TODO
+Around 1870-1900, Mauren took homogeneous rational functions $f \colon \mbb{C}^n \to \mbb{C}$ (such as $f\prs{x_1, \ldots, x_n} = \sum_{i=1}^n x_i^2$ for which $G_f = \mcal{O}_n\prs{\mbb{C}}$) and studied the structure of
+\[G_f \coloneqq \set{g \in \mrm{GL}_n\prs{\mbb{C}}}{f \circ g = f} \text{.}\]
+One can take $f$ to be any quadratic form, e.g.
+\[\mrm{Sp}_{2n}\prs{\mbb{C}} = \set{g \in \mrm{GL}_{2n}\prs{\mbb{C}}}{g^T \pmat{0 & I_n \\ -I_n & 0} g = \pmat{0 & I_n \\ -I_n & 0}}\]
+is such  group.
+Such groups are called \emph{classical groups}.
+
+Mauren looked at the tangent space of such group. His motivation was his interest in Hilbert's 14\textsuperscript{th} problem:
+Given $g \in G \leq \mrm{GL}_n\prs{\mbb{C}}$ we can consider $g$ as a map $\mbb{C}^n \to \mbb{C}^n$. Considering the action $G \acts \mbb{C}\brs{x_1, \ldots, x_n}$ on the coefficient, the problem is understanding the invariant space of this action.
+E.g. the invariant space of $S_n$ are \emph{symmetric polynomials}.
+
+\subsubsection{Later Developments}
+
+The field of Lie groups gave great success. Semisimple Lie groups have complete combinatorical classification due to Cartan and Killing. This is considered one of the greatest achievements in mathematics.
+
+Chevalley found out the every semisimple Lie group is defined by polynomials in integer coefficients, circa 1940. This led to the definition of algebraic groups and a new goal: to algebrize Lie theory and develop tools to study smooth symmetric ``without analysis'' and over more general fields. This should form a bridge between continuous groups and finite groups.
+Chevalley used in his studies of the subject the formal expression
+\[\mrm{exp}\prs{X} = \sum_{n=0}^\infty \frac{1}{n!} X^n\]
+and required $\mrm{char}\prs{\mbb{F}} = 0$.
+Later Kolchin returned to Picard's ideas and developed a differential Galois theory over a general field.
+
+\subsubsection{Modern Developments}
+
+From 1950 onwards, many mathematicians developed the study of algebraic groups, which was possible thanks to advances in algebraic geometry.
+Some of the advances of the field are the following.
+
+\begin{enumerate}
+\item The classification of finite simple groups. Most of these groups are of ``Lie type'', which are of the form $\mrm{Sp}_{2n}\prs{\mbb{F}_q}$.
+
+\item Results on \href{https://ncatlab.org/nlab/show/p-adic+completion}{$p$-adic} groups. For example, Bruhat-Tits buildings are homogeneous spaces with $p$-adic group actions and which are ``non-archimedean'' analogues to classical symmetric spaces.
+
+\item Results in number theory.
+\end{enumerate}
+
+\subsubsection{The Langlands Program}
+
+The Laglands program, circa 1960, tries to study properties in number theory through the study of groups. There are analogues to Riemann's zeta function which one hopes all arise from group actions in the following way.
+Taking an algebraic group $G$, one looks at \emph{automorphic spaces} $V$ with $G\prs{\mbb{R}}$ and $G\prs{\mbb{Q}_p}$ actions which commute with each other, for some groups $G\prs{\mbb{R}}, G\prs{\mbb{Q}_p}$ over the respective fields.
+
+\subsection{Some Algebraic Geometry \& Definitions}
+
+\subsubsection{What are Algebraic Groups?}
+
+Write $\mbb{F}$ for a field, and write $M_n\prs{\mbb{F}} \cong \mbb{F}^{n^2}$ for the space of $n \times n$ matrices over $\mbb{F}$.
+
+\begin{definition}[Affine Algebraic Group]
+A subset $G \leq M_n\prs{\mbb{F}}$ closed under multiplication and inverse is called an \emph{affine algebraic group} over $\mbb{F}$ if there are $f_1, \ldots, f_k \in \mbb{F}\brs{\set{x_{i,j}}_{i,j \in [n]}}$ such that
+\[G = \set{A \in M_n\prs{\mbb{F}}}{f_1\prs{A} = \ldots = f_k\prs{A} = 0} \text{.}\]
+\end{definition}
+
+\begin{example}
+$\mrm{SL}_n\prs{\mbb{F}}$ is n affine algebraic group. The determinant,
+\[\det\prs{X} = \sum_{\sigma \in S_n} \prs{-1}^{\sgn\prs{\sigma}} x_{1,\sigma\prs{1}} \cdot \ldots \cdot x_{n,\sigma\prs{n}} \text{,}\]
+is a polynomial and $\mrm{SL}_n\prs{\mbb{F}} = \set{A \in M_n\prs{\mbb{F}}{\det\prs{A} - 1 = 0}}$.
+\end{example}
+
+\begin{example}
+Let $Q \in M_n\prs{\mbb{F}}$ and denote
+\[\mcal{O}_{Q}\prs{\mbb{F}} \coloneqq \set{A \in \mrm{GL}_n\prs{\mbb{F}}}{A^t Q A = Q} \text{.}\]
+Taking $Q = I_n$ one gets $\mcal{O}_Q\prs{\mbb{R}} = \mcal{O}_n\prs{\mbb{R}}$. More generally, matrix multiplication is polynomial and one can write $A^t Q A - Q = 0$ as a polynomial equation in the coefficients of $A$. We explain the condition $A \in \mrm{GL}_n\prs{\mbb{F}}$ later.
+\end{example}
+
+\begin{example}
+Let $N \subseteq M_n\prs{\mbb{F}}$ be the subset of upper-triangular matrices with $1$ on the diagonal. This is an algebraic group with polynomial conditions $x_{i,j} = 0$ for $i > j$ and $x_{i,i} = 1$ for all $i \in [n]$.
+One has $N \cong \mbb{F}^{\frac{n\prs{n-1}}{2}}$ as vector space, but this doesn't remember the group structure.
+\end{example}
+
+\begin{example}
+The vector space $\mbb{F}^n$ with addition is an algebraic group.
+We have
+\begin{align*}
+V \coloneqq \set{\pmat{1 & 0 & \cdots & 0 & * \\ 0 & & & & * \\ \vdots & & \ddots & & \vdots \\ & & & & * \\ 0 & & \cdots & & 1} \in M_{n+1}\prs{\mbb{F}}} \cong \mbb{F}^n \text{.}
+\end{align*}
+One denotes $G_a\prs{\mbb{F}} \coloneqq \prs{\mbb{F}, +}$ and calls this \emph{the additive group over $\mbb{F}$}.
+\end{example}
+
+\begin{remark}
+One has
+\begin{align*}
+\mrm{GL}_n\prs{\mbb{F}} = \set{A \in M_n\prs{\mbb{F}}}{\det\prs{A} \neq 0}
+\\&\cong \set{\pmat{A & 0 \\ 0 & a} \in M_{n+1}\prs{\mbb{F}}}{\det\prs{A} \cdot a = 1}
+\end{align*}
+and a bijection $A \leftrightarrow \pmat{A & 0 \\ 0 & \det\prs{A}^{-1}}$, but this looks weird. We then want the definition to be more general and capture groups that are isomorphic to what we defined as affine algebraic groups. We do that later in the course.
+\end{remark}
+
+\begin{example}
+Every finite group $G$ is an algebraic group. One has an inclusion $G \rmono S_n$, and $S_n$ is an algebraic group where $\sigma$ is considered as $\prs{x_{i,j}}_{i,j \in [n]}$ with $x_{i,\sigma\prs{i}} = 1$ and $x_{i,j} = 0$ for any other $i,j \in [n]$.
+\end{example}
+
+\begin{exercise}
+Every finite subset $M_n\prs{\mbb{F}}$ is an algebraic set, in the sense that it's defined by the vanishing of polynomials.
+\end{exercise}
+
+To study properties of algebraic groups, one needs to use tools from algebraic geometry. Here there are two possible difficulties:
+
+\begin{enumerate}
+\item One needs to ask what generality is to be worked with. With our current definition it is difficult to use strong algebro-geometric tools, but with ``too general'' definitions it is more difficult to look at simple examples.
+
+\item One should decide how much they want to rely on geometric results as facts and how much is to be proved.
+\end{enumerate}
+
+Our answer to the latter question is proving things at the beginning of the course and later on taking more things as facts. For the first difficulty\ldots you'll see as we go.
+
+\subsubsection{A Course Overview}
+
+During the course we plan to go over the following.
+
+\begin{itemize}
+\item Basic algebraic geometry.
+
+\item General structure properties of algebraic groups. For example, a generalization of Jordan's decomposition to $\mrm{GL}_n$.
+
+\item Generalization of the notion of an algebraic group.
+
+\item Study of algebraic groups by looking at algebraic groups over the Galois closure and via Galois theory.
+
+\item The classification of reductive groups over algebraically closed fields. An algebraic version of the Cartan-Killing classification.
+\end{itemize}
 
 \backmatter
 \end{document}

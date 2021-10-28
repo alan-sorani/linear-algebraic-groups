@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.6.28) (preloaded format=xelatex 2021.9.30)  27 OCT 2021 09:44
+This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.6.28) (preloaded format=xelatex 2021.9.30)  28 OCT 2021 10:15
 entering extended mode
 **"./linear algebraic groups.tex"
 (linear algebraic groups.tex
@@ -1865,9 +1865,27 @@ LaTeX Font Info:    Trying to load font information for U+stmry on input line 2
 
 ]
 Chapter 1.
+
+Overfull \hbox (9.30286pt too wide) in paragraph at lines 123--124
+[]\TU/CMUSerif(0)/m/n/10 Around 1870-1900, Mauren took homogeneous rational fun
+ctions $\OML/cmm/m/it/10 f [] [] \U/msb/m/n/10 C[] \OMS/cmsy/m/n/10 ! \U/msb/m/
+n/10 C$ \TU/CMUSerif(0)/m/n/10 (such as $\OML/cmm/m/it/10 f [] \OT1/cmr/m/n/10 
+=
+ []
+
 [1
 
 ]
+Package hyperref Info: bookmark level for unknown definitionx defaults to 0 on 
+input line 168.
+Package hyperref Info: bookmark level for unknown example defaults to 0 on inpu
+t line 174.
+ [2]
+Package hyperref Info: bookmark level for unknown remark defaults to 0 on input
+ line 200.
+Package hyperref Info: bookmark level for unknown exercise defaults to 0 on inp
+ut line 213.
+ [3]
 \tf@thm=\write7
 \openout7 = `"linear algebraic groups.thm"'.
 
@@ -1877,12 +1895,12 @@ ed.
 (rerunfilecheck)             Checksum: <no file>.
  ) 
 Here is how much of TeX's memory you used:
- 34330 strings out of 411254
- 709504 string characters out of 2828529
- 1245790 words of memory out of 3000000
- 54218 multiletter control sequences out of 15000+600000
+ 34337 strings out of 411254
+ 709633 string characters out of 2828529
+ 1265790 words of memory out of 3000000
+ 54225 multiletter control sequences out of 15000+600000
  407426 words of font info for 78 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 117i,11n,122p,624b,483s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 117i,20n,122p,624b,508s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on linear algebraic groups.pdf (5 pages).
+Output written on linear algebraic groups.pdf (7 pages).

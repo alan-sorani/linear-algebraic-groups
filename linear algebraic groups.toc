@@ -3,4 +3,10 @@
 \contentsline {chapter}{\numberline {1}Linear Algebraic Groups}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Preliminaries}{1}{section.1.1}%
 \contentsline {subsection}{\numberline {1.1.1}Motivation \& Historical Background}{1}{subsection.1.1.1}%
-\contentsline {subsection}{\numberline {1.1.2}Some Algebraic Geometry}{1}{subsection.1.1.2}%
+\contentsline {subsubsection}{Linear Algebraic Groups From Differential Equations}{1}{section*.6}%
+\contentsline {subsubsection}{Later Developments}{1}{section*.7}%
+\contentsline {subsubsection}{Modern Developments}{2}{section*.8}%
+\contentsline {subsubsection}{The Langlands Program}{2}{section*.9}%
+\contentsline {subsection}{\numberline {1.1.2}Some Algebraic Geometry \& Definitions}{2}{subsection.1.1.2}%
+\contentsline {subsubsection}{What are Algebraic Groups?}{2}{section*.10}%
+\contentsline {subsubsection}{A Course Overview}{3}{section*.11}%
