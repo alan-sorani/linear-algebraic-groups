@@ -7,6 +7,8 @@
 \contentsline {subsubsection}{Later Developments}{1}{section*.7}%
 \contentsline {subsubsection}{Modern Developments}{2}{section*.8}%
 \contentsline {subsubsection}{The Langlands Program}{2}{section*.9}%
-\contentsline {subsection}{\numberline {1.1.2}Some Algebraic Geometry \& Definitions}{2}{subsection.1.1.2}%
+\contentsline {subsection}{\numberline {1.1.2}Definitions \& Course Goals}{2}{subsection.1.1.2}%
 \contentsline {subsubsection}{What are Algebraic Groups?}{2}{section*.10}%
 \contentsline {subsubsection}{A Course Overview}{3}{section*.11}%
+\contentsline {subsection}{\numberline {1.1.3}Preliminary Algebraic Geometry}{4}{subsection.1.1.3}%
+\contentsline {subsubsection}{Embedded $\mathbb {F}$-Affine Varieties}{4}{section*.12}%

@@ -159,7 +159,7 @@ Some of the advances of the field are the following.
 The Laglands program, circa 1960, tries to study properties in number theory through the study of groups. There are analogues to Riemann's zeta function which one hopes all arise from group actions in the following way.
 Taking an algebraic group $G$, one looks at \emph{automorphic spaces} $V$ with $G\prs{\mbb{R}}$ and $G\prs{\mbb{Q}_p}$ actions which commute with each other, for some groups $G\prs{\mbb{R}}, G\prs{\mbb{Q}_p}$ over the respective fields.
 
-\subsection{Some Algebraic Geometry \& Definitions}
+\subsection{Definitions \& Course Goals}
 
 \subsubsection{What are Algebraic Groups?}
 
@@ -238,6 +238,127 @@ During the course we plan to go over the following.
 
 \item The classification of reductive groups over algebraically closed fields. An algebraic version of the Cartan-Killing classification.
 \end{itemize}
+
+\subsection{Preliminary Algebraic Geometry}
+
+\subsubsection{Embedded $\mbb{F}$-Affine Varieties}
+
+\begin{notation}
+Denote $A_n \coloneqq \mbb{F}\brs{x_1, \ldots, x_n}$.
+\end{notation}
+
+\begin{definition}
+For $C \subseteq A_n$ define
+\[V\prs{C} \coloneqq \set{p \in \mbb{F}^n}{\forall f \in C \colon f\prs{p} = 0} \subseteq \mbb{F}^n \text{.}\]
+A set of this form is called an \emph{embedded $\mbb{F}$-Affine Variety}.
+\end{definition}
+
+\begin{definition}
+For $S \subseteq \mbb{F}^n$ define
+\begin{align*}
+I\prs{S} \coloneqq \set{f \in A_n}{\forall p \in S \colon f\prs{p} = 0} \text{.}
+\end{align*}
+\end{definition}
+
+\begin{exercise}
+For $S \subseteq \mbb{F}^n$ one has $I\prs{S} \ideal A_n$.
+\end{exercise}
+
+\begin{example}
+One has $I\prs{\ns} = A_n$ and whenever $\mbb{F}$ is infinite one has $I\prs{\mbb{F}^n} = \set{0}$.
+\end{example}
+
+\begin{example}
+For $I = \set{x_1^2 - x_2, x_1^3 - x_3}$ one has $V\prs{I} = \set{\prs{x, x^2, x^3}}{x \in \mbb{F}}$ which one calls the \emph{twisted cubic} over $\mbb{F}$
+\end{example}
+
+\begin{proposition}
+One notices that for $S \subseteq \mbb{F}^n$ and $C \subseteq A_n$ we have
+\begin{align*}
+S &\subseteq V\prs{I\prs{S}} \\
+C \subseteq I\prs{V\prs{C}} \text{.}
+\end{align*}
+\end{proposition}
+
+\begin{definition}[The Zariski Topology]
+The \emph{Zariski topology} on $\mbb{F}^n$ is the topology given by taking sets of the form $V\prs{C}$ for $C \subseteq A_n$ as the closed subsets.
+\end{definition}
+
+\begin{exercise}
+Check that the above definition gives a well-defined topology.
+\end{exercise}
+
+\begin{exercise}
+For $S \subseteq \mbb{F}^n$ one has $\overline{S} = V\prs{I\prs{S}}$.
+\end{exercise}
+
+\begin{example}
+Consider the case $n=1$. Then closed subsets of $\mbb{F}$ are sets of the form $V\prs{C}$ for $C \subseteq A_n$. If $C$ contains a nonzero polynomial, $V\prs{C}$ is finite, and otherwise $V\prs{C} = \mbb{F}$. We get that the nontrivial closed sets are exactly the finite subsets of $\mbb{F}^n$.
+\end{example}
+
+\begin{remark}
+$\mbb{F}^n$ with the Zariski topology is always \emph{quasi-compact}, meaning it's compact but not Hausdorff.
+\end{remark}
+
+\begin{theorem}[Hilbert's Basis Theorem]\label{theorem:basis_theorem}
+Every ideal $I \ideal A_n$ is finitely-generated.
+\end{theorem}
+
+\begin{proof}
+We prove the statement by induction on $n \in \mbb{N}$. The case $n = 0$ is trivial since $\mbb{F}$ is a field. Assume the statement is true for $n-1$, we show it for $n$.
+Write $A_n \cong A_{n-1}\brs{x_n}$ and assume $I \ideal A_n$ is nonzero. Choose $f_1 \in I \setminus \set{0}$ of minimal degree and write $d_1 \coloneqq \deg_{A_{n-1}}{f_1}$. If $\prs{f_1} \neq I$, choose $f_2 \in I\setminus\prs{f_1}$ of minimal degree $d_2 \coloneqq \deg_{A_{n_1}}\prs{f_2}$. Continue this way to get $f_i$ with $d_i \coloneqq \deg_{A_{n-1}}\prs{f_i}$ and $d_1 \leq d_2 \leq d_3 \leq \ldots $.
+
+Assume that this doesn't end a finite point (for otherwise we're done). Denote by $a_i \in A_{n-1}$ the leading coefficient of $f_i$. By assumption, $I' \coloneqq \prs{a_1, \ldots, a_i, \ldots} \ideal A_{n-1}$ is finitely-generated. We can then write $I' = \prs{a_1, \ldots, a_h}$ for some $h \in \mbb{N}$. Then
+\[a_{h+1} = x_1 a_1 + \ldots + x_h a_h\]
+for some $x_1, \ldots, x_h \in A_{n-1}$.
+Let
+\[g \coloneqq f_{h+1} - \sum_{i \in [h]} x_i \cdot f_i \cdot x^{d_{h+1} - d_i} \in I \text{.}\]
+The coefficient of $x^{d_{h+1}}$ in $g$ vanishes so $\deg\prs{g} < d_{h+1}$ and $g \in \prs{f_1,\ ldots, f_h}$. Then also $f_{h+1} \in \prs{f_1, \ldots, f_h}$, in contradiction.
+\end{proof}
+
+\begin{definition}[Noetherian Topological Space]
+A topological space $X$ is called \emph{Noetherian} if every decreasing sequence of closed subsets stabilises.
+\end{definition}
+
+\begin{exercise}
+Every subspace $X \subseteq \mbb{F}^n$ is quasi-compact.
+\end{exercise}
+
+\begin{corollary}
+$\mbb{F}^n$ with the Zariski topology is Noetherian.
+\end{corollary}
+
+\begin{proof}
+Let $\prs{X_i}_{i \in \mbb{N}_+} \subseteq \mbb{F}^n$ be a decreasing sequence of closed subsets, and for every $i$ denote $I_i \coloneqq I\prs{X_i}$. Then $X_i = V\prs{I_i}$. We get $I_1 \subseteq I_2 \subseteq I_3 \subseteq \ldots$. Denote $I = \bigcup_{i \in \mbb{N}_+} I_i$.  By Theorem \ref{theorem:basis_theorem} we have $I = \prs{f_1, \ldots, f_k}$ for some $k \in \mbb{N}_+$. Then $f_1, \ldots, f_k \in I_m$ for some $m \in \mbb{N}_+$. We get $I = I_m = I_{m+1} = \ldots$ and $X_m = X_{m+1} = X_{m+2} = \ldots$, as required.
+\end{proof}
+
+\begin{example}
+Consider $xy \in \mbb{F}\brs{x,y}$. $V\prs{x,y}$ is connected, but we would like to say it has two components. E.g. if $\mbb{F} = \mbb{R}$, the set $V\prs{x,y}$ is the union of two perpendicular axes. This leads to the following definition.
+\end{example}
+
+\begin{definition}[Irreducible Topological Space]
+A topological space $X$ is \emph{irreducible} if there aren't strict subsets $X_1, X_2 \subsetneq X$ such that $X = X_1 \cup X_2$.
+\end{definition}
+
+\begin{exercise}
+An irreducible Hausdorff topological space is a point.
+\end{exercise}
+
+\begin{exercise}
+In a Noetherian space $X$ there are finitely many maximal irreducible subsets $X_1, \ldots, X_k$, and $X = \bigcup_{i \in [k]} X_i$.
+\end{exercise}
+
+\begin{proposition}
+An algebraic variety $V \subseteq \mbb{F}^n$ is irreducible if and only if $I\prs{V}$ is prime.
+\end{proposition}
+
+\begin{proof}
+Assume $V$ is irreducible. Let $f_1, f_2 \in A_n$, such that $f_1 f_2 \in I\prs{V}$, we want to show $f_1 \in I\prs{V}$ or $f_2 \in I\prs{V}$. We have $V \subseteq V\prs{f_1 f_2} = V\prs{f_1} \cup V\prs{f_2}$. Now $V = \prs{V \cap V\prs{f_1}} \cup \prs{V \cap V\prs{f_2}}$ and by irreducibility $V = V \cap V\prs{f_i}$ for $i \in [2]$, in which case $V \subseteq V\prs{f_i}$ and therefore $f_i \in I\prs{V}$.
+
+The other direction is left as an exercise.
+\end{proof}
+
+
 
 \backmatter
 \end{document}

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.6.28) (preloaded format=xelatex 2021.9.30)  28 OCT 2021 10:15
+This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.6.28) (preloaded format=xelatex 2021.9.30)  28 OCT 2021 11:18
 entering extended mode
 **"./linear algebraic groups.tex"
 (linear algebraic groups.tex
@@ -1885,7 +1885,25 @@ Package hyperref Info: bookmark level for unknown remark defaults to 0 on input
  line 200.
 Package hyperref Info: bookmark level for unknown exercise defaults to 0 on inp
 ut line 213.
+Package hyperref Info: bookmark level for unknown notation defaults to 0 on inp
+ut line 247.
  [3]
+Package hyperref Info: bookmark level for unknown proposition defaults to 0 on 
+input line 276.
+Package hyperref Info: bookmark level for unknown theoremx defaults to 0 on inp
+ut line 303.
+Package hyperref Info: bookmark level for unknown proof defaults to 0 on input 
+line 308.
+Package hyperref Info: bookmark level for unknown corollary defaults to 0 on in
+put line 328.
+ [4]
+Overfull \hbox (9.76279pt too wide) in paragraph at lines 348--349
+[]\TU/CMUSerif(0)/m/n/10 In a Noetherian space $\OML/cmm/m/it/10 X$ \TU/CMUSeri
+f(0)/m/n/10 there are finitely many maximal irreducible subsets $\OML/cmm/m/it/
+10 X[]; [] ; X[]$\TU/CMUSerif(0)/m/n/10 ,
+ []
+
+[5]
 \tf@thm=\write7
 \openout7 = `"linear algebraic groups.thm"'.
 
@@ -1895,12 +1913,12 @@ ed.
 (rerunfilecheck)             Checksum: <no file>.
  ) 
 Here is how much of TeX's memory you used:
- 34337 strings out of 411254
- 709633 string characters out of 2828529
- 1265790 words of memory out of 3000000
- 54225 multiletter control sequences out of 15000+600000
- 407426 words of font info for 78 fonts, out of 8000000 for 9000
+ 34350 strings out of 411254
+ 710029 string characters out of 2828529
+ 1268790 words of memory out of 3000000
+ 54235 multiletter control sequences out of 15000+600000
+ 407450 words of font info for 81 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 117i,20n,122p,624b,508s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 117i,20n,122p,624b,524s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on linear algebraic groups.pdf (7 pages).
+Output written on linear algebraic groups.pdf (9 pages).
