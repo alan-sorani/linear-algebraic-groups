@@ -320,10 +320,6 @@ The coefficient of $x^{d_{h+1}}$ in $g$ vanishes so $\deg\prs{g} < d_{h+1}$ and 
 A topological space $X$ is called \emph{Noetherian} if every decreasing sequence of closed subsets stabilises.
 \end{definition}
 
-\begin{exercise}
-Every subspace $X \subseteq \mbb{F}^n$ is quasi-compact.
-\end{exercise}
-
 \begin{corollary}
 $\mbb{F}^n$ with the Zariski topology is Noetherian.
 \end{corollary}
@@ -331,6 +327,10 @@ $\mbb{F}^n$ with the Zariski topology is Noetherian.
 \begin{proof}
 Let $\prs{X_i}_{i \in \mbb{N}_+} \subseteq \mbb{F}^n$ be a decreasing sequence of closed subsets, and for every $i$ denote $I_i \coloneqq I\prs{X_i}$. Then $X_i = V\prs{I_i}$. We get $I_1 \subseteq I_2 \subseteq I_3 \subseteq \ldots$. Denote $I = \bigcup_{i \in \mbb{N}_+} I_i$.  By Theorem \ref{theorem:basis_theorem} we have $I = \prs{f_1, \ldots, f_k}$ for some $k \in \mbb{N}_+$. Then $f_1, \ldots, f_k \in I_m$ for some $m \in \mbb{N}_+$. We get $I = I_m = I_{m+1} = \ldots$ and $X_m = X_{m+1} = X_{m+2} = \ldots$, as required.
 \end{proof}
+
+\begin{exercise}
+Every subspace $X \subseteq \mbb{F}^n$ is quasi-compact.
+\end{exercise}
 
 \begin{example}
 Consider $xy \in \mbb{F}\brs{x,y}$. $V\prs{x,y}$ is connected, but we would like to say it has two components. E.g. if $\mbb{F} = \mbb{R}$, the set $V\prs{x,y}$ is the union of two perpendicular axes. This leads to the following definition.
