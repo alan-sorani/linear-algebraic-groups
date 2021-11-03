@@ -329,7 +329,7 @@ Let $\prs{X_i}_{i \in \mbb{N}_+} \subseteq \mbb{F}^n$ be a decreasing sequence o
 \end{proof}
 
 \begin{exercise}
-Every subspace $X \subseteq \mbb{F}^n$ is quasi-compact.
+Every closed subspace $X \subseteq \mbb{F}^n$ is quasi-compact.
 \end{exercise}
 
 \begin{example}
@@ -357,6 +357,67 @@ Assume $V$ is irreducible. Let $f_1, f_2 \in A_n$, such that $f_1 f_2 \in I\prs{
 
 The other direction is left as an exercise.
 \end{proof}
+
+%LECTURE 03.11.2021
+
+\begin{example}
+Consider $G \coloneqq \mrm{GL}_1\prs{\mbb{F}} \cong \mbb{F}^\times \subseteq \mbb{F}$.
+We have $V\prs{x-1} = \set{1}$ and similarly $V\prs{\prs{x-1}^2} = \set{1}$. If $\mbb{F} = \mbb{R}$, one has $V\prs{x^5 - 1} - 1 = \set{1}$ and one gets the same subgroup of $G$.
+However, over $\mbb{F} = \mbb{C}$ the group $V\prs{x^5 - 1}$ is the roots of unity of order $5$.
+\end{example}
+
+\begin{example}
+Let $V \subseteq \mbb{F}^n$ be closed, and for $f \in A_n$ define
+\begin{align*}
+V_f \coloneqq \set{x \in V}{f\prs{x} \neq 0} = V \setminus V\prs{f} \text{.}
+\end{align*}
+This is open in $V$ and such a set is called a \emph{principal open set}.
+Every open set $U$ is a finite union of such sets, so the principal open sets form a basis for the Zariski topology:
+
+If $U$ is open in $V$ let $W \coloneqq V \setminus U$ so that there are $\prs{f_i}_{i \in [k]} \subseteq A_n$ for which
+\begin{align*}
+V \setminus U = V \cap W = V\prs{f_1, \ldots, f_k}
+\end{align*}
+so
+\begin{align*}
+U = \bigcup_{i \in [k]} V_{f_i} \text{.}
+\end{align*}
+
+We sometimes want to think of $V_f$ as closed sets. This can be done by considering
+\begin{align*}
+\tilde{V}_f \coloneqq \set{\prs{v,y}}{\substack{v \in \mbb{F}^n \\ y \in \mbb{F} \\ f\prs{v} \cdot y = 1}} \subseteq \mbb{F}^{n+1} \text{.}
+\end{align*}
+There's a clear bijection $V_f \riso \tilde{V}_f$.
+\end{example}
+
+\begin{definition}[Morphism of Embedded Algebraic Varieties]
+For embedded algebraic varieties $V \subseteq \mbb{F}^n$ and $W \subseteq \mbb{F}^m$, a \emph{morphism} $\varphi \colon V \to W$, called also a \emph{regular map} is a map of the form
+\[\varphi\prs{x} = \prs{f_1\prs{x}, \ldots, f_m\prs{x}}\]
+for $\prs{f_i}_{i \in \brs{m}} \subseteq A_n$.
+\end{definition}
+
+\begin{example}
+The map
+\begin{align*}
+\varphi \colon \mbb{F}^2 &\to \mbb{F}^2
+\prs{x,y} &\mapsto \prs{xy,y} 
+\end{align*}
+is a regular map.
+\end{example}
+
+\begin{exercise}
+A regular map is continuous in the Zariski topology.
+\end{exercise}
+
+\begin{definition}
+A \emph{regular function} on an embedded algebraic variety $V$ over $\mbb{F}$ is a regular map $V \to \mbb{F}$.
+\end{definition}
+
+\begin{remark}
+Regular functions on $V$ are of the form $\rest{f}{V}$ for $f \in A_n$. We can think of these as elements of $\mbb{F}\brs{V} \coloneqq A_n / I\prs{V}$.
+\end{remark}
+
+
 
 
 
