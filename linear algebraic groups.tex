@@ -390,7 +390,9 @@ We sometimes want to think of $V_f$ as closed sets. This can be done by consider
 There's a clear bijection $V_f \riso \tilde{V}_f$.
 \end{example}
 
-\begin{definition}[Morphism of Embedded Algebraic Varieties]
+\subsubsection{Regular Maps}
+
+\begin{definition}[Regular Map]
 For embedded algebraic varieties $V \subseteq \mbb{F}^n$ and $W \subseteq \mbb{F}^m$, a \emph{morphism} $\varphi \colon V \to W$, called also a \emph{regular map} is a map of the form
 \[\varphi\prs{x} = \prs{f_1\prs{x}, \ldots, f_m\prs{x}}\]
 for $\prs{f_i}_{i \in \brs{m}} \subseteq A_n$.
@@ -417,9 +419,51 @@ A \emph{regular function} on an embedded algebraic variety $V$ over $\mbb{F}$ is
 Regular functions on $V$ are of the form $\rest{f}{V}$ for $f \in A_n$. We can think of these as elements of $\mbb{F}\brs{V} \coloneqq A_n / I\prs{V}$.
 \end{remark}
 
+\begin{definition}
+A regular map $\varphi \colon V \to W$ gives an $\mbb{F}$-algebra homomorphism
+\begin{align*}
+\varphi^* \colon \mbb{F}\brs{W} &\to \mbb{F}\prs{V} \\
+f &\mapsto \varphi \text{.}
+\end{align*}
+\end{definition}
 
+\begin{remark}
+Sending every $V$ to $\mbb{F}\brs{V}$ and every $\varphi$ to $\varphi^*$ is a contravariant functor from the category of embedded algebraic varieties to that of finite-dimensional $\mbb{F}$-algebras.
+\end{remark}
 
+\begin{exercise}
+\begin{enumerate}
+\item Consider regular maps
+\begin{align*}
+\varphi_1,\varphi_2 \colon V \to W
+\end{align*}
+such that $\varphi_1^* = \varphi_2^*$. Show that $\varphi_1 = \varphi_2$.
 
+\item Show that if $\varphi \colon V \to W$ is a regular map such that $\varphi^*$ is an isomorphism, $\varphi$ is also an isomorphism.
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+Let $\varphi \colon V \to W$ be a regular map, and assume $V$ is irreducible. Show that $\overline{\varphi\prs{V}}$ is irreducible. 
+\end{exercise}
+
+\subsubsection{Revising Affine $\mbb{F}$-Varieties}
+
+For a set $X$ one can consider the algebra of functions $M \coloneqq \hom_{\mathbf{Set}}\prs{X,\mbb{F}}$. Every $x \in X$ defines a homomorphism $\ev_x \colon M \to \mbb{F}$ given by $\ev_x\prs{f} = f\prs{x}$.
+
+\begin{definition}[Affine $\mbb{F}$-Variety]
+An \emph{affine $\mbb{F}$-variety} is a pair $\prs{X,A}$ where $X$ is any set and $A \subseteq \hom_{\mathbf{Set}}\prs{X,\mbb{F}}$ such that the following conditions hold.
+
+\begin{enumerate}
+\item $A$ is finite-generated.
+\item The map
+\begin{align*}
+X &\to \hom_{\mbb{F}\mathbf{-Alg}}\prs{A, \mbb{F}} \\
+x &\mapsto \rest{\ev_x}{A}
+\end{align*}
+is a bijection.
+\end{enumerate}
+\end{definition}
 
 \backmatter
 \end{document}
