@@ -465,5 +465,82 @@ is a bijection.
 \end{enumerate}
 \end{definition}
 
+%LECTURE 4.11.2021
+
+\begin{remark}
+This new definition of an affine $\mbb{F}$-variety is coordinate-free and gives good results even for non-algebraically-closed fields.
+\end{remark}
+
+\begin{remark}
+We could take any finitely-generated $\mbb{F}$-algebra $A$ and define $X = \hom_{\mbb{F}\mathbf{-Alg}}\prs{A,\mbb{F}}$. This would given an homomorphism $A \to \hom_{\mathbf{Set}}\prs{X,\mbb{F}}$ taking $f \in A$ to the map $x \mapsto x\prs{f}$.
+If we require that this map is injective, we get an equivalent definition to that of an affine $\mbb{F}$-variety.
+\end{remark}
+
+\begin{definition}[Regular Maps]
+Let $\prs{X,A}$ and $\prs{Y,B}$ be affine $\mbb{F}$-varieties. A \emph{regular map} $\varphi \colon \prs{X,A} \to \prs{Y,B}$ is a map of sets $\varphi \colon X \to Y$ such that for every $f \in B$ it holds that $f \circ \varphi \in A$. 
+\end{definition}
+
+\begin{definition}[Regular Isomorphism]
+A regular map $\varphi \colon \prs{X,A} \to \prs{Y,B}$ is an \emph{isomorphism} if there's $\psi \colon \prs{Y,B} \to \prs{X,A}$ such that $\varphi \circ \psi = \id$ and $\psi \circ \varphi = \id$.
+\end{definition}
+
+\begin{remark}
+Every homomorphism $\alpha \colon B \to A$ gives a regular map $\varphi \colon X \to Y$ by sending $x$ to the $y \in Y$ for which $\ev_x \circ \alpha = \ev_Y$.
+\end{remark}
+
+\begin{proposition}
+Embedded $\mbb{F}$-affine varieties are $\mbb{F}$-affine varieties.
+\end{proposition}
+
+\begin{proof}
+Let $V \subseteq \mbb{F}^n$ be an embedded $\mbb{F}$-affine variety. We claim $\prs{V, \mbb{F}\brs{V}}$ is an affine $\mbb{F}$-variety.
+
+$\mbb{F}\brs{V} = A_n/I\prs{V}$ is finitely-generated, so we have to show that all maps $\hom_{\mbb{F}\mathbf{-Alg}}\prs{\mbb{F}\brs{V}, \mbb{F}}$ are of the form $\ev_x$ (since $\mbb{F}\brs{V}$ separate points).
+Let $\eps \colon \mbb{F}\brs{V} \to \mbb{F}$, we find $x \in V$ such that $\eps = \ev_x$. Consider the quotient map $\pi \colon A_n \to \mbb{F}\brs{V}$. Then $\eps \circ \pi \colon A_n \to \mbb{F}$. Let $x = \prs{\eps \circ \pi \prs{x_i}}_{i \in [n]} \in \mbb{F}^n$. Now $\ker\prs{\eps \circ \pi}$ is a maximal ideal contained in $I\prs{x}$ so
+\begin{align*}
+I\prs{V} = \ker\prs{\pi} \subseteq \ker\prs{\eps \circ \pi} = I\prs{x}
+\end{align*}
+so $x \in V$.
+\end{proof}
+
+\begin{remark}
+Let $\prs{X,A}$ be an affine $\mbb{F}$-variety. Write $A \cong A_n / I$ and $\pi \colon A_n \riso A_n/I$ the quotient map, and define a map
+\begin{align*}
+\varphi \colon X &\to \mbb{F}^n \\
+x &\mapsto \prs{\ev_x \circ \pi\prs{x_i}}_{i \in \brs{n}} \text{.}
+\end{align*}
+Now $I = \ker\prs{\pi} \subseteq \ker\prs{\ev_p}$ for all $p \in \varphi\prs{X}$, so $I \subseteq I\prs{\varphi\prs{X}}$.
+In the other direction, if $f \in I\prs{\varphi\prs{X}}$ then $\ev_x\prs{\pi\prs{f}}$ for all $x \in X$. Therefore $\pi\prs{f} = 0$ so $I\prs{\varphi\prs{X}} \subseteq \ker\prs{\pi} = I$.
+Then $A \cong A_n / I\prs{\varphi\prs{X}} = \mbb{F}\brs{\varphi\prs{X}}$.
+Then
+$\prs{X,A} \cong \prs{\varphi\prs{X}, \mbb{F}\brs{\varphi\prs{X}}}$.
+
+We want $\varphi\prs{X}$ to be closed, which we explain later.
+\end{remark}
+
+\begin{exercise}
+Check that $\varphi$ in the above remark is injective.
+\end{exercise}
+
+\begin{definition}[Zariski Topology on an Affine $\mbb{F}$-Variety]
+Let $\prs{X,A}$ be an affine $\mbb{F}$-variety. Define the \emph{Zariski topology} on $\prs{X,A}$ by choosing the closed sets to be sets of the form
+\[V\prs{C} \coloneqq \set{x \in X}{\forall f \in C \colon f\prs{x} = 0}\]
+for $C \subseteq A$.
+\end{definition}
+
+\begin{definition}
+Let $\prs{X,A}$ be an affine $\mbb{F}$-variety. For $S \subseteq X$ we define
+\begin{align*}
+I\prs{S} \coloneqq \set{f \in A}{\forall x \in X \colon f\prs{x} = 0} \ideal A \text{.}
+\end{align*}
+\end{definition}
+
+\begin{remark}
+As before, if $Y \subseteq X$ is closed, we have $Y = V\prs{I\prs{Y}}$. Then $Y$ is itself an affine $\mbb{F}$-variety as $\prs{Y, A/I\prs{Y}}$ where $A/I\prs{Y}$ is considered as embedded in $\hom_{\mathbf{Set}}\prs{Y,\mbb{F}}$ by considering the restriction to $Y$.
+Elements of
+$\hom_{\mbb{F}\mathbf{-Alg}}\prs{A/I\prs{Y}, \mbb{F}}$
+are elements of $\hom\prs{A,\mbb{F}} \cong X$ that vanish on $I\prs{Y}$. These are exactly $V\prs{I\prs{Y}} \cong Y$.
+\end{remark}
+
 \backmatter
 \end{document}
