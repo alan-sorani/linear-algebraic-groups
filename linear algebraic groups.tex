@@ -393,15 +393,15 @@ There's a clear bijection $V_f \riso \tilde{V}_f$.
 \subsubsection{Regular Maps}
 
 \begin{definition}[Regular Map]
-For embedded algebraic varieties $V \subseteq \mbb{F}^n$ and $W \subseteq \mbb{F}^m$, a \emph{morphism} $\varphi \colon V \to W$, called also a \emph{regular map} is a map of the form
-\[\varphi\prs{x} = \prs{f_1\prs{x}, \ldots, f_m\prs{x}}\]
+For embedded algebraic varieties $V \subseteq \mbb{F}^n$ and $W \subseteq \mbb{F}^m$, a \emph{morphism} $\phi \colon V \to W$, called also a \emph{regular map} is a map of the form
+\[\phi\prs{x} = \prs{f_1\prs{x}, \ldots, f_m\prs{x}}\]
 for $\prs{f_i}_{i \in \brs{m}} \subseteq A_n$.
 \end{definition}
 
 \begin{example}
 The map
 \begin{align*}
-\varphi \colon \mbb{F}^2 &\to \mbb{F}^2
+\phi \colon \mbb{F}^2 &\to \mbb{F}^2
 \prs{x,y} &\mapsto \prs{xy,y} 
 \end{align*}
 is a regular map.
@@ -420,31 +420,31 @@ Regular functions on $V$ are of the form $\rest{f}{V}$ for $f \in A_n$. We can t
 \end{remark}
 
 \begin{definition}
-A regular map $\varphi \colon V \to W$ gives an $\mbb{F}$-algebra homomorphism
+A regular map $\phi \colon V \to W$ gives an $\mbb{F}$-algebra homomorphism
 \begin{align*}
-\varphi^* \colon \mbb{F}\brs{W} &\to \mbb{F}\prs{V} \\
-f &\mapsto \varphi \text{.}
+\phi^* \colon \mbb{F}\brs{W} &\to \mbb{F}\prs{V} \\
+f &\mapsto \phi \text{.}
 \end{align*}
 \end{definition}
 
 \begin{remark}
-Sending every $V$ to $\mbb{F}\brs{V}$ and every $\varphi$ to $\varphi^*$ is a contravariant functor from the category of embedded algebraic varieties to that of finite-dimensional $\mbb{F}$-algebras.
+Sending every $V$ to $\mbb{F}\brs{V}$ and every $\phi$ to $\phi^*$ is a contravariant functor from the category of embedded algebraic varieties to that of finite-dimensional $\mbb{F}$-algebras.
 \end{remark}
 
 \begin{exercise}
 \begin{enumerate}
 \item Consider regular maps
 \begin{align*}
-\varphi_1,\varphi_2 \colon V \to W
+\phi_1,\phi_2 \colon V \to W
 \end{align*}
-such that $\varphi_1^* = \varphi_2^*$. Show that $\varphi_1 = \varphi_2$.
+such that $\phi_1^* = \phi_2^*$. Show that $\phi_1 = \phi_2$.
 
-\item Show that if $\varphi \colon V \to W$ is a regular map such that $\varphi^*$ is an isomorphism, $\varphi$ is also an isomorphism.
+\item Show that if $\phi \colon V \to W$ is a regular map such that $\phi^*$ is an isomorphism, $\phi$ is also an isomorphism.
 \end{enumerate}
 \end{exercise}
 
 \begin{exercise}
-Let $\varphi \colon V \to W$ be a regular map, and assume $V$ is irreducible. Show that $\overline{\varphi\prs{V}}$ is irreducible. 
+Let $\phi \colon V \to W$ be a regular map, and assume $V$ is irreducible. Show that $\overline{\phi\prs{V}}$ is irreducible. 
 \end{exercise}
 
 \subsubsection{Revising Affine $\mbb{F}$-Varieties}
@@ -477,15 +477,15 @@ If we require that this map is injective, we get an equivalent definition to tha
 \end{remark}
 
 \begin{definition}[Regular Maps]
-Let $\prs{X,A}$ and $\prs{Y,B}$ be affine $\mbb{F}$-varieties. A \emph{regular map} $\varphi \colon \prs{X,A} \to \prs{Y,B}$ is a map of sets $\varphi \colon X \to Y$ such that for every $f \in B$ it holds that $f \circ \varphi \in A$. 
+Let $\prs{X,A}$ and $\prs{Y,B}$ be affine $\mbb{F}$-varieties. A \emph{regular map} $\phi \colon \prs{X,A} \to \prs{Y,B}$ is a map of sets $\phi \colon X \to Y$ such that for every $f \in B$ it holds that $f \circ \phi \in A$. 
 \end{definition}
 
 \begin{definition}[Regular Isomorphism]
-A regular map $\varphi \colon \prs{X,A} \to \prs{Y,B}$ is an \emph{isomorphism} if there's $\psi \colon \prs{Y,B} \to \prs{X,A}$ such that $\varphi \circ \psi = \id$ and $\psi \circ \varphi = \id$.
+A regular map $\phi \colon \prs{X,A} \to \prs{Y,B}$ is an \emph{isomorphism} if there's $\psi \colon \prs{Y,B} \to \prs{X,A}$ such that $\phi \circ \psi = \id$ and $\psi \circ \phi = \id$.
 \end{definition}
 
 \begin{remark}
-Every homomorphism $\alpha \colon B \to A$ gives a regular map $\varphi \colon X \to Y$ by sending $x$ to the $y \in Y$ for which $\ev_x \circ \alpha = \ev_Y$.
+Every homomorphism $\alpha \colon B \to A$ gives a regular map $\phi \colon X \to Y$ by sending $x$ to the $y \in Y$ for which $\ev_x \circ \alpha = \ev_Y$.
 \end{remark}
 
 \begin{proposition}
@@ -506,20 +506,20 @@ so $x \in V$.
 \begin{remark}
 Let $\prs{X,A}$ be an affine $\mbb{F}$-variety. Write $A \cong A_n / I$ and $\pi \colon A_n \riso A_n/I$ the quotient map, and define a map
 \begin{align*}
-\varphi \colon X &\to \mbb{F}^n \\
+\phi \colon X &\to \mbb{F}^n \\
 x &\mapsto \prs{\ev_x \circ \pi\prs{x_i}}_{i \in \brs{n}} \text{.}
 \end{align*}
-Now $I = \ker\prs{\pi} \subseteq \ker\prs{\ev_p}$ for all $p \in \varphi\prs{X}$, so $I \subseteq I\prs{\varphi\prs{X}}$.
-In the other direction, if $f \in I\prs{\varphi\prs{X}}$ then $\ev_x\prs{\pi\prs{f}}$ for all $x \in X$. Therefore $\pi\prs{f} = 0$ so $I\prs{\varphi\prs{X}} \subseteq \ker\prs{\pi} = I$.
-Then $A \cong A_n / I\prs{\varphi\prs{X}} = \mbb{F}\brs{\varphi\prs{X}}$.
+Now $I = \ker\prs{\pi} \subseteq \ker\prs{\ev_p}$ for all $p \in \phi\prs{X}$, so $I \subseteq I\prs{\phi\prs{X}}$.
+In the other direction, if $f \in I\prs{\phi\prs{X}}$ then $\ev_x\prs{\pi\prs{f}}$ for all $x \in X$. Therefore $\pi\prs{f} = 0$ so $I\prs{\phi\prs{X}} \subseteq \ker\prs{\pi} = I$.
+Then $A \cong A_n / I\prs{\phi\prs{X}} = \mbb{F}\brs{\phi\prs{X}}$.
 Then
-$\prs{X,A} \cong \prs{\varphi\prs{X}, \mbb{F}\brs{\varphi\prs{X}}}$.
+$\prs{X,A} \cong \prs{\phi\prs{X}, \mbb{F}\brs{\phi\prs{X}}}$.
 
-We want $\varphi\prs{X}$ to be closed, which we explain later.
+We want $\phi\prs{X}$ to be closed, which we explain later.
 \end{remark}
 
 \begin{exercise}
-Check that $\varphi$ in the above remark is injective.
+Check that $\phi$ in the above remark is injective.
 \end{exercise}
 
 \begin{definition}[Zariski Topology on an Affine $\mbb{F}$-Variety]
@@ -541,6 +541,78 @@ Elements of
 $\hom_{\mbb{F}\mathbf{-Alg}}\prs{A/I\prs{Y}, \mbb{F}}$
 are elements of $\hom\prs{A,\mbb{F}} \cong X$ that vanish on $I\prs{Y}$. These are exactly $V\prs{I\prs{Y}} \cong Y$.
 \end{remark}
+
+\begin{definition}[Closed Embedding]
+A regular map $\phi \colon \prs{X,A} \to \prs{Y,B}$ is called a \emph{closed embedding} if $\im\phi$ is closed and $\rest{\phi}{X}$ is a regular isomorphism.
+\end{definition}
+
+\begin{remark}
+Requiring that $\phi$ is injective would not suffice. Consider
+\begin{align*}
+\phi \colon \mbb{F}_p &\to \mbb{F}_p \\
+x &\mapsto x^p \text{.}
+\end{align*}
+We have
+\begin{align*}
+\phi^* \colon \mbb{F}_p\brs{x} &\to \mbb{F}_p\brs{x} \\
+x &\mapsto x^p \text{,}
+\end{align*}
+which isn't surjective. Hence $\phi$ isn't an isomorphism.
+\end{remark}
+
+\begin{proposition}
+Let $\phi \colon \prs{X,A} \to \prs{Y,B}$. $\phi$ is a closed embedding if and only if $\phi^* \colon \mbb{F}\brs{Y} \to \mbb{F}\brs{X}$ is surjective.
+\end{proposition}
+
+\begin{proof}
+\begin{itemize}
+\item Assume $\phi$ is a closed embedding. Consider the inclusion $i \colon \phi\prs{X} \to Y$ and write $\phi = i \circ \phi_0$. Then $\phi^* = \phi_0^* \circ i^*$. $\phi_0^*$ is an isomorphism, hence $\phi_0$ is an isomorphism. We're left to show that $i^*$ is surjective.
+$\phi\prs{X} \subseteq Y$ is closed and $i^*$ is the quotient map from $\mbb{F}\brs{Y}$ to $\mbb{F}\brs{\phi\prs{X}}$, hence we get the result.
+
+\item
+Assume $\phi^*$ is surjective. We show that $\phi\prs{X} = V\prs{\ker\prs{\phi^*}}$ and $\ker\prs{\phi^*} = I\prs{\phi\prs{X}}$.
+
+\begin{description}
+\item[$\phi\prs{X} = V\prs{\ker\prs{\phi^*}}$:]
+Let $f \in \ker\prs{\phi^*} \subseteq \mbb{F}\brs{Y}$. For every $x \in X$ we have
+\[\ev_{\phi\prs{x}}\prs{f} = \ev_x \prs{\phi^*\prs{f}} = \ev_x\prs{0} = 0\text{.}\]
+Hence $f \in I\prs{\phi\prs{X}}$. Hence $\ker\prs{\phi^*} \subseteq I\prs{\phi\prs{X}}$ so
+$\phi\prs{X} \subseteq V\prs{\ker\prs{\phi^*}}$.
+
+In the other direction, let $y \in V\prs{\ker\prs{\phi^*}}$. Then $\rest{\ev_y}{\ker\prs{\phi^*}} = 0$. Then $\ev_y \colon \mbb{F}\brs{Y} \to \mbb{F}$ factors through $\lambda \colon \mbb{F}\brs{X} \to \mbb{F}$ where $\lambda = \ev_y \circ \phi^*$. Hence there's $x \in X$ such that $\lambda = \ev_x$. Hence $y = \varphi\prs{x} \in \phi\prs{X}$ so $V\prs{\ker\prs{\phi^*}} \subseteq \phi\prs{X}$.
+
+\item[$\ker\prs{\phi^*} = I\prs{\phi\prs{X}}$:]
+We saw one inclusion in the previous part. Let $f \in I\prs{\phi\prs{X}}$, we have to show $f \in \ker\prs{\phi^*}$. Indeed, $\varphi^*\prs{f} = f \circ \phi = 0$.
+\end{description}
+\end{itemize}
+\end{proof}
+
+\subsubsection{Back to Algebraic Groups}
+
+In order to define affine algebraic groups, we want the product and inverse maps to be regular. For that, we need to define the product variety. This structure comes from tensor products of $\mbb{F}$-algebras.
+
+Let $\prs{X,A}, \prs{Y,B}$ be affine $\mbb{F}$-varieties. We have an embedding
+\begin{align*}
+\iota \colon A \otimes B &\to \hom_{\mathbf{Set}}\prs{X \times Y, F} \\
+f \otimes g &\mapsto \prs{\prs{x,y} \mapsto f\prs{x} \cdot g\prs{y}} \text{.}
+\end{align*}
+We show this is injective.
+Let $f_1, \ldots, f_k \in A$ linearly independent and $g_1, \ldots, g_\ell \in B$ linearly independent. Using properties of tensor products, we show that for $F = \sum_{\substack{i \in [k] \\ j \in [\ell]}} a_{i,j} f_i \otimes g_j$ such that $\iota\prs{F} = 0$ it holds that $F = 0$.
+Indeed, for $y \in Y$ define
+\[b_i\prs{y} = \sum_{j \in \brs{\ell}} a_{i,j} g_j\prs{y} \text{.}\]
+Then
+\[0 = \iota\prs{F} \prs{x,y} = \sum_{i \in \brs{k}} b_i\prs{y} f_i\prs{x}\]
+for all $x \in X$. Hence
+\[\sum_{i \in [k]} b_i\prs{y} f_i = 0\]
+so for every $i \in [k]$ we have $b_i\prs{y} = 0$. Hence
+\begin{align*}
+0 = b_i = \sum_{j \in \brs{\ell}} a_{i,j} g_j \in B
+\end{align*}
+so $a_{i,j} = 0$ for every $i \in \brs{k}$ and $j \in \brs{\ell}$.
+
+\begin{definition}[$\mbb{F}$-Algebraic Group]
+An \emph{$\mbb{F}$-algebraic group} $G$ is an $\mbb{F}$-affine variety such that the product and inverse maps are regular.
+\end{definition}
 
 \backmatter
 \end{document}

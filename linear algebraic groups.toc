@@ -14,3 +14,4 @@
 \contentsline {subsubsection}{Embedded $\mathbb {F}$-Affine Varieties}{4}{section*.12}%
 \contentsline {subsubsection}{Regular Maps}{6}{section*.13}%
 \contentsline {subsubsection}{Revising Affine $\mathbb {F}$-Varieties}{6}{section*.14}%
+\contentsline {subsubsection}{Back to Algebraic Groups}{8}{section*.15}%
