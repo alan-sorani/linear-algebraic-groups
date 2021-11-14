@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.6.28) (preloaded format=xelatex 2021.11.4)  11 NOV 2021 11:21
+This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.6.28) (preloaded format=xelatex 2021.11.4)  14 NOV 2021 16:00
 entering extended mode
 **"./linear algebraic groups.tex"
 (linear algebraic groups.tex
@@ -1930,10 +1930,10 @@ ed.
 Here is how much of TeX's memory you used:
  34382 strings out of 411254
  710558 string characters out of 2828529
- 1275801 words of memory out of 3000000
+ 1277801 words of memory out of 3000000
  54256 multiletter control sequences out of 15000+600000
  410223 words of font info for 92 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 117i,20n,122p,624b,680s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 117i,20n,122p,624b,634s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on linear algebraic groups.pdf (16 pages).
