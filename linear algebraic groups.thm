@@ -58,36 +58,47 @@
 \contentsline {remark}{{Remark}{1.1.{31}}{}}{7}{theoremx.1.1.31}%
 \contentsline {proposition}{{Proposition}{1.1.{32}}{}}{8}{theoremx.1.1.32}%
 \contentsline {proof}{{Proof}{5}{}}{8}{proof.5}%
-\contentsline {definitionx}{{Definition}{1.1.{33}}{$\mbb {F}$-Algebraic Group}}{8}{theoremx.1.1.33}%
+\contentsline {definitionx}{{Definition}{1.2.{1}}{$\mbb {F}$-Algebraic Group}}{8}{theoremx.1.2.1}%
 \contentsline {exercise}{{Exercise}{12}{}}{8}{exercise.12}%
-\contentsline {remark}{{Remark}{1.1.{34}}{}}{9}{theoremx.1.1.34}%
-\contentsline {proposition}{{Proposition}{1.1.{35}}{}}{9}{theoremx.1.1.35}%
+\contentsline {remark}{{Remark}{1.2.{2}}{}}{9}{theoremx.1.2.2}%
+\contentsline {proposition}{{Proposition}{1.2.{3}}{}}{9}{theoremx.1.2.3}%
 \contentsline {proof}{{Proof}{6}{}}{9}{proof.6}%
-\contentsline {definitionx}{{Definition}{1.1.{36}}{}}{9}{theoremx.1.1.36}%
+\contentsline {definitionx}{{Definition}{1.2.{4}}{}}{9}{theoremx.1.2.4}%
 \contentsline {exercise}{{Exercise}{13}{}}{9}{exercise.13}%
-\contentsline {proposition}{{Proposition}{1.1.{37}}{}}{9}{theoremx.1.1.37}%
+\contentsline {proposition}{{Proposition}{1.2.{5}}{}}{9}{theoremx.1.2.5}%
 \contentsline {proof}{{Proof}{7}{}}{10}{proof.7}%
 \contentsline {example}{{Example}{13}{}}{10}{example.13}%
 \contentsline {example}{{Example}{14}{}}{10}{example.14}%
 \contentsline {example}{{Example}{15}{}}{10}{example.15}%
-\contentsline {definitionx}{{Definition}{1.1.{38}}{$\mbb {F}$-Affine $G$-Space}}{10}{theoremx.1.1.38}%
+\contentsline {definitionx}{{Definition}{1.2.{6}}{$\mbb {F}$-Affine $G$-Space}}{10}{theoremx.1.2.6}%
 \contentsline {example}{{Example}{16}{}}{10}{example.16}%
-\contentsline {proposition}{{Proposition}{1.1.{39}}{}}{11}{theoremx.1.1.39}%
+\contentsline {proposition}{{Proposition}{1.2.{7}}{}}{11}{theoremx.1.2.7}%
 \contentsline {proof}{{Proof}{8}{}}{11}{proof.8}%
-\contentsline {proposition}{{Proposition}{1.1.{40}}{}}{12}{theoremx.1.1.40}%
+\contentsline {proposition}{{Proposition}{1.2.{8}}{}}{12}{theoremx.1.2.8}%
 \contentsline {proof}{{Proof}{9}{}}{12}{proof.9}%
-\contentsline {remark}{{Remark}{1.1.{41}}{}}{12}{theoremx.1.1.41}%
+\contentsline {remark}{{Remark}{1.2.{9}}{}}{12}{theoremx.1.2.9}%
 \contentsline {example}{{Example}{17}{}}{13}{example.17}%
 \contentsline {example}{{Example}{18}{}}{13}{example.18}%
-\contentsline {definitionx}{{Definition}{1.1.{42}}{Dominant Regular Map}}{13}{theoremx.1.1.42}%
-\contentsline {proposition}{{Proposition}{1.1.{43}}{}}{13}{theoremx.1.1.43}%
+\contentsline {definitionx}{{Definition}{1.2.{10}}{Dominant Regular Map}}{13}{theoremx.1.2.10}%
+\contentsline {proposition}{{Proposition}{1.2.{11}}{}}{13}{theoremx.1.2.11}%
 \contentsline {proof}{{Proof}{10}{}}{13}{proof.10}%
-\contentsline {theoremx}{{Theorem}{1.1.{44}}{}}{13}{theoremx.1.1.44}%
-\contentsline {theoremx}{{Theorem}{1.1.{45}}{}}{13}{theoremx.1.1.45}%
+\contentsline {theoremx}{{Theorem}{1.2.{12}}{}}{13}{theoremx.1.2.12}%
+\contentsline {theoremx}{{Theorem}{1.2.{13}}{}}{13}{theoremx.1.2.13}%
 \contentsline {example}{{Example}{19}{}}{13}{example.19}%
-\contentsline {definitionx}{{Definition}{1.1.{46}}{Reduced Ring}}{13}{theoremx.1.1.46}%
+\contentsline {definitionx}{{Definition}{1.2.{14}}{Reduced Ring}}{13}{theoremx.1.2.14}%
 \contentsline {lemma}{{Lemma}{1}{}}{13}{lemma.1}%
-\contentsline {example}{{Example}{20}{}}{13}{example.20}%
-\contentsline {corollary}{{Corollary}{1.1.{47}}{}}{13}{theoremx.1.1.47}%
-\contentsline {proposition}{{Proposition}{1.1.{48}}{}}{14}{theoremx.1.1.48}%
-\contentsline {proof}{{Proof}{11}{}}{14}{proof.11}%
+\contentsline {proof}{{Proof}{11}{}}{13}{proof.11}%
+\contentsline {example}{{Example}{20}{}}{14}{example.20}%
+\contentsline {corollary}{{Corollary}{1.2.{15}}{}}{14}{theoremx.1.2.15}%
+\contentsline {proposition}{{Proposition}{1.2.{16}}{}}{14}{theoremx.1.2.16}%
+\contentsline {proof}{{Proof}{12}{}}{14}{proof.12}%
+\contentsline {proof}{{Proof}{13}{\ref {theorem:nonempty_interior}}}{15}{proof.13}%
+\contentsline {proposition}{{Proposition}{1.2.{17}}{}}{15}{theoremx.1.2.17}%
+\contentsline {proof}{{Proof}{14}{}}{15}{proof.14}%
+\contentsline {proposition}{{Proposition}{1.2.{18}}{}}{15}{theoremx.1.2.18}%
+\contentsline {proof}{{Proof}{15}{}}{15}{proof.15}%
+\contentsline {definitionx}{{Definition}{1.2.{19}}{}}{16}{theoremx.1.2.19}%
+\contentsline {remark}{{Remark}{1.2.{20}}{}}{16}{theoremx.1.2.20}%
+\contentsline {remark}{{Remark}{1.2.{21}}{}}{16}{theoremx.1.2.21}%
+\contentsline {proposition}{{Proposition}{1.2.{22}}{}}{16}{theoremx.1.2.22}%
+\contentsline {proof}{{Proof}{16}{}}{16}{proof.16}%

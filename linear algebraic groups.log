@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.6.28) (preloaded format=xelatex 2021.11.4)  17 NOV 2021 10:31
+This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.6.28) (preloaded format=xelatex 2021.11.4)  18 NOV 2021 11:19
 entering extended mode
 **"./linear algebraic groups.tex"
 (linear algebraic groups.tex
@@ -1917,16 +1917,23 @@ Overfull \hbox (8.74261pt too wide) in paragraph at lines 475--477
 
 [6] [7] [8] [9] [10] [11] [12]
 Package hyperref Info: bookmark level for unknown lemma defaults to 0 on input 
-line 950.
+line 956.
+ [13]
+Overfull \hbox (0.15025pt too wide) in paragraph at lines 980--982
+\TU/CMUSerif(0)/m/n/10 Since the left-hand-side is of degree $\OT1/cmr/m/n/10 0
+$\TU/CMUSerif(0)/m/n/10 , the right-hand side is a constant polynomial. But, $[
+] [] [] \OT1/cmr/m/n/10 =
+ []
 
-Overfull \hbox (13.69067pt too wide) in paragraph at lines 955--956
+
+Overfull \hbox (13.69067pt too wide) in paragraph at lines 1013--1014
 []\TU/CMUSerif(0)/m/n/10 In the previous example, take $\OML/cmm/m/it/10 A [][]
 \OT1/cmr/m/n/10 = \U/msb/m/n/10 F []$ \TU/CMUSerif(0)/m/n/10 and $\OML/cmm/m/it
 /10 B [][]\OT1/cmr/m/n/10 = \U/msb/m/n/10 F []$\TU/CMUSerif(0)/m/n/10 . Then $\
 OML/cmm/m/it/10 B [] A [] \OT1/cmr/m/n/10 / []$\TU/CMUSerif(0)/m/n/10 .
  []
 
-[13] [14]
+[14] [15] [16]
 \tf@thm=\write7
 \openout7 = `"linear algebraic groups.thm"'.
 
@@ -1939,12 +1946,12 @@ ed.
 (rerunfilecheck)             Checksum: <no file>.
  ) 
 Here is how much of TeX's memory you used:
- 34385 strings out of 411254
- 710618 string characters out of 2828529
+ 34390 strings out of 411254
+ 710709 string characters out of 2828529
  1277801 words of memory out of 3000000
- 54259 multiletter control sequences out of 15000+600000
+ 54264 multiletter control sequences out of 15000+600000
  410223 words of font info for 92 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  117i,20n,122p,624b,634s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on linear algebraic groups.pdf (18 pages).
+Output written on linear algebraic groups.pdf (20 pages).
