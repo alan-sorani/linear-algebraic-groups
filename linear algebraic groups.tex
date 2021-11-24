@@ -579,10 +579,10 @@ Let $f \in \ker\prs{\phi^*} \subseteq \mbb{F}\brs{Y}$. For every $x \in X$ we ha
 Hence $f \in I\prs{\phi\prs{X}}$. Hence $\ker\prs{\phi^*} \subseteq I\prs{\phi\prs{X}}$ so
 $\phi\prs{X} \subseteq V\prs{\ker\prs{\phi^*}}$.
 
-In the other direction, let $y \in V\prs{\ker\prs{\phi^*}}$. Then $\rest{\ev_y}{\ker\prs{\phi^*}} = 0$. Then $\ev_y \colon \mbb{F}\brs{Y} \to \mbb{F}$ factors through $\lambda \colon \mbb{F}\brs{X} \to \mbb{F}$ where $\lambda = \ev_y \circ \phi^*$. Hence there's $x \in X$ such that $\lambda = \ev_x$. Hence $y = \varphi\prs{x} \in \phi\prs{X}$ so $V\prs{\ker\prs{\phi^*}} \subseteq \phi\prs{X}$.
+In the other direction, let $y \in V\prs{\ker\prs{\phi^*}}$. Then $\rest{\ev_y}{\ker\prs{\phi^*}} = 0$. Then $\ev_y \colon \mbb{F}\brs{Y} \to \mbb{F}$ factors through $\lambda \colon \mbb{F}\brs{X} \to \mbb{F}$ where $\lambda = \ev_y \circ \phi^*$. Hence there's $x \in X$ such that $\lambda = \ev_x$. Hence $y = \phi\prs{x} \in \phi\prs{X}$ so $V\prs{\ker\prs{\phi^*}} \subseteq \phi\prs{X}$.
 
 \item[$\ker\prs{\phi^*} = I\prs{\phi\prs{X}}$:]
-We saw one inclusion in the previous part. Let $f \in I\prs{\phi\prs{X}}$, we have to show $f \in \ker\prs{\phi^*}$. Indeed, $\varphi^*\prs{f} = f \circ \phi = 0$.
+We saw one inclusion in the previous part. Let $f \in I\prs{\phi\prs{X}}$, we have to show $f \in \ker\prs{\phi^*}$. Indeed, $\phi^*\prs{f} = f \circ \phi = 0$.
 \end{description}
 \end{itemize}
 \end{proof}
@@ -636,16 +636,16 @@ Consider $\mbb{F} = \overline{\mbb{F}_p}$ and take $X = \mbb{F}$. We have
 \end{align*}
 and the map
 \begin{align*}
-\varphi \colon \mbb{F} &\to \mbb{F} \\
+\phi \colon \mbb{F} &\to \mbb{F} \\
 v &\mapsto v^p
 \end{align*}
 is bijective (check this).
 The map
 \begin{align*}
-\varphi^* \colon \mbb{F}\brs{x} &\to \mbb{F}\brs{x} \\
+\phi^* \colon \mbb{F}\brs{x} &\to \mbb{F}\brs{x} \\
 x &\mapsto x^p
 \end{align*}
-isn't surjective, so $\varphi$ isn't an isomorphism!
+isn't surjective, so $\phi$ isn't an isomorphism!
 \end{enumerate}
 \end{remark}
 
@@ -756,7 +756,7 @@ which is connected. Then there's \[g = \pmat{0 & 1 \\ 1 & 0} \in \mrm{O}_2\prs{\
 
 \subsubsection{Group Actions}
 
-We want to show that every $\mbb{F}$-algebraic group is isomorphic to a closed subgroup of $\mrm{GL}_n\prs{\mbb{F}}$. To every $G$, we later find a rational representation $\varphi \colon G \to \mrm{GL}_n\prs{\mbb{F}}$ (i.e. with $\varphi$ regular) such that $\varphi$ is a closed embedding.
+We want to show that every $\mbb{F}$-algebraic group is isomorphic to a closed subgroup of $\mrm{GL}_n\prs{\mbb{F}}$. To every $G$, we later find a rational representation $\phi \colon G \to \mrm{GL}_n\prs{\mbb{F}}$ (i.e. with $\phi$ regular) such that $\phi$ is a closed embedding.
 For this, we look at actions of algebraic groups.
 
 \begin{definition}[$\mbb{F}$-Affine $G$-Space]
@@ -801,7 +801,7 @@ g \circ f = \prs{\ev_{g^{-1}} \otimes \id}\prs{a^*\prs{f}} \text{.}
 \begin{align*}
 a^*\prs{V} \subseteq \mbb{F}\brs{G} \otimes V \text{,}
 \end{align*}
-and the resulting homomorphism $\varphi \colon G \to \mrm{GL}\prs{V}$ is regular (given any choice of basis for $V$).
+and the resulting homomorphism $\phi \colon G \to \mrm{GL}\prs{V}$ is regular (given any choice of basis for $V$).
 
 \item For every finite-dimensional $W \subseteq \mbb{F}\brs{X}$ there's $V \subseteq \mbb{F}\brs{X}$ which contains $W$ and is $G$-invariant.
 \end{enumerate}
@@ -827,11 +827,11 @@ By linear independency we get $u_i\prs{g} = 0$ for all $i$, so $u_i \equiv 0$.
 Hence $a^*\prs{f} \in \mbb{F}\brs{G} \otimes V$.
 
 Choose a basis $\prs{f_1, \ldots, f_n}$ for $V$. We get $a^*\prs{f_i} = \sum_{j \in [n]} m_{j,i} f_j$ for $m_{i,j} \in \mbb{F}\brs{G} \otimes V$.
-If we look at the action of $G$ on $V$ and write the map $\varphi \colon G \to \mrm{GL}_n\prs{\mbb{F}}$ given by choosing the basis $\prs{f_1, \ldots, f_n}$, we get
-\[\varphi\prs{g} = \prs{m_{j,i} \prs{g^{-1}}}\]
+If we look at the action of $G$ on $V$ and write the map $\phi \colon G \to \mrm{GL}_n\prs{\mbb{F}}$ given by choosing the basis $\prs{f_1, \ldots, f_n}$, we get
+\[\phi\prs{g} = \prs{m_{j,i} \prs{g^{-1}}}\]
 and
 \[g \cdot f_i = \sum_{j \in [k]} m_{j,i} \prs{g^{-1}} f_j \text{.}\]
-Then, the matrix coefficients of $\varphi\prs{g}$ are given by regular functions.
+Then, the matrix coefficients of $\phi\prs{g}$ are given by regular functions.
 
 \item Take a basis $\prs{h_1, \ldots, h_k}$ of $W$ and examine the finite sum
 $a^*\prs{h_i} = \sum_j u_j \otimes f_{i_j}$.
@@ -845,18 +845,18 @@ is a $G$-invariant subspace.
 \end{proof}
 
 \begin{proposition}
-Let $G$ be an $\mbb{F}$-algebraic group. There's a regular homomorphism $\varphi \colon G \to \mrm{GL}_n\prs{\mbb{F}}$ which is a closed embedding.
+Let $G$ be an $\mbb{F}$-algebraic group. There's a regular homomorphism $\phi \colon G \to \mrm{GL}_n\prs{\mbb{F}}$ which is a closed embedding.
 \end{proposition}
 
 \begin{proof}
 Consider the right action of $G$ on itself. Take generators $f_1, \ldots, f_k \in \mbb{F}\brs{G}$ of the $\mbb{F}$-algebra $\mbb{F}\brs{G}$. From the previous proposition, there's a finite-dimensional $G$-invariant $V \subseteq \mbb{F}\brs{G}$ under the induced action on $\mbb{F}\brs{G}$, which contains each $f_i$.
 
-Choose a basis $\prs{e_1, \ldots, e_n}$ of $V$. We get a homomorphism $\varphi \colon G \to \mrm{GL}_n\prs{\mbb{F}} \cong \mrm{GL}\prs{V}$ as in the previous proposition. We want to show that
+Choose a basis $\prs{e_1, \ldots, e_n}$ of $V$. We get a homomorphism $\phi \colon G \to \mrm{GL}_n\prs{\mbb{F}} \cong \mrm{GL}\prs{V}$ as in the previous proposition. We want to show that
 \begin{align*}
-\varphi^* \colon \mbb{F}\brs{\mrm{GL}_n\prs{\mbb{F}}} \to \mbb{F}\brs{G}
+\phi^* \colon \mbb{F}\brs{\mrm{GL}_n\prs{\mbb{F}}} \to \mbb{F}\brs{G}
 \end{align*}
 is surjective.
-We may assume $\varphi\prs{g} = \prs{m_{j,i}\prs{g^{-1}}}$ for $m_{i,j} \in \mbb{F}\brs{G}$ for which
+We may assume $\phi\prs{g} = \prs{m_{j,i}\prs{g^{-1}}}$ for $m_{i,j} \in \mbb{F}\brs{G}$ for which
 \begin{align*}
 \forall x,g \in G \colon e_i\prs{xg} = \sum_j m_{j,i}\prs{g^{-1}} e_j\prs{x} \text{.}
 \end{align*}
@@ -868,72 +868,72 @@ Write $\tilde{m}_{i,j}\prs{g} = m_{j,i}\prs{g^{-1}}$.
 Then
 \[e_i = \sum_j e_j\prs{e} \tilde{m}_{j,i} \in \mbb{F}\brs{G}\]
 but
-$\tilde{m}_{i,j} = \varphi^*\prs{T_{i,j}}$.
-Hence $e_i \in \im\prs{\varphi}$.
-Hence $f_j \in \im\prs{\varphi^*}$ and these generate $\mbb{F}\brs{G}$ so $\im\prs{\varphi^*} = \mbb{F}\brs{G}$.
+$\tilde{m}_{i,j} = \phi^*\prs{T_{i,j}}$.
+Hence $e_i \in \im\prs{\phi}$.
+Hence $f_j \in \im\prs{\phi^*}$ and these generate $\mbb{F}\brs{G}$ so $\im\prs{\phi^*} = \mbb{F}\brs{G}$.
 \end{proof}
 
-Consider a homomorphism $\varphi \colon G \to H$ of $\mbb{F}$-algebraic groups. The kernel $\ker\prs{\varphi} = \varphi^{-1}\prs{e} \leq G$ is a closed subgroup of $G$. A question we would like to ask whether or not $\im\prs{\varphi}$ is closed. This happens to be true when $\mbb{F}$ is algebraically-closed, but requires use of an intricate result in algebraic geometry.
+Consider a homomorphism $\phi \colon G \to H$ of $\mbb{F}$-algebraic groups. The kernel $\ker\prs{\phi} = \phi^{-1}\prs{e} \leq G$ is a closed subgroup of $G$. A question we would like to ask whether or not $\im\prs{\phi}$ is closed. This happens to be true when $\mbb{F}$ is algebraically-closed, but requires use of an intricate result in algebraic geometry.
 
 \begin{remark}
 In Lie groups, the situation is different than that mentioned above. Consider the map
 \begin{align*}
-\varphi \colon \mbb{R} &\to \mrm{GL}_4\prs{\mbb{R}} \\
+\phi \colon \mbb{R} &\to \mrm{GL}_4\prs{\mbb{R}} \\
 \theta &\mapsto \pmat{\cos \theta & \sin \theta  & 0 & 0 \\ -\sin \theta & \cos \theta & 0 & 0 \\ 0 & 0 & \cos\prs{\alpha \theta} & \sin\prs{\alpha \theta} \\ 0 & 0 & -\sin\prs{\alpha \theta} & \cos\prs{\alpha \theta}} \text{.}
 \end{align*}
-If $\alpha / 2 \pi$ is irrational, this is an embedding of $\mbb{R}$ which isn't closed. Moreover, $\im\varphi$ has an empty interior.
+If $\alpha / 2 \pi$ is irrational, this is an embedding of $\mbb{R}$ which isn't closed. Moreover, $\im\phi$ has an empty interior.
 \end{remark}
 
-We later show that if $\varphi \colon X \to Y$ is regular between $\mbb{F}$-affine varieties and $\mbb{F}$ is algebraically-closed, there's an open $U \subseteq \overline{\varphi\prs{X}}$ such that $U \subseteq \varphi\prs{X}$.
+We later show that if $\phi \colon X \to Y$ is regular between $\mbb{F}$-affine varieties and $\mbb{F}$ is algebraically-closed, there's an open $U \subseteq \overline{\phi\prs{X}}$ such that $U \subseteq \phi\prs{X}$.
 
 \begin{example}
 Consider $X \coloneqq \set{\prs{x,y} \in \mbb{F}^2}{xy = 1}$ and the map
 \begin{align*}
-\varphi \colon X &\to \mbb{F} \\
+\phi \colon X &\to \mbb{F} \\
 \prs{x,y} &\mapsto x \text{.}
 \end{align*}
-The image $\im\prs{\varphi} = \mbb{F} \setminus \set{0}$ is dense, non-closed and open.
+The image $\im\prs{\phi} = \mbb{F} \setminus \set{0}$ is dense, non-closed and open.
 \end{example}
 
 \begin{example}
 Consider
 \begin{align*}
-\varphi \colon \mrm{GL}_1\prs{\mbb{R}} \to \mrm{GL}_1\prs{\mbb{R}} \\
+\phi \colon \mrm{GL}_1\prs{\mbb{R}} \to \mrm{GL}_1\prs{\mbb{R}} \\
 x &\mapsto x^2 \text{.}
 \end{align*}
-We have $\im\prs{\varphi} = \set{y \in \mbb{R}}{y > 0}$ which is (Zariski) dense in $\mrm{GL}_1\prs{\mbb{R}}$ but doesn't contain an open set.
+We have $\im\prs{\phi} = \set{y \in \mbb{R}}{y > 0}$ which is (Zariski) dense in $\mrm{GL}_1\prs{\mbb{R}}$ but doesn't contain an open set.
 \end{example}
 
 \begin{definition}[Dominant Regular Map]
-Let $\varphi \colon X \to Y$ be a regular map between $\mbb{F}$-affine varieties. We say $\varphi$ is \emph{dominant} if $\overline{\varphi\prs{X}} = Y$.
+Let $\phi \colon X \to Y$ be a regular map between $\mbb{F}$-affine varieties. We say $\phi$ is \emph{dominant} if $\overline{\phi\prs{X}} = Y$.
 \end{definition}
 
 \subsubsection{Algebraic Interlude}
 
 \begin{proposition}\label{proposition:dominant-injective}
-$\varphi \colon X \to Y$ is regular if and only if $\varphi^* \colon \mbb{F}\brs{Y} \to \mbb{F}\brs{X}$ is injective.
+$\phi \colon X \to Y$ is regular if and only if $\phi^* \colon \mbb{F}\brs{Y} \to \mbb{F}\brs{X}$ is injective.
 \end{proposition}
 
 \begin{proof}
-Assume $\varphi$ isn't dominant. We have $Z \coloneqq \overline{\varphi\prs{X}} \subsetneq Y$.
-Then there's $f \in \mbb{F}\brs{Y} \setminus 0$ such that $\rest{f}{Z} = 0$. Then $\varphi^*\prs{f} = 0$ so $\ker\prs{\varphi^*} \neq \prs{0}$ so $\varphi^*$ isn't injective.
+Assume $\phi$ isn't dominant. We have $Z \coloneqq \overline{\phi\prs{X}} \subsetneq Y$.
+Then there's $f \in \mbb{F}\brs{Y} \setminus 0$ such that $\rest{f}{Z} = 0$. Then $\phi^*\prs{f} = 0$ so $\ker\prs{\phi^*} \neq \prs{0}$ so $\phi^*$ isn't injective.
 
-Assume $\varphi^*$ isn't injective. Then $\ker\prs{\varphi^*} \neq \prs{0}$. Then there's $f \in \mbb{F}\brs{Y} \setminus 0$ such that $\varphi^*\prs{f} = 0$. Then $\varphi\prs{X} \subseteq V\prs{f} \subsetneq Y$ so $\varphi\prs{X}$ isn't dense, a contradiction.
+Assume $\phi^*$ isn't injective. Then $\ker\prs{\phi^*} \neq \prs{0}$. Then there's $f \in \mbb{F}\brs{Y} \setminus 0$ such that $\phi^*\prs{f} = 0$. Then $\phi\prs{X} \subseteq V\prs{f} \subsetneq Y$ so $\phi\prs{X}$ isn't dense, a contradiction.
 \end{proof}
 
 \begin{theorem}\label{theorem:nonempty_interior}
-Let $\varphi \colon X \to Y$ be a dominant regular map between $\mbb{F}$-affine varieties, for $\mbb{F}$ algebraically-closed.
-Then $\im\prs{\varphi}$ has non-empty interior.
+Let $\phi \colon X \to Y$ be a dominant regular map between $\mbb{F}$-affine varieties, for $\mbb{F}$ algebraically-closed.
+Then $\im\prs{\phi}$ has non-empty interior.
 \end{theorem}
 
 An equivalent statement is the following.
 
 \begin{theorem}
-Let $\varphi \colon X \to Y$ be a dominant regular map between $\mbb{F}$-affine varieties, for $\mbb{F}$ algebraically-closed. There's $f \in \mbb{F}\brs{Y} \setminus \set{0}$ such that $\ev_y\prs{f} \neq 0$ implies there's $x \in X$ for which $\ev_x \circ \varphi^* = \ev_y$.
+Let $\phi \colon X \to Y$ be a dominant regular map between $\mbb{F}$-affine varieties, for $\mbb{F}$ algebraically-closed. There's $f \in \mbb{F}\brs{Y} \setminus \set{0}$ such that $\ev_y\prs{f} \neq 0$ implies there's $x \in X$ for which $\ev_x \circ \phi^* = \ev_y$.
 \end{theorem}
 
 \begin{example}
-$\varphi \colon \mrm{GL}_1\prs{\mbb{F}} \to \mbb{F}$ sending $x \mapsto x$ gives a map $\varphi^* \colon \mbb{F}\brs{x} \to \mbb{F}\brs{x,x^{-1}}$.
+$\phi \colon \mrm{GL}_1\prs{\mbb{F}} \to \mbb{F}$ sending $x \mapsto x$ gives a map $\phi^* \colon \mbb{F}\brs{x} \to \mbb{F}\brs{x,x^{-1}}$.
 For $y \in \mbb{F} \setminus \set{0}$ we can lift $\ev_y$ to a homomorphism
 \begin{align*}
 \mbb{F}\brs{x,x^{-1}} &\to
@@ -1014,7 +1014,7 @@ In the previous example, take $A \coloneqq \mbb{F}\brs{x}$ and $B \coloneqq \mbb
 \end{example}
 
 \begin{corollary}
-Let $\varphi \colon G \to H$ be a homomorphism of algebraic groups over an algebraically-closed field $\mbb{F}$. Then $\im\prs{\varphi}$ is closed.
+Let $\phi \colon G \to H$ be a homomorphism of algebraic groups over an algebraically-closed field $\mbb{F}$. Then $\im\prs{\phi}$ is closed.
 \end{corollary}
 
 A generalization of the lemma is the following.
@@ -1050,14 +1050,14 @@ where $\tilde{\eps} = \eps' \circ \pi$. Hence $\eps\prs{b} \neq 0$.
 
 \begin{proof}[\ref{theorem:nonempty_interior}]
 \begin{itemize}
-\item If $X$ is irreducible, so is $Y$ and we get $\varphi^* \colon \mbb{F}\brs{X} \rmono \mbb{F}\brs{X}$. $X$ is irreducible, hence $\mbb{F}\brs{X}$ is an integral domain. From \ref{proposition:going_up} it follows that there's $f \in \mbb{F}\brs{Y} \setminus \set{0}$ such that for $\eps \colon \mbb{F}\brs{Y} \to \mbb{F}$ satisfying $\eps\prs{f} \neq 0$ there is a lift $\eps' \colon \mbb{F}\brs{x} \to \mbb{F}$.
+\item If $X$ is irreducible, so is $Y$ and we get $\phi^* \colon \mbb{F}\brs{X} \rmono \mbb{F}\brs{X}$. $X$ is irreducible, hence $\mbb{F}\brs{X}$ is an integral domain. From \ref{proposition:going_up} it follows that there's $f \in \mbb{F}\brs{Y} \setminus \set{0}$ such that for $\eps \colon \mbb{F}\brs{Y} \to \mbb{F}$ satisfying $\eps\prs{f} \neq 0$ there is a lift $\eps' \colon \mbb{F}\brs{x} \to \mbb{F}$.
 
-For $y \in Y$ with $\ev_y\prs{f} = f\prs{y} \neq 0$ we can find $\eps' \colon \mbb{F}\brs{X} \to \mbb{F}$ lifting $\ev_y$. But, $\eps' = \ev_x$ for some $x \in X$. We get that $\ev_y = \ev_x \circ \varphi^*$, which is equivalent to $\phi\prs{x} = y$. Then $V_f \subseteq \varphi\prs{X}$.
+For $y \in Y$ with $\ev_y\prs{f} = f\prs{y} \neq 0$ we can find $\eps' \colon \mbb{F}\brs{X} \to \mbb{F}$ lifting $\ev_y$. But, $\eps' = \ev_x$ for some $x \in X$. We get that $\ev_y = \ev_x \circ \phi^*$, which is equivalent to $\phi\prs{x} = y$. Then $V_f \subseteq \phi\prs{X}$.
 
-\item Assume $X = \bigcup_{i \in [s]} X_i$ is a decomposition of $X$ to irreducible components. It follows from the irreducible case that there are open sets $U_1, \ldots, U_s \subseteq Y$ such that $\overline{\varphi\prs{X_i}} \cap U_i \subseteq \varphi\prs{X_i}$ for all $i \in [s]$. Write
-$U \coloneqq \bigcap_{i \in [s]} U_i'$ for $U_i' = U_i \cup \prs{Y \setminus \overline{\varphi\prs{X_i}}}$. For every $i \in [s]$ we get
-\[\overline{\varphi\prs{X_i}} \cap U \subseteq \overline{\varphi\prs{X_i}} \cap U_i' \subseteq \varphi\prs{X_i} \text{.}\]
-Also, $U \subseteq \bigcup_{i \in [s]} \varphi\prs{X_i} = \varphi\prs{X}$.
+\item Assume $X = \bigcup_{i \in [s]} X_i$ is a decomposition of $X$ to irreducible components. It follows from the irreducible case that there are open sets $U_1, \ldots, U_s \subseteq Y$ such that $\overline{\phi\prs{X_i}} \cap U_i \subseteq \phi\prs{X_i}$ for all $i \in [s]$. Write
+$U \coloneqq \bigcap_{i \in [s]} U_i'$ for $U_i' = U_i \cup \prs{Y \setminus \overline{\phi\prs{X_i}}}$. For every $i \in [s]$ we get
+\[\overline{\phi\prs{X_i}} \cap U \subseteq \overline{\phi\prs{X_i}} \cap U_i' \subseteq \phi\prs{X_i} \text{.}\]
+Also, $U \subseteq \bigcup_{i \in [s]} \phi\prs{X_i} = \phi\prs{X}$.
 Check that $U \neq \ns$ by using the irreducibility of one of the $X_i$.
 \end{itemize}
 \end{proof}
@@ -1087,11 +1087,11 @@ Hence there are $x_1, x_@ \in H$ such that $y x_1 = x_2$. Then $y = x_2 x_1^{-1}
 \end{proof}
 
 \begin{proposition}
-If $\varphi \colon G \to H$ is a regular homomorphism of algebraic groups, $\varphi\prs{G}$ is a closed subgroup of $H$.
+If $\phi \colon G \to H$ is a regular homomorphism of algebraic groups, $\phi\prs{G}$ is a closed subgroup of $H$.
 \end{proposition}
 
 \begin{proof}
-$\varphi\prs{G} \leq H$ is a subgroup, and from \ref{theorem:nonempty_interior}, $\varphi\prs{G}$ contains an open subset of $\overline{\varphi\prs{G}}$. From the previous proposition we get that $\varphi\prs{G}$ is closed.
+$\phi\prs{G} \leq H$ is a subgroup, and from \ref{theorem:nonempty_interior}, $\phi\prs{G}$ contains an open subset of $\overline{\phi\prs{G}}$. From the previous proposition we get that $\phi\prs{G}$ is closed.
 \end{proof}
 
 \subsection{Jordan Decomposition}
@@ -1138,7 +1138,73 @@ v &\mapsto Av \text{.}
 Since $\prs{t - \lambda_i}^{r_a\prs{\lambda_i}}$ are coprime, it follows from the Chinese Remainder Theorem that such $p$ exists.
 \end{proof}
 
+%LECTURE 24.11
 
+\begin{proposition}
+Let $a \in \End\prs{V}$. There are polynomials $p_s, p_u  \in \mbb{F}\brs{x}$ such that $a_s = p_s\prs{a}$ and $a_n = p_n\prs{a}$.
+\end{proposition}
+
+\begin{corollary}
+Let $a \in \End\prs{V}$ (or $g \in \mrm{GL}\prs{V}$). The decomposition $a = a_s + a_n$ with $a_s$ semi-simple and $a_n$ nilpotent such that $a_s a_n = a_n a_s$ (or $g = g_s g_u$ such that $g_s$ is semi-simple and $g_u$ is unipotent such that $g_s g_u = g_u g_s$), is unique.
+\end{corollary}
+
+\begin{proof}
+Write $a = a_s + a_n = b_s + b_n$ where $a_s, b_s$ are semi-simple, $a_n,b_n$ are nilpotent and each of the pairs $a_s, a_n$ and $b_s, b_n$ commutes. Write $a_s = p_s\prs{a}$ for a polynomial $p_s \in \mbb{F}\brs{x}$.
+Then
+\begin{align*}
+b_s a_s = a_s b_s
+\end{align*}
+since $b_s$ commutes with $a$ and $a_s = p_s\prs{a}$.
+Similarly, $b_S a_n = a_n b_s$ and $b_n a_n = a_n b_n$.
+Then
+$a_s - b_s = b_ - a_n$ is semi-simple and nilpotent (a sum of commuting semi-simple/nilpotent matrices is semi-simple/nilpotent), hence zero.
+\end{proof}
+
+\begin{lemma}
+Let $a \in \End\prs{V}$, $b \in \End\prs{W}$, and $\phi \in \hom\prs{V,W}$ such that $b \circ \phi = \phi \circ a$. Then $b_s \circ \phi = \phi \circ a_s$ and $b_n \circ \phi = \phi \circ a_n$.
+\end{lemma}
+
+\begin{proof}
+Consider the commutative diagram
+\[
+\begin{tikzcd}
+V \arrow[rr, "\phi"] \arrow[dr, "\iota"] & & W \\
+& V \oplus W \arrow[ur, "p"]
+\end{tikzcd}
+\]
+with $i\prs{v} = \prs{v, \phi\prs{v}}$ and $p\prs{v,w} = w$.
+By considering $a \oplus b \in \End\prs{V \oplus W}$ we see that we may assume $\phi$ is either injective or surjective.
+
+In other word, for $T \in \End\prs{V}$ and $Z \leq V$ which is $T$-invariant, we want to show that $prs{\rest{T}{Z}}_s = \rest{\prs{T_s}}{Z}$ (for when $\phi$ is injective) and if $\tilde{T} \in \End\prs{V/Z}$ is the induced map on the quotient, we have to show $\tilde{T}_s = \widetilde{\prs{T_s}}$.
+
+Now, $\rest{\prs{T_s}}{Z}$ is semi-simple as a restriction of such, and $\rest{T_n}{Z}$ is nilpotent, and these commute. By uniqueness, we get the case for the restriction. Similarly one gets the case for quotients.
+\end{proof}
+
+\subsubsection{Jordan-Chevalley Decomposition and Groups}
+
+Let $G \leq \mrm{GL}\prs{V}$ be a closed subgroup. Choose $v \in V$ and $\phi \in V^*$, and write $f_{v,\phi} \in \mbb{F}\brs{G}$ for $f_{v,\phi}\prs{g} = \phi\prs{g \cdot v}$. This is an analogue for a representing matrix of a linear transformation given two bases.
+
+For every $\phi \in V^*$ let
+\begin{align*}
+r^\phi \colon V &\to \mbb{F}\brs{G} \\
+v &\mapsto f_{v,\phi} \text{.}
+\end{align*}
+This commutes with the group action.
+
+Consider $G \acts G$ with the right-action $g * h = h g^{-1}$. This gives a linear action $G \acts \mbb{F}\brs{G}$ given by
+\[\rho\prs{g_0}\prs{f}\prs{g} = f\prs{g g_0}\]
+for $g_0 \in G$ and $f \in \mbb{F}\brs{G}$. We call this right-translation.
+For every $g \in G$ we get
+\[\rho\prs{g} \circ r^{\phi} = r^\phi \circ g \text{.}\]
+We would like to say the following things.
+
+\begin{enumerate}
+\item That
+\[\rho\prs{g}_s \circ r^\phi = r^\phi \circ g_s \text{,}\]
+but $\rho\prs{g}$ is an operator on an infinite-dimensional space.
+\item That $\rho\prs{g}_s = \rho\prs{\hat{g}}$ for some $\hat{g} \in G$.
+\item That $g_s = \hat{g} \in G$.
+\end{enumerate}
 
 \backmatter
 \end{document}

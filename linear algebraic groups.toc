@@ -21,3 +21,4 @@
 \contentsline {subsubsection}{Algebraic Interlude}{13}{section*.16}%
 \contentsline {subsubsection}{Back to Algebraic Groups}{15}{section*.17}%
 \contentsline {subsection}{\numberline {1.2.3}Jordan Decomposition}{16}{subsection.1.2.3}%
+\contentsline {subsubsection}{Jordan-Chevalley Decomposition and Groups}{17}{section*.18}%
