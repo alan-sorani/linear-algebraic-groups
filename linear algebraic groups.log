@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.6.28) (preloaded format=xelatex 2021.11.4)  24 NOV 2021 10:21
+This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.6.28) (preloaded format=xelatex 2021.11.4)  25 NOV 2021 11:25
 entering extended mode
 **"./linear algebraic groups.tex"
 (linear algebraic groups.tex
@@ -1933,7 +1933,14 @@ Overfull \hbox (13.69067pt too wide) in paragraph at lines 1013--1014
 OML/cmm/m/it/10 B [] A [] \OT1/cmr/m/n/10 / []$\TU/CMUSerif(0)/m/n/10 .
  []
 
-[14] [15] [16] [17]
+[14] [15] [16] [17] [18]
+Overfull \hbox (5.66393pt too wide) in paragraph at lines 1375--1376
+[]\TU/CMUSerif(0)/m/n/10 If $\OML/cmm/m/it/10 W \OMS/cmsy/m/n/10 ^^T \OML/cmm/m
+/it/10 V$ \TU/CMUSerif(0)/m/n/10 is $\OML/cmm/m/it/10 ' []$\TU/CMUSerif(0)/m/n/
+10 -invariant, the restrictions $[][] [] [][]\OT1/cmr/m/n/10 =
+ []
+
+[19] [20]
 \tf@thm=\write7
 \openout7 = `"linear algebraic groups.thm"'.
 
@@ -1946,12 +1953,12 @@ ed.
 (rerunfilecheck)             Checksum: <no file>.
  ) 
 Here is how much of TeX's memory you used:
- 34504 strings out of 411254
- 713518 string characters out of 2828529
+ 34510 strings out of 411254
+ 713620 string characters out of 2828529
  1277801 words of memory out of 3000000
- 54378 multiletter control sequences out of 15000+600000
+ 54384 multiletter control sequences out of 15000+600000
  410223 words of font info for 92 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  117i,20n,122p,624b,1038s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on linear algebraic groups.pdf (21 pages).
+Output written on linear algebraic groups.pdf (24 pages).

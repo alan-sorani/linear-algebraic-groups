@@ -911,7 +911,7 @@ Let $\phi \colon X \to Y$ be a regular map between $\mbb{F}$-affine varieties. W
 \subsubsection{Algebraic Interlude}
 
 \begin{proposition}\label{proposition:dominant-injective}
-$\phi \colon X \to Y$ is regular if and only if $\phi^* \colon \mbb{F}\brs{Y} \to \mbb{F}\brs{X}$ is injective.
+$\phi \colon X \to Y$ is dominant if and only if $\phi^* \colon \mbb{F}\brs{Y} \to \mbb{F}\brs{X}$ is injective.
 \end{proposition}
 
 \begin{proof}
@@ -1205,6 +1205,238 @@ but $\rho\prs{g}$ is an operator on an infinite-dimensional space.
 \item That $\rho\prs{g}_s = \rho\prs{\hat{g}}$ for some $\hat{g} \in G$.
 \item That $g_s = \hat{g} \in G$.
 \end{enumerate}
+
+%LECTURE 25.11
+
+\begin{notation}
+For a group $G$ denote by $\lambda, \rho$ its action on itself from the left and right respectively. Denote the actions of an element $g$ by $\lambda_g, \rho_g$.
+\end{notation}
+
+\begin{remark}
+For an algebraic group $G$ we get maps
+\begin{align*}
+\lambda\prs{g} \colon \mbb{F}\brs{G} &\to \mbb{F}\brs{G} \\
+\lambda\prs{g}\prs{f}\prs{h} &= f\prs{\lambda_{g^{-1}}\prs{h}} = f\prs{g^{-1} h}
+\end{align*}
+and
+\begin{align*}
+\rho\prs{g} \colon \mbb{F}\brs{G} &\to \mbb{F}\brs{G} \\
+\rho\prs{g}\prs{f}\prs{h} &= f\prs{\rho_{g^{-1}}\prs{h}} = f\prs{hg} \text{.}
+\end{align*}
+\end{remark}
+
+We would like to write each $\rho\prs{g}$ as $\rho\prs{g}_s + \rho\prs{g}_n$ for semi-simple and nilpotent parts, but we don't have such a decomposition yet since $\mbb{F}\brs{G}$ is infinite-dimension.
+
+\begin{definition}
+Let $V$ be a vector space and let $a \in \End\prs{V}$ such that for every $v \in V$ there's $W_v \leq V$ finite-dimensional and $a$-invariant such that $v \in W_v$.
+Define
+\begin{align*}
+a_s \colon V &\to V \\
+v &\mapsto \prs{\rest{a}{W}}_s \prs{v}
+\end{align*}
+for $W_v$ as above.
+\end{definition}
+
+\begin{exercise}
+The above definition is well-defined. This follows from the fact that restriction and taking the semi-simple part commute.
+\end{exercise}
+
+\begin{theorem} \label{theorem:jordan_chevalley_groups}
+Let $\mbb{F}$ be algebraically-closed and let $G \leq \mrm{GL}\prs{V}$ be an embedded $\mbb{F}$-algebraic group. For every $g \in G$ it holds that $g_s, g_u \in G$.
+\end{theorem}
+
+\begin{exercise}
+It holds that $\prs{a \otimes b}_s = a_s \otimes b_s$.
+\end{exercise}
+
+\begin{proof}[\ref{theorem:jordan_chevalley_groups}]
+Consider the map
+\begin{align*}
+m \colon \mbb{F}\brs{G} \otimes \mbb{F}\brs{G} &\to \mbb{F}\brs{G} \\
+f_1 \otimes f_2 &\mapsto f_1 \cdot f_2 \text{.}
+\end{align*}
+Since $\rho\prs{g}$ is a homomorphism for every $g \in G$, it holds that
+\[m\prs{\rho\prs{g} \otimes \rho\prs{g}} = \rho\prs{g} \circ m \text{.}\]
+Hence
+\[m\prs{\rho\prs{g}_s \otimes \rho\prs{g}_s} = \rho\prs{g}_s \circ m\]
+since this is true locally (on finite-dimensional subspaces).
+Hence $\rho\prs{g}_s \colon \mbb{F}\brs{G} \to \mbb{F}\brs{G}$ is a homomorphism of $\mbb{F}$-algebras.
+
+We get a regular map
+$\psi \colon G \to G$ such that $\psi^* = \rho\prs{g}_s$.
+Let $\hat{g} \coloneqq \psi\prs{e} \in G$.
+For $h \in G$ we have
+\begin{align*}
+\rho\prs{g} \circ \rho\prs{h} = \lambda\prs{h} \circ \rho\prs{g}
+\end{align*}
+so
+\begin{align*}
+\rho\prs{g}_s \circ \rho\prs{h} = \lambda\prs{h} \circ \rho\prs{g}_s \text{.}
+\end{align*}
+Hence $\lambda\prs{h} = \lambda_{h^{-1}}^*$.
+Then
+\[\psi^* \circ \lambda_h^* = \lambda_h^* \circ \psi^*\]
+so
+\[\psi \circ \lambda_h = \lambda_h \circ \psi\]
+and then
+\[\psi\prs{h} = \psi\prs{\lambda_h\prs{e}} = \lambda_h\prs{\psi\prs{e}} = h \hat{g} \text{.}\]
+Hence $\psi = \rho_{\hat{g}^{-1}}$ so $\rho\prs{g}_s = \rho\prs{\hat{g}}$.
+
+For $\phi \in V^*$ remind that
+\begin{align*}
+r^\phi \colon V &\to \mbb{F}\brs{G} \\
+\phi &\mapsto f_{v,\phi}
+\end{align*}
+and $f_{v,\phi}\prs{g} = \phi\prs{g\cdot v}$.
+It holds that $\rho\prs{g} \circ r^\phi = r^\phi \circ g$ for all $g \in G$.
+Then
+\begin{align*}
+r^\phi \circ g_s = \rho\prs{g}_s \circ r^\phi = \rho\prs{\hat{g}} \circ r^\phi = r^\phi \circ \hat{g}
+\end{align*}
+for every $\phi \in V^*$. Hence $g_s\prs{v} = \hat{g}\prs{v}$ for all $v \in V$, so $g_s = \hat{g} \in G$.
+Then also $g_u = g g_s^{-1} \in G$.
+\end{proof}
+
+\begin{theorem}
+Let $\mbb{F}$ be an algebraically-closed field.
+
+\begin{enumerate}
+\item Let $G$ be an $\mbb{F}$-algebraic group.
+For every $g \in G$, the elements $g_s, g_u \in G$ are independent of the embedding of $G$.
+
+\item For a homomorphism $\phi \colon G_1 \to G_2$ of $\mbb{F}$-algebraic groups it holds that
+\begin{align*}
+phi\prs{g_s} &= \phi\prs{g}_s \\
+\phi\prs{g_u} &= \phi\prs{g}_u
+\end{align*}
+for all $g \in G$.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+\begin{enumerate}
+\item In the previous proof, we saw that for any embedding, $g_s$ is determined by $\rho\prs{g}_s$.
+
+\item For $g,h \in G$ it holds that
+\[\phi\prs{hg} = \phi\prs{h} \phi\prs{g}\]
+so
+\[\rho_{G_1}\prs{g} \circ \phi^* = \phi^* \circ \rho_{G_2} \prs{\phi\prs{g}} \text{.}\]
+Indeed, for $f \in \mbb{F}\brs{G_2}$ we have
+\begin{align*}
+\rho_{G_1}\prs{g}\phi^*\prs{f}\prs{g'} &= f\prs{\phi\prs{g'g}}
+\end{align*}
+and
+\begin{align*}
+\phi^*\prs{\rho_{G_2}\prs{\phi\prs{g}}\prs{f}\prs{g'}} &= f\prs{\phi\prs{g'}\phi\prs{g}}
+\end{align*}
+so these are equal.
+We get
+\begin{align*}
+\rho_{G_1}\prs{g_s} \circ \phi^* = \phi^* \circ \rho_{G_2}\prs{\phi\prs{g}_s} \text{.}
+\end{align*}
+Then
+\begin{align*}
+\ev_{g_s} \circ \phi^* &= \ev_{e_{G_2}} \circ \rho_{G_2}\prs{g_s} \circ \phi^*
+\\&= \ev_{e_{G_2}} \circ \phi^* \circ \rho_{G_2}\prs{\phi\prs{g}_s}
+\\&= \ev_{e_{G_1}} \circ \rho\prs{\phi\prs{g}_s}
+\\&= \ev_{\phi\prs{g}_s}
+\end{align*}
+so $\rho\prs{g_s} = \rho\prs{g}_s$.
+\end{enumerate}
+\end{proof}
+
+\begin{definition}
+Let $G$ be an $\mbb{F}$-algebraic group. Call an element $g \in G$ \emph{semi-simple} if $g = g_s$ and \emph{unipotent} if $g = g_u$.
+\end{definition}
+
+\subsection{Unipotent and Reductive Groups}
+
+\begin{definition}[Unipotent Group]
+An $\mbb{F}$-algebraic group $G$ is called \emph{unipotent} if every $g \in G$ is unipotent.
+\end{definition}
+
+\begin{notation}
+Denote $U_n\prs{\mbb{F}} \leq M_n\prs{\mbb{F}}$ for the group of upper-triangular matrices with $1$ on the diagonal.
+\end{notation}
+
+\subsubsection{Some Representation Theory}
+
+Every closed subgroup of $U_n\prs{\mbb{F}}$ is unipotent. We want to show these are all the unipotent subgroups.
+
+\begin{definition}[Representation]
+Let $G$ be an $\mbb{F}$-algebraic group. A \emph{representation} of $G$ is an $\mbb{F}$-vector space $V$ together with a regular homomorphism $\phi \colon G \to \mrm{GL}\prs{V}$.
+\end{definition}
+
+\begin{definition}[Irreducible Representation]
+A representation $\prs{\phi, V}$ of $G$ is \emph{irreducible} if there's no non-trivial $W \leq V$ which is $\phi\prs{G}$-invariant.
+\end{definition}
+
+\begin{definition}[Subrepresentation]
+If $W \leq V$ is $\phi\prs{G}$-invariant, the restrictions $\rest{\phi}{W}\prs{g} \coloneqq \rest{\phi\prs{g}}{W} \in \mrm{GL}\prs{W}$ form a representation $\prs{\rest{\phi}{W}, W}$ which we call a \emph{subrepresentation} of $\prs{\phi, V}$. 
+\end{definition}
+
+\begin{definition}[Quotient Representation]
+If $W \leq V$ is $\phi\prs{G}$-invariant, the quotient maps $\overline{\phi\prs{g}} \in \mrm{GL}\prs{V/W}$ form a representation $\prs{\bar{\phi}, V/W}$ called the \emph{quotient representation}.
+\end{definition}
+
+\begin{lemma}[Schur]
+Let $\mbb{F}$ be algebraically-closed and let $V$ be a finite-dimensional vector space over $\mbb{F}$.
+Let $S \subseteq \End\prs{V}$ be such that there's no non-trivial $W \leq V$ which is $S$-invariant (usually one takes $S = \phi\prs{G}$).
+If $T \in \End\prs{V}$ is such that $T \circ a = a \circ T$ for all $a \in S$, then $T = \lambda \id_V$ for some $\lambda \in \mbb{F}$.
+\end{lemma}
+
+\begin{proof}
+Since $\mbb{F}$ is algebraically-closed, $T$ has an eigenvalue $\lambda \in \mbb{F}$. For every $a \in S$ and $v \in \ker\prs{T - \lambda \id_V}$ it holds that
+\begin{align*}
+\T\prs{a\prs{v}} &= a\prs{T\prs{v}}
+\\&= a\prs{\lambda v}
+\\&= \lambda a\prs{v} \text{.}
+\end{align*}
+Since $a\prs{v} \in \ker\prs{T - \lambda \id_V}$ we get that $\ker\prs{T - \lambda I}$ is $S$-invariant. From the assumption, it follows that $\ker\prs{T - \lambda \id_V} = V$ so $T = \lambda \id_V$.
+\end{proof}
+
+\begin{theorem}[Burnside, Wedderburn; Density Theorem]\label{theorem:density}
+Let $\mbb{F}$ be an algebraically-closed field, let $V$ be a finite-dimensional $\mbb{F}$-vector space and let $S \subseteq \End\prs{V}$ such that there's no non-trivial $S$-invariant $W \leq V$.
+Then
+\[\spn_{\mbb{F}}\prs{S} = \End\prs{V} \text{.}\]
+\end{theorem}
+
+\begin{notation}
+For $A \in M_{r,n}\prs{\mbb{F}}$ let
+\begin{align*}
+\tau_A \colon V^{\oplus n} &\to V^{\oplus n} \\
+\prs{v_1, \ldots, v_r} &\mapsto \prs{v_1, \ldots, v_r} \cdot A \text{.}
+\end{align*}
+(If we identify $V^{\oplus n} \cong \mbb{F}^n \otimes_{\mbb{F}} V$ we get $\tau_A = L_A \otimes \id_V$.)
+For every $a \in \End\prs{V}$ one gets
+\[\tau_A \circ \phi_r \prs{a} = \phi_n\prs{a} \circ \tau_A \text{.}\]
+
+Denote also
+\begin{align*}
+\phi_n \colon V^{\oplus n} &\to V^{\oplus n} \\
+a &\mapsto a^{\oplus n} \text{.}
+\end{align*}
+\end{notation}
+
+\begin{lemma}\label{lemma:density}
+Let $\mbb{F}$ be an algebraically-closed field, let $V$ be a finite-dimensional $\mbb{F}$-vector space and let $S \subseteq \End\prs{V}$ such that there's no non-trivial $S$-invariant $W \leq V$.
+Let $W \lneq V^{\oplus n}$ which is $\phi_n\prs{S}$-invariant. Then there's $A \in M_{n,r}\prs{\mbb{F}}$ for $r < n$ and such that $W = \im\prs{\tau_A}$.
+\end{lemma}
+
+\begin{proof}
+\begin{itemize}
+\item Assume first that $W \neq \set{0}$ is irreducible.
+Let $p_i \colon V^{\oplus n} \to V$ be the projection on the $i$\textsuperscript{th} component.
+Since $W$ is non-zero, there's $i_0 \in [n]$ such that $\rest{p_{i_0}}{W} \neq 0$. Then $\psi \coloneqq \rest{p_{i_0}}{W}$ is an isomorphism since its domain and range are irreducible (one gets $\ker\prs{\psi} = \set{0}$ and $\im\prs{\psi} = V$).
+
+Let $t_i \coloneqq p_i \circ \psi^{-1} \in \End\prs{V}$. This commutes with every $a \in S$. By Schur's lemma, $t_i\prs{v} = \lambda_i v$ for some $\lambda_i \in \mbb{F}$. Now
+\begin{align*}
+W &= \set{\prs{\lambda_1 v, \ldots, \lambda_n v}}{v \in V}
+\\&= \im \prs{\tau_{\pmat{\lambda_1, \ldots, \lambda_n}}} \text{.}
+\end{align*}
+\item 
+\end{itemize}
+\end{proof}
 
 \backmatter
 \end{document}
