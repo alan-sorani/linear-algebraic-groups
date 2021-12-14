@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.6.28) (preloaded format=xelatex 2021.11.4)  25 NOV 2021 11:25
+This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.6.28) (preloaded format=xelatex 2021.11.4)  14 DEC 2021 13:21
 entering extended mode
 **"./linear algebraic groups.tex"
 (linear algebraic groups.tex
@@ -1940,7 +1940,12 @@ Overfull \hbox (5.66393pt too wide) in paragraph at lines 1375--1376
 10 -invariant, the restrictions $[][] [] [][]\OT1/cmr/m/n/10 =
  []
 
-[19] [20]
+[19] [20] [21]
+
+Package amsmath Warning: Cannot use `split' here;
+(amsmath)                trying to recover with `aligned' on input line 1579.
+
+[22] [23]
 \tf@thm=\write7
 \openout7 = `"linear algebraic groups.thm"'.
 
@@ -1954,11 +1959,11 @@ ed.
  ) 
 Here is how much of TeX's memory you used:
  34510 strings out of 411254
- 713620 string characters out of 2828529
+ 713621 string characters out of 2828529
  1277801 words of memory out of 3000000
  54384 multiletter control sequences out of 15000+600000
  410223 words of font info for 92 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  117i,20n,122p,624b,1038s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on linear algebraic groups.pdf (24 pages).
+Output written on linear algebraic groups.pdf (27 pages).

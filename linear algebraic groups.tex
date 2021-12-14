@@ -1306,7 +1306,7 @@ For every $g \in G$, the elements $g_s, g_u \in G$ are independent of the embedd
 
 \item For a homomorphism $\phi \colon G_1 \to G_2$ of $\mbb{F}$-algebraic groups it holds that
 \begin{align*}
-phi\prs{g_s} &= \phi\prs{g}_s \\
+\phi\prs{g_s} &= \phi\prs{g}_s \\
 \phi\prs{g_u} &= \phi\prs{g}_u
 \end{align*}
 for all $g \in G$.
@@ -1413,7 +1413,7 @@ For every $a \in \End\prs{V}$ one gets
 
 Denote also
 \begin{align*}
-\phi_n \colon V^{\oplus n} &\to V^{\oplus n} \\
+\phi_n \colon \End\prs{V} &\to \End\prs{V^{\oplus n}} \\
 a &\mapsto a^{\oplus n} \text{.}
 \end{align*}
 \end{notation}
@@ -1425,7 +1425,7 @@ Let $W \lneq V^{\oplus n}$ which is $\phi_n\prs{S}$-invariant. Then there's $A \
 
 \begin{proof}
 \begin{itemize}
-\item Assume first that $W \neq \set{0}$ is irreducible.
+\item Assume first that $W \neq \set{0}$ is irreducible (i.e. has no non-trivial $\phi_n\prs{S}$-invariant subspace).
 Let $p_i \colon V^{\oplus n} \to V$ be the projection on the $i$\textsuperscript{th} component.
 Since $W$ is non-zero, there's $i_0 \in [n]$ such that $\rest{p_{i_0}}{W} \neq 0$. Then $\psi \coloneqq \rest{p_{i_0}}{W}$ is an isomorphism since its domain and range are irreducible (one gets $\ker\prs{\psi} = \set{0}$ and $\im\prs{\psi} = V$).
 
@@ -1434,9 +1434,188 @@ Let $t_i \coloneqq p_i \circ \psi^{-1} \in \End\prs{V}$. This commutes with ever
 W &= \set{\prs{\lambda_1 v, \ldots, \lambda_n v}}{v \in V}
 \\&= \im \prs{\tau_{\pmat{\lambda_1, \ldots, \lambda_n}}} \text{.}
 \end{align*}
+
 \item 
+Now let $\set{0} \neq W \subseteq V^{\oplus n}$ be general. We use induction on $n$.
+There's $\set{0} \neq W_0 \subseteq W$ irreducible and $\phi_n\prs{S}$-invariant.
+By the previous case, we can write $W_0 = \im \tau_{\prs{q_1, \ldots, q_n}}$. There's $g \in \mrm{GL}_n\prs{\mbb{F}}$ such that
+\[\prs{q_1, \ldots, q_n} \cdot g = \prs{1, 0, \ldots, 0} \text{.}\]
+Then
+\begin{align*}
+\tau_g\prs{W} &= \im \tau_{\prs{1, 0, \ldots, 0}} = \set{\prs{v,0,\ldots,0}}{v \in V}
+\\&= \tau_g\prs{W_0} \oplus \prs{\tau_g\prs{W} \ker p_1}
+\end{align*}
+where
+$p_1$ is the projection the the first component.
+Denote $W' \coloneqq \prs{\tau_g\prs{W} \ker p_1}$. By induction we can write $W' = \im\tau_{A'}$ for $A \in M_{r', n-1}\prs{\mbb{F}}$ with some $r' < n-1$. Then $\tau_g\prs{W} = \im \tau_{A''}$ for $A'' \coloneqq \pmat{1 & 0 \\ 0 & A'}$.
+Then $W = \im \prs{\tau_{A'' g^{-1}}} \in M_{r'+1, n} \prs{\mbb{F}}$.
 \end{itemize}
 \end{proof}
+
+%LECTURE  8.12 (half of the above proof and)
+
+\begin{proof}[\ref{theorem:density}]
+We assume that $S$ is multiplicatively closed, which might be necessary.
+
+Let $\prs{e_1, \ldots, e_n}$ be a basis for $V$ and let $\underline{e} = \prs{e_1, \ldots, e_n} \in V^{\oplus n}$.
+Let $W \coloneqq \spn\set{\phi_n\prs{S}\prs{\underline{e}}} \leq V^{\oplus n}$ which is $\phi_n\prs{S}$-invariant.
+If $W \lneq V^{\oplus n}$, it follows from the lemma that there's $A \in M_{r,n}\prs{\mbb{F}}$ with $r < n$ and $W = \im \prs{\tau_A}$. In particular, in that case $\underline{e} \in \im\prs{\tau_A}$, so $\dim\prs{\spn\set{e_1, \ldots, e_n}} \leq r$,
+a contradiction.
+Hence $W = V^{\oplus n}$.
+
+Take $T \in \End\prs{V}$. Then $\prs{T\prs{e_1}, \ldots, T\prs{e_n}} \in W$, so there are $\prs{s_i}_{i \in [k]} \subseteq S$ and $\prs{\alpha_i}_{i \in [k]} \subseteq \mbb{F}$ such that $U \coloneqq \sum_{i \in [k]} \alpha_i s_i$ gives $T\prs{e_i} = U\prs{e_i}$ for all $i \in [k]$, so $T = U \in \spn\prs{S}$.
+\end{proof}
+
+\begin{theorem}
+Let $G$ be a unipotent group over an algebraically-closed field $\mbb{F}$. Let $\phi \colon G \to \mrm{GL}\prs{V}$ be an irreducible rational representation. Then $\varphi$ is the trivial representation.
+\end{theorem}
+
+\begin{proof}
+From properties we've shown, elements of $\tilde{G} \coloneqq \phi\prs{G}$ are unipotent transformations.
+For $g \in \tilde{G}$ we have
+$\tr\prs{g} = n$ and for every $g,h \in \tilde{G}$ we have
+\[\tr\prs{\prs{\id-g}h} = \tr\prs{h} - \tr\prs{gh} = n-n = 0\text{.}\]
+By \ref{theorem:density} we get that
+\[\tr\prs{\prs{\id-g}A} = 0\]
+for all $A \in \End\prs{V}$.
+
+Now,
+\[\trs{Y,X} \coloneqq \tr\prs{Y^t X}\]
+pulls back to a non-degenerate form on $\End\prs{V}$, %TODO make sure this is fine
+so we get that $\id - g = 0$ for all $g \in \tilde{G}$. Then $\tilde{G} = \set{I}$ and by irreducibility of $V$ we get $\dim\prs{V} = 1$.
+\end{proof}
+
+%LECTURE 9.12
+
+\begin{corollary}
+Every unipotent group $G$ over an algebraically-closed field $\mbb{F}$ is isomorphic to a closed subgroup of $\mrm{U}_n \coloneqq \set{\pmat{1 & & * \\ & \ddots & \\ 0 & 1}}$.
+
+In other words, for any rational representation $\phi \colon G \to \mrm{GL}\prs{V}$ there's a basis $B$ of $V$ such that $\set{\brs{T}_B}{T \in \phi\prs{G}} \subseteq U_n$.
+\end{corollary}
+
+\begin{proof}
+Let $\phi \colon G \to \mrm{GL}\prs{V}$ be a rational representation.
+There's a minimal irreducible subrepresentation $\set{0} \neq W \leq V$ and by the theorem $W$ is $1$-dimensional. Write $W = \spn\set{e_1}$ for some $e_1$. Then $\phi\prs{G} e_1 = e_1$, and we look at the $\phi\prs{G}$-action on $V/W$. By induction, there's a basis $f_2, \ldots, f_n$ of the quotient for which the action of $\phi\prs{G}$ is represented by matrices in $U_{n-1}$. Lift $f_2, \ldots, f_n$ to elements $e_2, \ldots, e_n \in V$. We get a basis $\prs{e_1, \ldots, e_n}$ of $V$ for which elements of $\phi\prs{G}$ are of the given form.
+\end{proof}
+
+\begin{proposition}
+Let $G$ be a unipotent group acting algebraically on an affine $\mbb{F}$-variety $X$. %TODO shouldn't we require $\mbb{F}$ to be algebraically-closed?
+Then every $G$-orbit is closed.
+\end{proposition}
+
+\begin{proof}
+Let $x_0 \in X$ and
+\begin{align*}
+\phi \colon G &\to X \\
+g &\mapsto g \cdot x_0 \text{.}
+\end{align*}
+Let $Y \coloneqq \overline{\phi\prs{G}} \leq X$, we want to show $Y = \phi\prs{G}$.
+
+There's $U \leq Y$ open and non-empty such that $U \subseteq \phi\prs{G}$.
+It holds that $\phi\prs{G} = \bigcup_{g \in G} g \cdot U$ so $\phi\prs{G} \leq Y$ is open.
+Indeed, taking $u_0 \in U$ there's $g_0 \in G$ such that $u_0 = g_0 \cdot x_0$, so for all $g \in G$ we have
+\[g \cdot x_0 = g g_0^{-1} u_0 \in g g_0^{-1} U \text{.}\]
+
+Now, $Z \coloneqq Y \setminus \phi\prs{G}$ is closed, and assume towards a contradiction that it's non-empty.
+We get $\prs{0} \neq I\prs{Z} \ideal \mbb{F}\brs{Y}$.
+$Y$ is $G$-invariant as the closure of an orbit. (Check this. It's similar to showing that $H \leq G$ implies $\bar{H} \leq G$.)
+We have a linear action $G \acts \mbb{F}\brs{Y}$ via $g \cdot f\prs{x} = f\prs{g^{-1}x}$ and $Z$ is $G$-invariant, so $I\prs{Z}$ is $G$-invariant. There's a finite-dimensional $G$-invariant $V \leq I\prs{Z}$. 
+From the theorem on unipotent groups, there's $f \in I\prs{Z}$ non-zero such that $G \cdot f = f$. %TODO why?
+Then $f \in \mbb{F}\brs{Y}$ is constant on the $G$-orbits.
+$\phi\prs{G}$ is dense in $Y$ so $\rest{f}{\phi\prs{G}} \equiv 0$ (since $\rest{f}{Z} \equiv 0$), so $f = 0$, a contradiction.
+\end{proof}
+
+\begin{remark}
+The above isn't true without the unipotent requirement.
+For example, consider $G \coloneqq \mbb{F}^\times$ acting on $\mbb{F}$ via multiplication.
+The orbits are $\set{0}$ and $\mbb{F}^\times$, where the latter isn't closed unless $\mbb{F}$ is finite.
+\end{remark}
+
+\begin{example}
+Consider the action of $G \coloneqq \mrm{GL}_2\prs{\mbb{F}}$ on $M_2\prs{\mbb{F}}$ by conjugation. We have
+\begin{align*}
+\set{\pmat{0 & a \\ 0 & 0}}{a \in \mbb{F}^{\times}} \subseteq G \cdot \pmat{0 & 1 \\ 0 & 0}
+\end{align*}
+but $0 \notin G \cdot \pmat{0 & 1 \\ 0 & 0}$ and this is clearly in the closure.
+\end{example}
+
+\begin{example}
+Examine
+\[\prs{\mbb{F}, +} \cong U_2 \coloneqq \set{\pmat{1 & a \\ 0 & 1}}{a \in \mbb{F}}\]
+with the usual action $U_2 \acts \mbb{F}^2$.
+For $a \in \mbb{F} \setminus \mbb{F}$ let
+\[Y_a \coloneqq \set{\pmat{x \\ a}}{x \in \mbb{F}} \text{.}\]
+These are closed orbits, but the the rest of the orbits are points $\set{\pmat{b \\ 0}}$ with $b \in \mbb{F}$. These orbits are all closed.
+\end{example}
+
+\section{Tangent Spaces}
+
+\begin{definition}[Tangent Space]
+Let $X$ be an embedded affine $\mbb{F}$-variety and let $p \in X$.
+Define \emph{the tangent space of $X$ at $p$} to be
+\begin{align*}
+T_p X \coloneqq \set{v \in \mbb{F}^n}{\frac{\del f_i}{\del v} \prs{p} = 0}
+\end{align*}
+where
+\[\frac{\del f}{\del v}\prs{p} = \sum_{i \in [n]} \frac{\diff f}{\diff x_i} c\dot v_i \text{.}\]
+\end{definition}
+
+\begin{notation}
+Denote $\nabla f = \prs{\frac{\del f}{\del x_1}, \frac{\del f}{\del x_2}, \ldots, \frac{\del f}{\del x_n}}$.
+\end{notation}
+
+\begin{example}
+Let $X = V\prs{y - x^2, z - x^3} \subseteq \mbb{F}^3$ where $f_1 \coloneqq y - x_2$ and $f_2 \coloneqq z - x^3$.
+Then $X = \set{\prs{x,x^2,x^3}}{x \in \mbb{F}}$ and
+\begin{align*}
+\nabla f_1 &= \prs{-2x, 1, 0} \\
+\nabla f_2 &= \prs{-3x^2, 0, 1} \text{.}
+\end{align*}
+So,
+\[T_p X = \set{\prs{v_1, v_2, v_3}}{
+\begin{split}
+-2x v_1 + v_2 &= 0 \\ -3x^2 v_1 + v_3 &= 0
+\end{split}
+} \text{.}\]
+\end{example}
+
+\begin{example}
+Let $X \coloneqq V\prs{xy} \subseteq \mbb{F}^2$ and $f = xy$ so that $\nabla f = \prs{y,x}$.
+For $p = \prs{p_1, p_2} \in X$ we have
+\begin{align*}
+T_p X &=
+\begin{cases}
+\spn\set{\prs{0,1}} & p_1 = 0 \wedge p_2 \neq 0 \\
+\spn\set{\prs{1,0}} & p_1 \neq 0 \wedge p_2 = 0 \\
+\mbb{F}^2 & p = \prs{0,0}
+\end{cases} \text{.}
+\end{align*}
+We later call a point such as $p$ where the tangent space is of \emph{different dimension}, a \emph{singular point}.
+\end{example}
+
+\begin{example}
+Given $X \coloneqq V\prs{y^2 - x^3}$ we have $T_{\prs{0,0}}X = \mbb{F}^2$.
+\end{example}
+
+Examine the Jacobian
+\[J\prs{f_1, \ldots, f_k} \coloneqq \pmat{\nabla f_1 \\ \vdots \\ \nabla f_k} \in M_{k,n}\prs{A_n}\]
+where $A_n \coloneqq \mbb{F}\brs{x_1, \ldots, x_n}$.
+At every point $p$ we can evaluate
+\[J\prs{f_1, \ldots, f_k}\prs{p} \in M_n\prs{\mbb{F}}\]
+and
+\[T_p X = \mrm{null}\prs{J\prs{f_1, \ldots, f_k}} \leq \mbb{F}^n \text{.}\]
+
+Assume now that $X$ is irreducible, so that $\mbb{F}\brs{X}$ is an integral domain. Let $K$ be the fraction field of $\mbb{F}\brs{X}$, and consider $\Omega \coloneqq \overline{J\prs{f_1, \ldots, f_k}} \in M_n\prs{K}$ for some $f_i$. Let $d \coloneqq \dim\prs{\mrm{null}\prs{\Omega}}$.
+
+\begin{proposition}
+Let $X$ be an irreducible $\mbb{F}$-variety and let $\Omega$ and $d$ be as above. For every $p \in X$ it holds that $\dim T_p X \geq d$ and for every non-empty $U \subseteq X$ with $p \in U$ it holds that $\dim T_p X = d$.
+\end{proposition}
+
+\begin{proof}
+We have $\mrm{rank}\prs{\Omega} = n - d$. Examine the matrix's minors of size $n-d$ which we denote $g_1, \ldots, g_t \in \mbb{F}\brs{X}$.
+\end{proof}
+
+%TODO fill in
 
 \backmatter
 \end{document}
