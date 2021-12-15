@@ -25,3 +25,5 @@
 \contentsline {subsection}{\numberline {1.2.4}Unipotent and Reductive Groups}{19}{subsection.1.2.4}%
 \contentsline {subsubsection}{Some Representation Theory}{19}{section*.19}%
 \contentsline {section}{\numberline {1.3}Tangent Spaces}{22}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Definitions}{22}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.2}Definitions Independent of the Embedding}{23}{subsection.1.3.2}%

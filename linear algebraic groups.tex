@@ -1550,6 +1550,8 @@ These are closed orbits, but the the rest of the orbits are points $\set{\pmat{b
 
 \section{Tangent Spaces}
 
+\subsection{Definitions}
+
 \begin{definition}[Tangent Space]
 Let $X$ be an embedded affine $\mbb{F}$-variety and let $p \in X$.
 Define \emph{the tangent space of $X$ at $p$} to be
@@ -1613,9 +1615,53 @@ Let $X$ be an irreducible $\mbb{F}$-variety and let $\Omega$ and $d$ be as above
 
 \begin{proof}
 We have $\mrm{rank}\prs{\Omega} = n - d$. Examine the matrix's minors of size $n-d$ which we denote $g_1, \ldots, g_t \in \mbb{F}\brs{X}$.
+Now $U \ceq X \setminus V\prs{g_1, \ldots, g_t} \neq \ns$ since the $g_i$ aren't all zero.
+For $p \in U$ there's $i \in [t]$ for which $g_i\prs{p} \neq 0$, hence
+\[\rank\prs{\Omega p} \geq n-d\]
+so
+\[\rank\prs{\Omega p} \leq \rank\prs{\Omega} = n - d\]
+and for $p \in X$ we have $\dim T_p X \geq d$.
 \end{proof}
 
-%TODO fill in
+\subsection{Definitions Independent of the Embedding}
+
+\begin{definition}[Module Over an Algebra]
+Let $A$ be an $\mbb{F}$-algebra. An $A$-module $M$ is a vector space over $\mbb{F}$ together with an $\mbb{F}$-algebra homomorphism
+\[\phi \colon A \to \End_{\mbb{F}}\prs{M} \text{.}\]
+\end{definition}
+
+\begin{notation}
+We usually write $a \cdot m$ instead of $\phi\prs{a}\prs{m}$, and don't write $\phi$.
+\end{notation}
+
+\begin{example}
+An ideal $I \ideal A$ is an $A$-module.
+\end{example}
+
+\begin{example}
+$A/I$ is an $A$-module.
+\end{example}
+
+For $X$ an affine $\mbb{F}$-variety and $p \in X$, examine $\mfrak{m}_p \coloneqq \mbb{F}\brs{X} / \ker\prs{\ev_p} \cong \mbb{F}$. This is an $\mbb{F}\brs{X}$-module where $f \in \mbb{F}\brs{X}$ acts on $t \in \mbb{F}$ via $f \cdot t = f\prs{p} \cdot t$ under the above isomorphism.
+
+\begin{definition}[Derivation Space]
+Let $M$ be an $A$-module.
+We define the \emph{derivation space}
+\[\mrm{Der}_{\mbb{F}}\prs{A,M} \coloneqq \set{D \in \hom_{\mbb{F}}\prs{A, M}}{\forall a,b \in A \colon D\prs{ab} = a \cdot D\prs{b} + b \cdot D\prs{a}} \text{.}\]
+\end{definition}
+
+\begin{example}
+Let $v \in \mbb{F}^n$. We have $\frac{\del}{\del v} \in \mrm{Der}_{\mbb{F}}\prs{A_n, A_n}$ since (regular) derivation satisfies the Leibniz rule.
+\end{example}
+
+\begin{definition}
+Let $A$ be a finitely-generated $\mbb{F}$-algebra with generators $x_1, \ldots, x_n \in A$. Write $A \cong A_n / I$ and $I = \prs{f_1, \ldots, f_k}$.
+Let $\Omega \coloneqq J\prs{f_1, \ldots, f_k} \in M_{k,n}\prs{A}$.
+Taking an $A$-module $M$, we get that
+$\Omega$ acts on the left of $M^n$ via matrix multiplication.
+We define
+\[\mcal{I}_{A,M} = \set{v \in M^n}{\Omega v = 0} \text{.}\]
+\end{definition}
 
 %LECTURE 15.12.21
 

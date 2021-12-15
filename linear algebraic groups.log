@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.6.28) (preloaded format=xelatex 2021.11.4)  15 DEC 2021 10:20
+This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.6.28) (preloaded format=xelatex 2021.11.4)  15 DEC 2021 18:56
 entering extended mode
 **"./linear algebraic groups.tex"
 (linear algebraic groups.tex
@@ -1831,33 +1831,12 @@ File: sources/front.jpg Graphic file (type bmp)
 
 
 
-] (linear algebraic groups.toc
-LaTeX Font Info:    Trying to load font information for U+msa on input line 2.
-
-(C:\Users\EladT\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 2.
-
-(C:\Users\EladT\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 2.
-
-
-(C:\Users\EladT\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ursfs.fd
-File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
-)
-LaTeX Font Info:    Trying to load font information for U+stmry on input line 2
-.
-
-(C:\Users\EladT\AppData\Local\Programs\MiKTeX\tex/latex/stmaryrd\ustmry.fd))
+] (linear algebraic groups.toc)
 \tf@toc=\write6
 \openout6 = `"linear algebraic groups.toc"'.
 
 \c@lecturenumber=\count460
-
-[2
+ [2
 
 ] [3
 
@@ -1865,7 +1844,27 @@ LaTeX Font Info:    Trying to load font information for U+stmry on input line 2
 
 ]
 Chapter 1.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 109
+.
+(C:\Users\EladT\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 109
+.
 
+(C:\Users\EladT\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 10
+9.
+
+(C:\Users\EladT\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ursfs.fd
+File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
+)
+LaTeX Font Info:    Trying to load font information for U+stmry on input line 1
+09.
+
+(C:\Users\EladT\AppData\Local\Programs\MiKTeX\tex/latex/stmaryrd\ustmry.fd)
 Overfull \hbox (9.30286pt too wide) in paragraph at lines 123--124
 []\TU/CMUSerif(0)/m/n/10 Around 1870-1900, Mauren took homogeneous rational fun
 ctions $\OML/cmm/m/it/10 f [] [] \U/msb/m/n/10 C[] \OMS/cmsy/m/n/10 ! \U/msb/m/
@@ -1943,23 +1942,23 @@ Overfull \hbox (5.66393pt too wide) in paragraph at lines 1375--1376
 [19] [20] [21]
 
 Package amsmath Warning: Cannot use `split' here;
-(amsmath)                trying to recover with `aligned' on input line 1579.
+(amsmath)                trying to recover with `aligned' on input line 1581.
 
 [22]
-Overfull \hbox (75.4457pt too wide) in paragraph at lines 1648--1649
+LaTeX Font Info:    Trying to load font information for U+euf on input line 164
+5.
+ (C:\Users\EladT\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\ueuf.fd
+File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
+)
+[23]
+Overfull \hbox (81.19276pt too wide) in paragraph at lines 1694--1695
 []\TU/CMUSerif(0)/m/n/10 For $\OML/cmm/m/it/10 v \OT1/cmr/m/n/10 = [] \OMS/cmsy
 /m/n/10 2 I[]$ \TU/CMUSerif(0)/m/n/10 consider the quotient map $\OML/cmm/m/it/
 10 ^^Y [] [] \U/msb/m/n/10 F [] \OMS/cmsy/m/n/10 ! \U/msb/m/n/10 F [] \OT1/cmr/
 m/n/10 / []$\TU/CMUSerif(0)/m/n/10 ,
  []
 
-[23]
-LaTeX Font Info:    Trying to load font information for U+euf on input line 170
-8.
- (C:\Users\EladT\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\ueuf.fd
-File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-)
-[24]
+[24] [25]
 \tf@thm=\write7
 \openout7 = `"linear algebraic groups.thm"'.
 
@@ -1972,12 +1971,12 @@ ed.
 (rerunfilecheck)             Checksum: <no file>.
  ) 
 Here is how much of TeX's memory you used:
- 34526 strings out of 411254
- 713871 string characters out of 2828529
- 1277801 words of memory out of 3000000
- 54394 multiletter control sequences out of 15000+600000
+ 34527 strings out of 411254
+ 713884 string characters out of 2828529
+ 1276801 words of memory out of 3000000
+ 54395 multiletter control sequences out of 15000+600000
  410931 words of font info for 95 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 117i,20n,122p,624b,1038s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 117i,20n,122p,675b,1038s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on linear algebraic groups.pdf (28 pages).
+Output written on linear algebraic groups.pdf (29 pages).
