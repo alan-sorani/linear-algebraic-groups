@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.6.28) (preloaded format=xelatex 2021.11.4)  14 DEC 2021 13:21
+This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.6.28) (preloaded format=xelatex 2021.11.4)  15 DEC 2021 10:20
 entering extended mode
 **"./linear algebraic groups.tex"
 (linear algebraic groups.tex
@@ -1945,7 +1945,21 @@ Overfull \hbox (5.66393pt too wide) in paragraph at lines 1375--1376
 Package amsmath Warning: Cannot use `split' here;
 (amsmath)                trying to recover with `aligned' on input line 1579.
 
-[22] [23]
+[22]
+Overfull \hbox (75.4457pt too wide) in paragraph at lines 1648--1649
+[]\TU/CMUSerif(0)/m/n/10 For $\OML/cmm/m/it/10 v \OT1/cmr/m/n/10 = [] \OMS/cmsy
+/m/n/10 2 I[]$ \TU/CMUSerif(0)/m/n/10 consider the quotient map $\OML/cmm/m/it/
+10 ^^Y [] [] \U/msb/m/n/10 F [] \OMS/cmsy/m/n/10 ! \U/msb/m/n/10 F [] \OT1/cmr/
+m/n/10 / []$\TU/CMUSerif(0)/m/n/10 ,
+ []
+
+[23]
+LaTeX Font Info:    Trying to load font information for U+euf on input line 170
+8.
+ (C:\Users\EladT\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\ueuf.fd
+File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
+)
+[24]
 \tf@thm=\write7
 \openout7 = `"linear algebraic groups.thm"'.
 
@@ -1958,12 +1972,12 @@ ed.
 (rerunfilecheck)             Checksum: <no file>.
  ) 
 Here is how much of TeX's memory you used:
- 34510 strings out of 411254
- 713621 string characters out of 2828529
+ 34526 strings out of 411254
+ 713871 string characters out of 2828529
  1277801 words of memory out of 3000000
- 54384 multiletter control sequences out of 15000+600000
- 410223 words of font info for 92 fonts, out of 8000000 for 9000
+ 54394 multiletter control sequences out of 15000+600000
+ 410931 words of font info for 95 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  117i,20n,122p,624b,1038s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on linear algebraic groups.pdf (27 pages).
+Output written on linear algebraic groups.pdf (28 pages).

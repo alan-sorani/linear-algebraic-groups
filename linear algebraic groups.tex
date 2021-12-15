@@ -1605,7 +1605,7 @@ At every point $p$ we can evaluate
 and
 \[T_p X = \mrm{null}\prs{J\prs{f_1, \ldots, f_k}} \leq \mbb{F}^n \text{.}\]
 
-Assume now that $X$ is irreducible, so that $\mbb{F}\brs{X}$ is an integral domain. Let $K$ be the fraction field of $\mbb{F}\brs{X}$, and consider $\Omega \coloneqq \overline{J\prs{f_1, \ldots, f_k}} \in M_n\prs{K}$ for some $f_i$. Let $d \coloneqq \dim\prs{\mrm{null}\prs{\Omega}}$.
+Assume now that $X$ is irreducible, so that $\mbb{F}\brs{X}$ is an integral domain. Let $K$ be the fraction field of $\mbb{F}\brs{X}$, and consider $\Omega \coloneqq \overline{J\prs{f_1, \ldots, f_k}} \in M_n\prs{K}$ where $\mbb{F}\brs{X} \cong \mbb{F}\brs{x_1, \ldots, x_n}/\prs{f_1, \ldots, f_k}$ and $f_i \in \mbb{F}\brs{x_1, \ldots, x_n}$. Let $d \coloneqq \dim\prs{\mrm{null}\prs{\Omega}}$. Note that $\Omega$ is supposedly dependent on the choice of generators, but it is in fact not.
 
 \begin{proposition}
 Let $X$ be an irreducible $\mbb{F}$-variety and let $\Omega$ and $d$ be as above. For every $p \in X$ it holds that $\dim T_p X \geq d$ and for every non-empty $U \subseteq X$ with $p \in U$ it holds that $\dim T_p X = d$.
@@ -1616,6 +1616,99 @@ We have $\mrm{rank}\prs{\Omega} = n - d$. Examine the matrix's minors of size $n
 \end{proof}
 
 %TODO fill in
+
+%LECTURE 15.12.21
+
+\begin{notation}
+For $M \in \mbb{F}\brs{X}\mathbf{-Mod}$, denote
+\begin{align*}
+\mcal{I}_{\mbb{F}\brs{X}, M} \coloneqq \set{v \in M^n}{\Omega v = 0} \leq M^n \text{.}
+\end{align*}
+Denote also $\mbb{F}_p \coloneqq \mbb{F}\brs{X} / \prs{p}$.
+\end{notation}
+
+\begin{remark}
+It holds that
+\[T_p X = \mcal{I}_{\mbb{F}\brs{X}, \mbb{F}_p}\]
+and we've seen that
+\[\dim_k \mcal{I}_{\mbb{F}\brs{X}, K} \leq \dim_{\mbb{F}} T_p X\]
+where there's equality on each $p$ in an open subset of $X$.
+\end{remark}
+
+\begin{definition}[Derivation Space]
+For $M \in A\mathbf{-Mod}$ let
+\begin{align*}
+\mrm{Der}_{\mbb{F}}\prs{A,M} \coloneqq \set{D \in \hom_{\mbb{F}}\prs{A,M}}{
+\forall a,b \in A \colon D\prs{ab} = a \cdot D\prs{b} + b \cdot D\prs{A}
+} \text{.}
+\end{align*}
+\end{definition}
+
+\begin{definition}
+For $v = \pmat{v_1 \\ \vdots \\ v_n} \in \mcal{I}_{A,M}$ consider the quotient map $\pi \colon \mbb{F}\brs{x_1, \ldots, x_n} \to \mbb{F}\brs{x_1, \ldots, x_n}/\prs{f_1, \ldots, f_k}$, and define
+\begin{align*}
+D_v \colon A &\to M \\
+\pi\prs{f} &\mapsto \sum_{i \in \brs{n}}\pi\prs{\frac{\diff f}{\diff x_i}} \cdot v_i \text{.}
+\end{align*}
+\end{definition}
+
+\begin{proposition}
+\begin{enumerate}
+\item $D_v \in \mrm{Der}_{\mbb{F}}\prs{A,M}$, and in particular this is well-defined.
+
+\item The map
+\begin{align*}
+\eta \colon \mcal{I}_{A,M} &\to \mrm{Der}_{\mbb{F}}\prs{A,M} \\
+v &\mapsto D_v
+\end{align*}
+is an $A$-module isomorphism.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+\begin{enumerate}
+\item Let $v \in \mcal{I}_{A,M}$. We want to show that $D_v\prs{\ker\prs{\pi}} = \set{0}$ so that $D_v$ is well-defined.
+For $j \in [n]$ it holds that
+\[\sum_{i \in [n]} \pi\prs{\frac{\diff f_j}{\diff x_i}} \cdot v_i = 0 \text{.}\]
+For a general $f \in \ker\prs{\pi}$ we can write $f = \sum_{i \in [k]} h_i f_i$, so
+\begin{align*}
+\pi\prs{\frac{\diff f}{\diff x_i}} = \sum_{j \in [k]} \pi\prs{h_j} \pi\prs{\frac{\diff f_j}{\diff x_i}} + \pi\prs{\frac{\diff h_j}{\diff x_i}} \cancelto{0}{\pi\prs{f_j}} = 0
+\end{align*}
+where the last equality follows from the previous computation. Hence $D_v$ is well-defined.
+It easily seen that the Leibniz law holds, so $D_v$ is a derivation.
+
+\item If $D_v = 0$ we have
+\begin{align*}
+0 &= D_v\prs{\pi\prs{x_j}} = v_j
+\end{align*} 
+for all $j \in [k]$, so $v = 0$. Hence $\eta$ is injective.
+
+Assume $D \in \mrm{Der}_{\mbb{F}}\prs{A,M}$ and let $\tilde{D} \coloneqq D \circ \pi \in \mrm{Der}_{\mbb{F}}\prs{\mbb{F}\brs{x_1, \ldots, x_n}, M}$. Let
+\[v \coloneqq \pmat{\tilde{D}\prs{x_1} \\ \vdots \\ \tilde{D}\prs{x_n}} \in M^n \text{.}\]
+For $j \in [n]$ we have
+\begin{align*}
+\tilde{D}\prs{x_j} &= \sum_{i \in [n]} \frac{\diff x_j}{\diff x_i} \cdot v_i = \tilde{D}_v\prs{x_j} \text{.}
+\end{align*}
+As before, derivations are determined by generators and we get that
+\[\tilde{D} = \tilde{D}_v \text{.}\]
+If we show that $v \in \mcal{I}_{A,M}$ we get that $\eta$ is surjective.
+This is true since for every $j \in [k]$ it holds that
+\[\tilde{D}_v\prs{f_j} = \tilde{D}\prs{f_j} = 0 \text{.}\]
+\end{enumerate}
+\end{proof}
+
+\begin{corollary}
+For every $p \in X$ it holds that
+\begin{align*}
+T_o X \cong \mrm{der}_{\mbb{F}}\prs{\mbb{F}\brs{X}, \mbb{F}_p} \text{.}
+\end{align*}
+\end{corollary}
+
+\begin{proposition}
+For $p \in X$ denote $\mfrak{m}_p \coloneqq \ker\prs{\ev_p} \ideal \mbb{F}\brs{X}$, which is maximal.
+There is a natural isomorphism
+\[T_p X \cong \prs{\mfrak{m}/\mfrak{m}^2}^* \text{.}\]
+\end{proposition}
 
 \backmatter
 \end{document}
