@@ -1756,5 +1756,286 @@ There is a natural isomorphism
 \[T_p X \cong \prs{\mfrak{m}/\mfrak{m}^2}^* \text{.}\]
 \end{proposition}
 
+%LECTURE 16.12.21
+
+\begin{proof}
+Let $\ell \in \hom_{\mbb{F}\mathbf{-Vect}}\prs{\mfrak{m}, \mfrak{F}}$ such that $\rest{\ell}{\mfrak{m}^2} \equiv 0$.
+Define
+\begin{align*}
+\mu \colon \mbb{F}\brs{X} &\to \mbb{F} \\
+f &\mapsto \ell\prs{f-f\prs{p}\cdot 1} \text{.}
+\end{align*}
+One can check that $\mu \in \mrm{Der}_{\mbb{F}}\prs{\mbb{F}\brs{X}, \mbb{F}\prs{p}}$.
+
+For the other direction, given $\mu$ in this space, we can take $\ell = \rest{\mu}{\mfrak{m}}$.
+\end{proof}
+
+Let $A,B$ be $\mbb{F}$-algebras, $N$ a $B$-module and $\psi \colon A \to B$ an $\mbb{F}$-module homomorphism.
+There is an induced $A$-module structure on $N$ by $a \cdot n \coloneqq \psi\prs{a} n$.
+In particular, there is an induced map
+\begin{align*}
+\tilde{\psi} \colon \mrm{Der}_{\mbb{F}}\prs{B,N} &\to \mrm{Der}_{\mbb{F}}\prs{A,N} \\
+D &\mapsto D \circ \psi \text{.}
+\end{align*}
+
+If $X,Y$ are affine $\mbb{F}$-varieties and $\phi \colon X \to Y$ is regular, we have a map $\phi^* \colon \mbb{F}\brs{Y} \to \mbb{F}\brs{X}$.
+For $p \in X$ the module $\mbb{F}\prs{p} \coloneqq \mbb{F}\brs{X}/\ker\prs{\ev_p}$ has the structure of an $\mbb{F}\brs{Y}$-module and is isomorphic to $\mbb{F}\prs{\phi\prs{p}}$ with this structure.
+
+\begin{definition}
+Denote
+\begin{align*}
+\diff_p \phi \coloneqq \tilde{\phi}^* \colon T_p\prs{X} \to T_{\phi\prs{p}}\prs{Y}
+\end{align*}
+and call this the \emph{differential} of $\phi$ at $p$.
+\end{definition}
+
+\begin{exercise}
+If one identifies $T_p\prs{X} \leq \mbb{F}^n$ and $T_{\phi\prs{p}}\prs{Y} \leq \mbb{F}^m$, show that $\phi$ is a restriction of a polynomial $\mbb{F}^n \to \mbb{F}^m$ and that $\diff_p\phi$ is identified with the matrix $M_{n,m}\prs{\mbb{F}}$ which is the differential of $\phi$ (as over $\mbb{R}$).
+\end{exercise}
+
+\subsection{Dimension}
+
+In analogy to differentiable manifolds, we define algebraic varieties as a space which locally looks like $\mbb{F}^n$.
+
+\begin{definition}
+Let $X$ be an irreducible affine $\mbb{F}$-variety, and let $K \coloneqq \mrm{Frac}\prs{\mbb{F}\brs{X}}$.
+Define $\dim X \coloneqq \mrm{trdeg}_{\mbb{F}}\prs{K}$.
+\end{definition}
+
+\begin{fact}
+Let $\mbb{F}$ be a perfect field and $X$ be an irreducible affine $\mbb{F}$-variety. Then
+\[
+\dim X = \dim_K \mrm{Der}_{\mbb{F}}\prs{\mbb{F}\brs{X}, K} \text{.}
+\]
+\end{fact}
+
+\begin{corollary}
+Let $X$ be an irreducible affine $\mbb{F}$-variety over a perfect field $\mbb{F}$.
+There is $U \subseteq X$ open and non-empty such that for every $p \in U$ it holds that $\dim T_p X = \dim X$.
+\end{corollary}
+
+\begin{definition}
+For $X$ as above, a point $p \in X$ is called \emph{simple} or \emph{smooth} if $\dim T_p X = \dim X$, and \emph{singular} otherwise (in which case $\dim T_p X > \dim X$).
+\end{definition}
+
+\begin{definition}[Smooth Variety]
+For $X$ as above, we say $X$ is \emph{smooth} if it has no singular points.
+\end{definition}
+
+\begin{proposition}
+Let $G$ be an $\mbb{F}$-algebraic group for $\mbb{F}$ a perfect field.
+Let $X$ be an $\mbb{F}$-affine $G$-space on which $G$ acts transitively.
+Then, $X$ is smooth.
+\end{proposition}
+
+\begin{proof}
+Let $x_0 \in X$ be a smooth point (which exists by the corollary).
+For $x \in X$ there's $g \in G$ such that $x = g \cdot x_0$.
+\begin{align*}
+\lambda_g \colon X &\to X \\
+x &\mapsto g \cdot x
+\end{align*}
+is an isomorphism, so
+\[\diff_{x_0}\prs{\lambda_g} \colon T_{x_0}\prs{X} \to T_x\prs{X}\]
+is an isomorphism.
+Hence $x$ is smooth.
+\end{proof}
+
+\begin{proposition}
+Let $X$ be an irreducible affine $\mbb{F}$-variety and let $Y \lneq X$ be closed and irreducible. Then $\dim Y < \dim X$.
+\end{proposition}
+
+\begin{proof}
+We can write
+\[\mbb{F}\brs{Y} \cong \mbb{F}\brs{X} / I\]
+for some non-zero ideal $I \ideal \mbb{F}\brs{X}$, which is prime since $Y$ is irreducible.
+Let $f_1, \ldots, f_k \in \mbb{F}\brs{Y}$ be algebraically-independent where $k \coloneqq \dim Y$.
+Let $g_1, \ldots, g_k \in \mbb{F}\brs{X}$ be such that $\bar{g}_i = f_i$.
+Let $g_0 \in I \setminus \set{0}$, we want to show that $g_0, \ldots, g_k$ are algebraically-independent.
+
+Assume towards a contradiction that there's a non-zero $p \in \mbb{F}\brs{y_0, \ldots, y_k}$ such that $p\prs{g_0, \ldots, g_k} = 0$. We may assume $p$ is irreducible. Write
+\[p\prs{y_0, \ldots, y_k} = y_0 p_1\prs{y_0, \ldots, y_k} + p_2\prs{y_1, \ldots, y_k}\]
+for polynomials $p_1, p_2$.
+We have
+\begin{align*}
+\bar{0} &= \overline{p\prs{g_0, \ldots, g_k}}
+\\&= \overline{g_0 p_1\prs{g_0, \ldots, g_k} + p_2\prs{g_1, \ldots, g_k}}
+\\&= \cancelto{0}{\overline{g_0}} \overline{p_1\prs{g_0, \ldots, g_k}} + \overline{p_2\prs{g_1, \ldots, g_k}}
+\\&= \overline{p_2\prs{g_1, \ldots, g_k}}
+\\&= p_2\prs{f_1, \ldots, f_k} \text{.}
+\end{align*}
+Hence $p_2 \equiv 0$ so $p\prs{y_0, \ldots, y_k} = y_0 p_1\prs{y_0, \ldots, y_k}$, so $p$ is reducible, a contradiction.
+\end{proof}
+
+\begin{lemma} \label{lemma:charts}
+Let $X \subseteq \mbb{F}^n$ be an embedded affine irreducible variety. For $p \in X$ identify $T_p X \leq \mbb{F}^n$. For $p_0 \in X$ simple there's $f \in \mbb{F}\brs{X}$ such that $p_0 \in X_f$ and there are regular maps
+\begin{align*}
+\psi_i \colon X_f \to \mbb{F}^n
+\end{align*}
+for $i \in d \coloneqq \dim X$ such that
+$\prs{\psi_1\prs{x} ,\ldots, \psi_d\prs{x}}$ is a basis for $T_x X$ for all $x \in X_f$.
+\end{lemma}
+
+\begin{proof}
+Identify
+\begin{align*}
+\mbb{F}\brs{X} = \mbb{F}\brs{x_1, \ldots, x_n}/\prs{f_1, \ldots, f_k} \text{.}
+\end{align*}
+There's a non-vanishing minor of size $n-d$ in $J\prs{f_1, \ldots, f_k}\prs{p_0}$.
+We have
+\[T_{p_0}\prs{X} = \mrm{null}\prs{J\prs{f_1, \ldots, f_{n-d}}\prs{p_0}}\]
+for $n-d \leq k$.
+Then we can write
+\[J\prs{f_1, \ldots, f_{n-d}} = \pmat{A & B} \in M_{n-d,n}\prs{A_n}\]
+for $A \in M_{n-d}\prs{A_n}$ and $B \in M_{n-d,d}\prs{A_n}$.
+Let $f = \det\prs{A}$. Then up to reordering the columns we have $\det A\prs{p_0} \neq 0$.
+$X_f$ consists of simple points of $X$. For $x \in X_f$ we have
+\[T_x\prs{X} = \mrm{null}\prs{J\prs{f_1, \ldots, f_{n-d}}\prs{x}}\]
+so
+\[\psi\prs{x} = \prs{\psi_1\prs{x}, \ldots, \psi_d\prs{x}} = \pmat{- A^{-1} B \\ I_{d \times d}}\prs{x} \in M_{n,d}\prs{\mbb{F}}\]
+so
+\[J\prs{f_1, \ldots, f_{n-d}}\prs{x} \cdot \psi\prs{x} = 0 \text{.}\]
+\end{proof}
+
+\begin{proposition}[Differential Criterion for Dominance]
+Let $\mbb{F}$ be perfect and infinite.
+Let $X,Y$ be irreducible affine $\mbb{F}$-varieties and let $\phi \colon X \to Y$.
+Assume there's $p \in X$ such that $\diff_p \prs{\phi}$ is surjective onto $T_{\phi\prs{p}}\prs{Y}$ and that $\phi\prs{p} \in Y$ is simple (the second condition might be unnecessary).
+Then $Y = \overline{\phi\prs{X}}$.
+\end{proposition}
+
+\begin{proof}
+Using \ref{lemma:charts} with respect to $p \in X$, we get $X_f \subseteq X$ such that for all $x \in X_f$ one has
+\[T_x X = \spn\prs{\psi_1\prs{x}, \ldots, \psi_d\prs{x}}\]
+where
+\[\psi\prs{x} = \prs{\psi_1\prs{x}, \ldots, \psi_d\prs{x}} \in M_{n,d}\prs{A_n} \text{.}\]
+Now
+\[p \in U_1 \coloneqq \set{x \in X_f}{\mrm{rank}\prs{\diff_x\prs{\phi}} \geq \dim\prs{Y}} \subseteq X\]
+is open since the condition is equivalent to non-vanishing of minors of the matrix $\diff \phi\prs{x} \cdot \psi\prs{x}$.
+
+Denote $Z \coloneqq \overline{\phi\prs{X}}$ and assume towards a contradiction that $Z \subsetneq Y$. Then $\dim Z \leq \dim Y$. Let
+\[U_2 \coloneqq \set{x \in X}{\phi\prs{x} \text{ is simple in $Z$}} \subseteq X \text{.}\]
+Then $U_2$ is the inverse image of an open set under $\phi$, and is therefore open. Hence $\phi\prs{X}$ contains an open subset of $Z$. Using irreducibility we get that $\phi\prs{X}$ contains simple points of $Z$, so $U_1 \cap U_2 \neq \ns$.
+Let $x_0 \in U_1 \cap U_2$. We get
+\[\dim Z = \dim T_{\phi\prs{x_0}}\prs{Z} \geq \rank \diff_{x_0}\prs{\phi} \geq \dim\prs{Y} \text{,}\]
+a contradiction.
+\end{proof}
+
+%LECTURE 22.12.21
+
+\section{Lie Algebras}
+
+\subsection{Definitions}
+
+
+
+\begin{definition}[Lie Algebra]
+A \emph{Lie algebra} $\mfrak{g}$ over $\mbb{F}$ is a nonassociative algebra over $\mbb{F}$ whose (bilinear) product, denoted $\brs{x,y}$, and called the \emph{Lie bracket}, satisfying the following for all $x,y,z \in \mfrak{g}$.
+\begin{description}
+\item[Skew-symmetry:] $\brs{x,y} = -\brs{y,x}$
+\item[Jacobi's Identity:] $\brs{x,\brs{y,z}} + \brs{y,\brs{z,x}} + \brs{z,\brs{x,y}} = 0$.
+\end{description}
+\end{definition}
+
+\begin{definition}[The Primordial Lie Algebra]
+Let $C$ be an $\mbb{F}$-algebra. We define on $C$ the \emph{commutator}
+\begin{align*}
+\brs{a,b} = ab - ba \text{.}
+\end{align*}
+This turns $C$ into a Lie algebra.
+\end{definition}
+
+\begin{example}
+Let $A$ be an $\mbb{F}$-algebra. One has $\mrm{Der}_{\mbb{F}\mathbf{-Vec}}\prs{A,A} \leq \End_{\mbb{F}}\prs{A,A}$.
+In particular, for $X,Y \in \mrm{Der}_{\mbb{F}}\prs{A,A}$ we have $X \circ Y \colon A \to A$. The composition $X \circ Y$ isn't a derivation, but $\brs{X,Y}$ is by direct computation.
+We get a Lie algebra structure on $\mrm{Der}_{\mbb{F}}\prs{A,A}$.
+\end{example}
+
+\begin{example}
+Given an $\mbb{F}$-affine variety $X$ one gets a ``large'' Lie algebra
+$\mrm{Der}_{\mbb{F}}\prs{\mbb{F}\brs{X}, \mbb{F}\brs{X}}$ which is infinite-dimensional over $\mbb{F}$.
+
+If $X = G$ is an algebraic group over $\mbb{F}$ there is a more interesting construction. Let $\lambda \colon G \to \mrm{GL}\prs{\mbb{F}\brs{G}}$ be the map with $\lambda\prs{g}\prs{f}\prs{x} = f\prs{g^{-1}x}$ for $g \in G, f \in \mbb{F}\brs{X}, x \in G$.
+
+For $D \in \mrm{Der}_{\mbb{F}}\prs{\mbb{F}\brs{G}, \mbb{F}\prs{G}}$ and $g \in G$ we have
+\[\lambda\prs{g} \circ D \circ \lambda\prs{g}^{-1} \in \mrm{Der}_{\mbb{F}}\prs{\mbb{F}\brs{G}, \mbb{F}\prs{G}} \text{.}\]
+Geometrically, this moves the vector field matching $D$ by the $g$ action.
+\end{example}
+
+\begin{definition}
+For $G$ as above, define
+\[\Lie\prs{G} \coloneqq \set{D \in \mrm{Der}_{\mbb{F}}\prs{\mbb{F}\brs{G}, \mbb{F}\brs{G}}}{\forall g\in G \colon \lambda \prs{g} \circ D = D \circ \lambda\prs{g}} \text{.}\]
+\end{definition}
+
+\begin{remark}
+It is easily checked that for $D_1, D_2 \in \Lie\prs{G}$ one has $\brs{D_1, D_2} \in \Lie\prs{G}$. We then call $\Lie\prs{G}$ the \emph{Lie algebra of $G$}.
+\end{remark}
+
+\begin{notation}
+For $D \in \mrm{Der}_{\mbb{F}}\prs{\mbb{F}\brs{G}, \mbb{F}\brs{G}}$ and $g \in G$ denote
+\[D_g \coloneqq \ev_g \circ D  \text{.}\]
+\end{notation}
+
+\begin{remark}
+It holds that $D_g \in \Der_{\mbb{F}}\prs{\mbb{F}\brs{G}, \mbb{F}\brs{g}} = T_g\prs{G}$.
+We have
+\begin{align*}
+\diff \prs{\lambda_g}_h \colon T_h\prs{G} &\to T_{gh}\prs{G} \\
+\end{align*}
+and
+\begin{align*}
+\lambda\prs{g} \circ D_h \circ \lambda\prs{g}^{-1} = \diff \prs{\lambda_g}_{g^{-1}h} \prs{D_{g^{-1}h}} \text{.}
+\end{align*}
+(Check this.)
+We get that $D \in \Lie\prs{G}$ if and only if
+\[\diff \prs{\lambda_g}_e \prs{D_e} = D_g \text{.}\]
+\end{remark}
+
+\begin{example}
+Let $G = \prs{\mbb{F}^n, +}$. Then $A_n \coloneqq \mbb{F}\brs{G} = \mbb{F}\brs{x_1, \ldots, x_n}$.
+We have
+\begin{align*}
+\Der_{\mbb{F}}\prs{A_n, A_n} &= \set{\sum_{i\in[n]} f_i \frac{\diff}{\diff x_i}}{\prs{f_i}_{i \in [n]} \subseteq A_n} \text{.}
+\end{align*}
+These correspond to global vector fields on $G$.
+Then $D = \sum_{i \in [n]} f_i \frac{\diff}{\diff x_i}$ is in $\Lie\prs{G}$ if all the $f_i$ satisfy $f_i\prs{x+y} = f_i\prs{x}$ for all $y \in \mbb{F}^n$.
+This is true exactly when $f_i \equiv a_i$ are constant, so $D = \sum_{i \in [n]} a_i \frac{\diff}{\diff x_i}$ corresponds to a constant vector field.
+\end{example}
+
+\begin{example}
+Let $G \coloneqq \mrm{GL}_1\prs{\mbb{F}}$, so that $\mbb{F}\brs{G} \equiv \mbb{F}\brs{t,u} / \prs{tu - 1}$.
+Then
+\[\Der_{\mbb{F}}\prs{\mbb{F}\brs{G}, \mbb{F}\brs{G}} = \set{f \frac{\diff}{\diff t}}{f \in \mbb{F}\brs{G}} \text{.}\]
+Now $f \frac{\diff}{\diff t} \in \Lie\prs{G}$ if and only if for all $a \in \mbb{F}^\times$ and $\rho \in \mbb{F}\brs{G} \cong \mbb{F}\brs{t,t^{-1}}$ we have
+\[f\prs{t} \frac{\diff}{\diff t}\prs{\rho\prs{at}} = f\prs{at} \frac{\diff \rho}{\diff t}\prs{at} \text{.}\]
+Then
+\[a f\prs{t} \frac{\diff \rho}{\diff t}\prs{at} = f\prs{at} \frac{\diff \rho}{\diff t}\prs{at}\]
+so
+\[a f\prs{t} = f\prs{at}\]
+so $f\prs{t} = \alpha t$ for some $\alpha \in \mbb{F}$.
+We get that
+\[\Lie\prs{G} = \spn\set{t \frac{\diff}{\diff t}} \text{.}\]
+\end{example}
+
+\begin{proposition}
+The map
+\begin{align*}
+\eta \colon \Lie\prs{G} &\to T_e\prs{G} \\
+D &\mapsto D_e
+\end{align*}
+is a vector-space isomorphism.
+\end{proposition}
+
+\begin{proof}
+%TODO fill in
+\end{proof}
+
+\begin{remark}
+Knowing the above proposition, we sometimes think of $\Lie\prs{G}$ as the tangent space $T_e\prs{G}$.
+In fact, we could define a Lie algebra structure on $T_e\prs{G}$ directly by
+\[\brs{X,Y} \coloneqq \prs{X \otimes Y - Y \otimes X} \circ m^*\]
+for every $X,Y \in T_e\prs{G} = \Der_{\mbb{F}}\prs{\mbb{F}\brs{G}, \mbb{F}\prs{G}}$ and where $m \colon G \times G \to G$ is the group-multiplication. But, this might lack motivation.
+\end{remark}
+
 \backmatter
 \end{document}
