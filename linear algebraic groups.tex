@@ -10,6 +10,7 @@
 
 \usepackage{maths}
 \usepackage{stylish}
+\DeclareMathOperator{\Ad}{Ad}
 
 %\usepackage{tikz-graph}
 %\GraphInit[vstyle = Shade]
@@ -2026,16 +2027,252 @@ D &\mapsto D_e
 is a vector-space isomorphism.
 \end{proposition}
 
+%LECTURE 23.12
+
 \begin{proof}
-%TODO fill in
+\begin{description}
+\item[Injectivity:]
+Assume $D$ is such that $D_e = 0$. Then for all $g \in G$ we have
+\[D_g = \diff\prs{\lambda_g}_e \prs{D_e} = 0 \text{.}\]
+For $f \in \mbb{F}\brs{G}$ we then have
+\[\ev_g\prs{D\prs{f}} = 0\]
+so $D\prs{f} = 0$.
+
+\item[Surjectivity:]
+
+Let $X \in T_e\prs{G}$. Define
+\[D_X \colon \mbb{F}\brs{G} \to \mbb{F}\brs{G}\]
+via
+\[D_X\prs{f}\prs{g} = X\prs{\lambda\prs{g^{-1}}\prs{f}}\]
+for all $g \in G$.
+We have to show that $D_X\prs{f} \in \mbb{F}\brs{G}$, and then check that $D_X$ is a derivation.
+
+Let $m \colon G \times G \to G$ be the group product. Then for $f \in \mbb{F}\brs{G}$ with
+\[f\prs{xy} = \sum_i u_i\prs{x} v_i\prs{y}\]
+we have
+\[\lambda\prs{g}\prs{f} = \sum_i u_i\prs{g^{-1}} v_i\]
+and
+\begin{align*}
+D_X\prs{f}\prs{g} = \sum_i u_i\prs{g^{-1}} X\prs{v_i} \in \mbb{F}\brs{X} \text{.}
+\end{align*}
+
+Now, $D_X \in \Lie\prs{G}$ because for $h \in G$ we have
+\begin{align*}
+D_X\prs{\lambda\prs{h}\prs{f}}\prs{g} &= X\prs{\lambda\prs{\prs{h^{-1} g}^{-1}}\prs{f}}
+\\&= \lambda\prs{h} D_X\prs{f} \prs{g}
+\end{align*}
+so \[D_X\prs{\lambda\prs{h} f} = \lambda\prs{h} D_X\prs{f} \text{.}\]
+
+
+\end{description}
 \end{proof}
 
-\begin{remark}
 Knowing the above proposition, we sometimes think of $\Lie\prs{G}$ as the tangent space $T_e\prs{G}$.
 In fact, we could define a Lie algebra structure on $T_e\prs{G}$ directly by
-\[\brs{X,Y} \coloneqq \prs{X \otimes Y - Y \otimes X} \circ m^*\]
+\begin{equation}\label{equation:direct_lie_bracket}
+\brs{X,Y} \coloneqq \prs{X \otimes Y - Y \otimes X} \circ m^*
+\end{equation}
 for every $X,Y \in T_e\prs{G} = \Der_{\mbb{F}}\prs{\mbb{F}\brs{G}, \mbb{F}\prs{G}}$ and where $m \colon G \times G \to G$ is the group-multiplication. But, this might lack motivation.
+
+From the above proposition, we can identify
+$T_e\prs{G} \cong \Lie\prs{G}$, and, pulling back this Lie-algebra structure we can define the bracket
+$\brs{X,Y} \in T_e G$ for any $X,Y \in T_e\prs{G}$.
+
+For an embedded algebraic group $G \leq \mrm{GL}_n\prs{\mbb{F}}$ we get an embedding $\Lie\prs{G} \cong T_e\prs{G} \leq M_n\prs{\mbb{F}}$. Write $\mbb{F}\brs{G} = \mbb{F}\brs{\set{T_{i,j}}_{i,j \in [n]}}/I$. Any $X \in T_e\prs{G}$ is determined by its action on generators. Write $x_{i,j} \coloneqq X\prs{T_{i,j}}$. We have
+\begin{align*}
+m^* \colon \mbb{F}\brs{G} &\to \mbb{F}\brs{G} \times \mbb{F}\brs{G} \\
+T_{i,j} &\mapsto \sum_{k \in [n]} T_{i,k} \otimes T_{k,j} \text{.}
+\end{align*}
+Then
+\[D_X\prs{T_{i,j}} = \sum_{k \in [n]} T_{i,k} x_{k,j} \text{.}\]
+Hence $D_X\prs{T_{i,j}} \in M_n\prs{\mbb{F}\brs{G}}$ and
+\begin{align*}
+\prs{D_X\prs{T_{i,j}}}_{i,j} &= \prs{T_{i,j}} \cdot X
+\end{align*}
+under the identification of $X$ as the matrix $\prs{x_{i,j}}_{i,j \in [n]}$ in $M_n\prs{\mbb{F}\brs{G}}$.
+
+Now,
+\begin{align*}
+\brs{X,Y}\prs{f} &= \prs{D_X \circ D_Y - D_Y \circ D_X} \prs{f}\prs{e}
+\\&= X\prs{D_Y\prs{f}} - Y\prs{D_X\prs{f}} \text{.}
+\end{align*}
+Under the embedding we have
+\begin{align*}
+Y\prs{D_X\prs{T_{i,j}}} = \prs{YX}_{i,j}
+\end{align*}
+so
+\[\brs{X,Y}\prs{T_{i,j}} = \prs{XY - YX}_{i,j} \text{.}\]
+
+We then get the under the identification with matrices, $\brs{X,Y} = XY - YX$. I.e. for every embedding $G \rmono \mrm{GL}_n\prs{\mbb{F}}$ we get an isomorphism from $\Lie\prs{G}$ to a Lie subalgebra of $M_n\prs{\mbb{F}}$.
+
+\begin{exercise}
+Check that the definition of $\brs{\cdot,\cdot}$ on $T_e\prs{G}$ is the same as that of \eqref{equation:direct_lie_bracket}.
+\end{exercise}
+
+\begin{proposition}
+Let $\phi \colon G \to H$ be a homomorphism of algebraic groups. Then
+\[\diff \phi = \prs{\diff \phi}_e \colon \Lie\prs{G} \to \Lie\prs{H}\]
+satisfies
+\[\brs{\diff \phi\prs{X}, \diff \phi\prs{Y}} = \diff \phi \brs{X,Y} \text{.}\]
+
+In other words, $\diff \phi \colon \Lie\prs{G} \to \Lie\prs{H}$ is a Lie-algebra homomorphism.
+\end{proposition}
+
+\begin{proof}
+$\phi$ is a homomorphism, so $\phi \circ m_G = m_H \circ \prs{\phi \times \phi}$, so
+\[\prs{\phi^* \otimes \phi^*} \circ m_H^* = m_G^* \circ \phi^* \text{.}\]
+Then
+\begin{align*}
+\brs{\diff \phi\prs{X}, \diff \phi\prs{Y}} &= \prs{\prs{X \circ \phi^*} \otimes \prs{Y \circ \phi^*} - \prs{Y \circ \phi^*} \otimes \prs{X \circ \phi^*}} \circ m_H^*
+\\&= \prs{X \otimes Y - Y \otimes X} \circ m_G^* \circ \phi^*
+\\&= \brs{X,Y} \circ \phi^*
+\\&= \diff \phi\prs{\brs{X,Y}} \text{.}
+\end{align*}
+\end{proof}
+
+
+
+Let $G$ be an affine $\mbb{F}$-algebraic group.
+$G$ acts on itself by conjugation.
+For $g \in G$, denote
+\begin{align*}
+\mrm{In}\prs{g} \colon G &\to G \\
+h &\mapsto g h g^{-1} \text{.}
+\end{align*}
+Then
+\[\mrm{Ad}\prs{g} \coloneqq \diff \prs{\mrm{In}\prs{g}}_e \colon \Lie\prs{G} \to \Lie\prs{G}\]
+gives a regular map
+\[\mrm{Ad} \colon G \to \mrm{GL}\prs{\Lie\prs{G}}\]
+which is a representation of $G$ called \emph{the adjoint representation of $G$}.
+We get a map
+\begin{align*}
+\ad \coloneqq \diff\Ad \colon \Lie\prs{G} \to \End\prs{\Lie\prs{G}}
+\end{align*}
+such that
+\[\ad\prs{X}\prs{Y} = \brs{X,Y} \text{.}\]
+
+\begin{exercise}
+We could define $\brs{X,Y}$ as $\ad\prs{X}\prs{Y}$.
+\end{exercise}
+
+\begin{remark}
+From the above proposition, one has
+\[\brs{\ad\prs{X}, \ad\prs{Y}} = \ad\brs{X,Y} \text{,}\]
+which is equivalent to Jacobi's identity.
 \end{remark}
+
+\begin{exercise}
+In finite dimensional it holds that $T_e\prs{G}^\circ = T_e\prs{G}$.
+\end{exercise}
+
+\begin{corollary}
+One has $\dim \Lie\prs{G} = \dim T_e\prs{G} = \dim\prs{G^\circ}$.
+\end{corollary}
+
+\section{Categorical Approach to Algebraic Groups}
+
+\subsection{Definitions}
+
+An affine algebraic variety is defined by polynomial equations, $X = V\prs{f_1, \ldots, f_k} \leq \mbb{F}^n$ for $\prs{f_i}_{i \in [k]} \mbb{F}\brs{x_1, \ldots, x_n}$.
+One can treat the equations $f_i = 0$ over any (commutative) $\mbb{F}$-algebra $R$.
+
+\begin{definition}[Functor of Points]
+Let $X$ be an affine algebraic variety over $\mbb{F}$, and let $R$ be an $\mbb{F}$-algebra.
+Define
+\[X\prs{R} = \hom_{\mbb{F}\mathbf{-Alg}}\prs{\mbb{F}\brs{X}, R}\]
+and call the resulting functor $R \mapsto X\prs{R}$ the \emph{functor of points of $X$}.
+\end{definition}
+
+\begin{definition}[Category]
+A \emph{(small) category} $\mcal{C}$ is a \emph{collection} (the exact type of which depends on the axiomatic approach) $\ob\prs{\mcal{C}}$ together with a \emph{set} of morphism $\hom_{\mcal{C}}\prs{X,Y}$ for every $X,Y \in \mcal{C}$ and a \emph{composition map}
+\begin{align*}
+\hom\prs{X,Y} \times \hom\prs{Y,Z} &\to \hom\prs{X,Z} \\
+\prs{f,g} &\mapsto g \circ f
+\end{align*}
+satisfying the following.
+
+\begin{enumerate}
+\item For all $X \in \ob\prs{\mcal{C}}$ there's $\id_X \in \hom_{\mcal{C}}\prs{X,X}$ such that $\id_X \circ f = f$ and $g \circ \id_X$ for all $f,g$ (which make sense).
+\item Composition is associative.
+\end{enumerate}
+\end{definition}
+
+\begin{example}
+\begin{enumerate}
+\item Sets with functions between them form a category.
+\item Groups with group homomorphisms.
+\item $\mbb{F}$-algebras with their homomorphisms.
+\end{enumerate}
+\end{example}
+
+\begin{definition}[Functor]
+A \emph{(covariant) functor} $F \colon \mcal{C} \to \mcal{D}$ between categories is a ``function'' $F \colon \ob\prs{\mcal{C}} \to \ob\prs{\mcal{D}}$ and for each $X,Y \in \ob\prs{\mcal{C}}$ a function
+\[F \colon \hom_{\mcal{C}}\prs{X,Y} \to \hom_{\mcal{D}}\prs{F\prs{X},F\prs{Y}}\]
+such that $F$ respects composition and identities.
+\end{definition}
+
+\begin{definition}
+If instead of respecting composition, $F$ satisfies $F\prs{g \circ f} = F\prs{f} \circ F\prs{g}$, we call $F$ a \emph{contravariant functor}.
+\end{definition}
+
+\begin{example}
+The correspondence $X \mapsto \mbb{F}\brs{X}$ and $\phi \mapsto \phi^*$ forms a functor from affine $\mbb{F}$-varieties to commutative $\mbb{F}$-algebras.
+\end{example}
+
+\begin{example}
+There is a functor $F \colon \mathbf{Vec}_{\mbb{F}} \to \mathbf{Vec}_{\mbb{F}}$ from the category of $\mbb{F}$-vector spaces to itself, sending $V \mapsto V^*$ and $T \mapsto T^*$.
+\end{example}
+
+\begin{example}
+We have a functor $G \mapsto \Lie\prs{G}$ sending an affine algebraic group over $\mbb{F}$ to an vector space over $\mbb{F}$.
+\end{example}
+
+\begin{definition}
+We call a functor which ``forgets'' some of the structure a \emph{forgetful functor.}
+\end{definition}
+
+\begin{definition}
+Let $\mcal{C}$ be a category, and let $X \in \ob\prs{\mcal{C}}$. Define a contravariant functor
+\begin{align*}
+h^X \colon \mcal{C} &\to \mathbf{Set} \\
+Y &\mapsto \hom_{\mcal{C}}\prs{X,Y} \\
+\phi &\mapsto \prs{f \mapsto \phi \circ f} \text{.}
+\end{align*}
+\end{definition}
+
+\begin{corollary}
+Let $X$ be an affine variety over $\mbb{F}$. One can see $X$ as a functor $X \colon \mbb{F}\mathbf{-Alg} \to \mathbf{Set}$ sending $R$ to $X\prs{R}$. This is the functor $X = h^{\mbb{F}\brs{X}}$.
+\end{corollary}
+
+\begin{definition}[Natural Transformation]
+Let $F, G \colon \mcal{C} \to \mcal{D}$ be functors between categories. A \emph{natural transformation} $\eta \colon F \to G$ is the data $\eta_X \in \hom_{\mcal{D}}\prs{F\prs{X}, G\prs{X}}$ for all $X \in \ob\prs{\mcal{C}}$, such that the following diagram commutes for every $X,Y \in \ob\prs{\mcal{C}}$.
+
+\[
+\begin{tikzcd}
+F\prs{X} \arrow[r, "\eta_X"] \arrow[d, "F\prs{\phi}"] & G\prs{X} \arrow[d, "G\prs{\phi}"] \\
+F\prs{Y} \arrow[r, "\eta_Y"] & G\prs{Y}
+\end{tikzcd}
+\]
+\end{definition}
+
+\begin{example}
+Consider the functors $\id_{\mbb{F}\mathbf{-Vec}}$ and $\prs{\prs{-}^*}^*$ on the category of $\mbb{F}$-vector spaces. The canonical identification $V \cong \prs{V^*}^*$ is a natural transformation $\id_{\mbb{F}\mathbf{-Vec}} \to \prs{\prs{-}^*}^*$.
+\end{example}
+
+\begin{theorem}[Yoneda's Lemma]\label{theorem:yoneda_lemma}
+Let $\mcal{C}$ be a category and let $\phi \in \hom_{\mcal{C}}\prs{X,Y}$. Consider the induced natural transformation $T\prs{\phi} \in \hom\prs{h^Y, h^X}$ with
+\begin{align*}
+T\prs{\phi}_Z \colon \hom\prs{Y,Z} &to \hom\prs{X,Z} \\
+f &\mapsto f \circ \phi \text{.}
+\end{align*}
+Then
+\[T \colon \hom_{\mcal{C}}\prs{X,Y} \to \hom_{\mathbf{Fun}\prs{\mcal{C}, \mathbf{Set}}}\prs{h^Y, h^X}\]
+is a bijection.
+\end{theorem}
+
+\begin{corollary}
+Any $\mcal{C}$ is embedded as a subcategory of $\mathbf{Fun}\prs{\mcal{C}, \mathbf{Set}}$.
+\end{corollary}
 
 \backmatter
 \end{document}

@@ -189,4 +189,25 @@
 \contentsline {example}{{Example}{32}{}}{28}{example.32}%
 \contentsline {proposition}{{Proposition}{1.4.{7}}{}}{28}{theoremx.1.4.7}%
 \contentsline {proof}{{Proof}{34}{}}{28}{proof.34}%
-\contentsline {remark}{{Remark}{1.4.{8}}{}}{28}{theoremx.1.4.8}%
+\contentsline {exercise}{{Exercise}{17}{}}{30}{exercise.17}%
+\contentsline {proposition}{{Proposition}{1.4.{8}}{}}{30}{theoremx.1.4.8}%
+\contentsline {proof}{{Proof}{35}{}}{30}{proof.35}%
+\contentsline {exercise}{{Exercise}{18}{}}{30}{exercise.18}%
+\contentsline {remark}{{Remark}{1.4.{9}}{}}{30}{theoremx.1.4.9}%
+\contentsline {exercise}{{Exercise}{19}{}}{30}{exercise.19}%
+\contentsline {corollary}{{Corollary}{1.4.{10}}{}}{30}{theoremx.1.4.10}%
+\contentsline {definitionx}{{Definition}{1.5.{1}}{Functor of Points}}{30}{theoremx.1.5.1}%
+\contentsline {definitionx}{{Definition}{1.5.{2}}{Category}}{31}{theoremx.1.5.2}%
+\contentsline {example}{{Example}{33}{}}{31}{example.33}%
+\contentsline {definitionx}{{Definition}{1.5.{3}}{Functor}}{31}{theoremx.1.5.3}%
+\contentsline {definitionx}{{Definition}{1.5.{4}}{}}{31}{theoremx.1.5.4}%
+\contentsline {example}{{Example}{34}{}}{31}{example.34}%
+\contentsline {example}{{Example}{35}{}}{31}{example.35}%
+\contentsline {example}{{Example}{36}{}}{31}{example.36}%
+\contentsline {definitionx}{{Definition}{1.5.{5}}{}}{31}{theoremx.1.5.5}%
+\contentsline {definitionx}{{Definition}{1.5.{6}}{}}{31}{theoremx.1.5.6}%
+\contentsline {corollary}{{Corollary}{1.5.{7}}{}}{31}{theoremx.1.5.7}%
+\contentsline {definitionx}{{Definition}{1.5.{8}}{Natural Transformation}}{31}{theoremx.1.5.8}%
+\contentsline {example}{{Example}{37}{}}{31}{example.37}%
+\contentsline {theoremx}{{Theorem}{1.5.{9}}{Yoneda's Lemma}}{32}{theoremx.1.5.9}%
+\contentsline {corollary}{{Corollary}{1.5.{10}}{}}{32}{theoremx.1.5.10}%

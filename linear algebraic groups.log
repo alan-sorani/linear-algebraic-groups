@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.6.28) (preloaded format=xelatex 2021.11.4)  24 DEC 2021 15:03
+This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.6.28) (preloaded format=xelatex 2021.11.4)  28 DEC 2021 15:58
 entering extended mode
 **"./linear algebraic groups.tex"
 (linear algebraic groups.tex
@@ -1681,91 +1681,91 @@ Package tocbibind Note: Using chapter style headings, unless overridden.
  (linear algebraic groups.aux)
 \openout1 = `"linear algebraic groups.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 73.
-LaTeX Font Info:    ... okay on input line 73.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 73.
-LaTeX Font Info:    ... okay on input line 73.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 73.
-LaTeX Font Info:    ... okay on input line 73.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 73.
-LaTeX Font Info:    ... okay on input line 73.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 73.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 74.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 7
-3.
+4.
 
 (C:\Users\EladT\AppData\Local\Programs\MiKTeX\tex/latex/base\ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 73.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 73.
-LaTeX Font Info:    ... okay on input line 73.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 73.
-LaTeX Font Info:    ... okay on input line 73.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 73.
-LaTeX Font Info:    ... okay on input line 73.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 73.
-LaTeX Font Info:    ... okay on input line 73.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 73.
-LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
 
 Package fontspec Info: Adjusting the maths setup (use [no-math] to avoid
 (fontspec)             this).
 
 \symlegacymaths=\mathgroup8
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 73.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 73.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 73.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 73.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 73.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 73.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 73.
-LaTeX Font Info:    Redeclaring math accent \check on input line 73.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 73.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 73.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 73.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 73.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 73.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 73.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 73.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 73.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 73.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 73.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 73.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 73.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 73.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 73.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 73.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 73.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 74.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 74.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 74.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 74.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 74.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 74.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 74.
+LaTeX Font Info:    Redeclaring math accent \check on input line 74.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 74.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 74.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 74.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 74.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 74.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 74.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 74.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 74.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 74.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 74.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 74.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 74.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 74.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 74.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 74.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 74.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 73.
+(Font)              `operators' in the math version `normal' on input line 74.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/CMUSerif(0)/m/n on input line 73.
+(Font)                  OT1/cmr/m/n --> TU/CMUSerif(0)/m/n on input line 74.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 73.
+(Font)              `operators' in the math version `bold' on input line 74.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/CMUSerif(0)/m/n on input line 73.
+(Font)                  OT1/cmr/bx/n --> TU/CMUSerif(0)/m/n on input line 74.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  TU/CMUSerif(0)/m/n --> TU/CMUSerif(0)/m/n on input line
- 73.
+ 74.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/CMUSerif(0)/m/it on input line 73.
+(Font)                  OT1/cmr/m/it --> TU/CMUSerif(0)/m/it on input line 74.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/CMUSerif(0)/b/n on input line 73.
+(Font)                  OT1/cmr/bx/n --> TU/CMUSerif(0)/b/n on input line 74.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 73.
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 74.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 73.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 74.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  TU/CMUSerif(0)/m/n --> TU/CMUSerif(0)/b/n on input line
- 73.
+ 74.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> TU/CMUSerif(0)/b/it on input line 73.
+(Font)                  OT1/cmr/bx/it --> TU/CMUSerif(0)/b/it on input line 74.
 
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 73.
+(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 74.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 73.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 74.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
@@ -1804,7 +1804,7 @@ Package caption Info: End \AtBeginDocument code.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring ON on input line 73.
+Package hyperref Info: Link coloring ON on input line 74.
 (C:\Users\EladT\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 
@@ -1817,9 +1817,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count459
 )
-LaTeX Info: Redefining \ref on input line 73.
-LaTeX Info: Redefining \pageref on input line 73.
-LaTeX Info: Redefining \nameref on input line 73.
+LaTeX Info: Redefining \ref on input line 74.
+LaTeX Info: Redefining \pageref on input line 74.
+LaTeX Info: Redefining \nameref on input line 74.
  (linear algebraic groups.out) (linear algebraic groups.out)
 \@outlinefile=\write5
 \openout5 = `"linear algebraic groups.out"'.
@@ -1866,7 +1866,7 @@ LaTeX Font Info:    Trying to load font information for U+stmry on input line 2
 ]
 Chapter 1.
 
-Overfull \hbox (9.30286pt too wide) in paragraph at lines 123--124
+Overfull \hbox (9.30286pt too wide) in paragraph at lines 124--125
 []\TU/CMUSerif(0)/m/n/10 Around 1870-1900, Mauren took homogeneous rational fun
 ctions $\OML/cmm/m/it/10 f [] [] \U/msb/m/n/10 C[] \OMS/cmsy/m/n/10 ! \U/msb/m/
 n/10 C$ \TU/CMUSerif(0)/m/n/10 (such as $\OML/cmm/m/it/10 f [] \OT1/cmr/m/n/10 
@@ -1877,27 +1877,27 @@ n/10 C$ \TU/CMUSerif(0)/m/n/10 (such as $\OML/cmm/m/it/10 f [] \OT1/cmr/m/n/10
 
 ]
 Package hyperref Info: bookmark level for unknown definitionx defaults to 0 on 
-input line 168.
+input line 169.
 Package hyperref Info: bookmark level for unknown example defaults to 0 on inpu
-t line 174.
+t line 175.
  [2]
 Package hyperref Info: bookmark level for unknown remark defaults to 0 on input
- line 200.
+ line 201.
 Package hyperref Info: bookmark level for unknown exercise defaults to 0 on inp
-ut line 213.
+ut line 214.
 Package hyperref Info: bookmark level for unknown notation defaults to 0 on inp
-ut line 247.
+ut line 248.
  [3]
 Package hyperref Info: bookmark level for unknown proposition defaults to 0 on 
-input line 276.
+input line 277.
 Package hyperref Info: bookmark level for unknown theoremx defaults to 0 on inp
-ut line 303.
+ut line 304.
 Package hyperref Info: bookmark level for unknown proof defaults to 0 on input 
-line 308.
+line 309.
 Package hyperref Info: bookmark level for unknown corollary defaults to 0 on in
-put line 324.
+put line 325.
  [4]
-Overfull \hbox (9.76279pt too wide) in paragraph at lines 348--349
+Overfull \hbox (9.76279pt too wide) in paragraph at lines 349--350
 []\TU/CMUSerif(0)/m/n/10 In a Noetherian space $\OML/cmm/m/it/10 X$ \TU/CMUSeri
 f(0)/m/n/10 there are finitely many maximal irreducible subsets $\OML/cmm/m/it/
 10 X[]; [] ; X[]$\TU/CMUSerif(0)/m/n/10 ,
@@ -1906,10 +1906,10 @@ f(0)/m/n/10 there are finitely many maximal irreducible subsets $\OML/cmm/m/it/
 [5]
 
 LaTeX Font Warning: Font shape `U/stmry/b/n' undefined
-(Font)              using `U/stmry/m/n' instead on input line 454.
+(Font)              using `U/stmry/m/n' instead on input line 455.
 
 
-Overfull \hbox (8.74261pt too wide) in paragraph at lines 475--477
+Overfull \hbox (8.74261pt too wide) in paragraph at lines 476--478
 []\TU/CMUSerif(0)/m/n/10 We could take any finitely-generated $\U/msb/m/n/10 F$
 \TU/CMUSerif(0)/m/n/10 -algebra $\OML/cmm/m/it/10 A$ \TU/CMUSerif(0)/m/n/10 and
  define $\OML/cmm/m/it/10 X \OT1/cmr/m/n/10 = [][] []$\TU/CMUSerif(0)/m/n/10 .
@@ -1917,16 +1917,16 @@ Overfull \hbox (8.74261pt too wide) in paragraph at lines 475--477
 
 [6] [7] [8] [9] [10] [11] [12]
 Package hyperref Info: bookmark level for unknown lemma defaults to 0 on input 
-line 956.
+line 957.
  [13]
-Overfull \hbox (0.15025pt too wide) in paragraph at lines 980--982
+Overfull \hbox (0.15025pt too wide) in paragraph at lines 981--983
 \TU/CMUSerif(0)/m/n/10 Since the left-hand-side is of degree $\OT1/cmr/m/n/10 0
 $\TU/CMUSerif(0)/m/n/10 , the right-hand side is a constant polynomial. But, $[
 ] [] [] \OT1/cmr/m/n/10 =
  []
 
 
-Overfull \hbox (13.69067pt too wide) in paragraph at lines 1013--1014
+Overfull \hbox (13.69067pt too wide) in paragraph at lines 1014--1015
 []\TU/CMUSerif(0)/m/n/10 In the previous example, take $\OML/cmm/m/it/10 A [][]
 \OT1/cmr/m/n/10 = \U/msb/m/n/10 F []$ \TU/CMUSerif(0)/m/n/10 and $\OML/cmm/m/it
 /10 B [][]\OT1/cmr/m/n/10 = \U/msb/m/n/10 F []$\TU/CMUSerif(0)/m/n/10 . Then $\
@@ -1934,7 +1934,7 @@ OML/cmm/m/it/10 B [] A [] \OT1/cmr/m/n/10 / []$\TU/CMUSerif(0)/m/n/10 .
  []
 
 [14] [15] [16] [17] [18]
-Overfull \hbox (5.66393pt too wide) in paragraph at lines 1375--1376
+Overfull \hbox (5.66393pt too wide) in paragraph at lines 1376--1377
 []\TU/CMUSerif(0)/m/n/10 If $\OML/cmm/m/it/10 W \OMS/cmsy/m/n/10 ^^T \OML/cmm/m
 /it/10 V$ \TU/CMUSerif(0)/m/n/10 is $\OML/cmm/m/it/10 ' []$\TU/CMUSerif(0)/m/n/
 10 -invariant, the restrictions $[][] [] [][]\OT1/cmr/m/n/10 =
@@ -1943,16 +1943,16 @@ Overfull \hbox (5.66393pt too wide) in paragraph at lines 1375--1376
 [19] [20] [21]
 
 Package amsmath Warning: Cannot use `split' here;
-(amsmath)                trying to recover with `aligned' on input line 1581.
+(amsmath)                trying to recover with `aligned' on input line 1582.
 
 [22]
 LaTeX Font Info:    Trying to load font information for U+euf on input line 164
-5.
+6.
  (C:\Users\EladT\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 )
 [23]
-Overfull \hbox (81.19276pt too wide) in paragraph at lines 1694--1695
+Overfull \hbox (81.19276pt too wide) in paragraph at lines 1695--1696
 []\TU/CMUSerif(0)/m/n/10 For $\OML/cmm/m/it/10 v \OT1/cmr/m/n/10 = [] \OMS/cmsy
 /m/n/10 2 I[]$ \TU/CMUSerif(0)/m/n/10 consider the quotient map $\OML/cmm/m/it/
 10 ^^Y [] [] \U/msb/m/n/10 F [] \OMS/cmsy/m/n/10 ! \U/msb/m/n/10 F [] \OT1/cmr/
@@ -1961,8 +1961,8 @@ m/n/10 / []$\TU/CMUSerif(0)/m/n/10 ,
 
 [24]
 Package hyperref Info: bookmark level for unknown fact defaults to 0 on input l
-ine 1806.
- [25] [26] [27] [28]
+ine 1807.
+ [25] [26] [27] [28] [29] [30] [31] [32]
 \tf@thm=\write7
 \openout7 = `"linear algebraic groups.thm"'.
 
@@ -1975,12 +1975,12 @@ ed.
 (rerunfilecheck)             Checksum: <no file>.
  ) 
 Here is how much of TeX's memory you used:
- 34537 strings out of 411254
- 713983 string characters out of 2828529
- 1277829 words of memory out of 3000000
- 54405 multiletter control sequences out of 15000+600000
+ 34585 strings out of 411254
+ 715105 string characters out of 2828529
+ 1277842 words of memory out of 3000000
+ 54453 multiletter control sequences out of 15000+600000
  410931 words of font info for 95 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 117i,20n,122p,624b,1038s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 117i,20n,122p,624b,1058s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on linear algebraic groups.pdf (32 pages).
+Output written on linear algebraic groups.pdf (36 pages).
