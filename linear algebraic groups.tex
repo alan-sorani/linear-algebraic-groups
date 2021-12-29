@@ -2232,7 +2232,7 @@ We call a functor which ``forgets'' some of the structure a \emph{forgetful func
 \end{definition}
 
 \begin{definition}
-Let $\mcal{C}$ be a category, and let $X \in \ob\prs{\mcal{C}}$. Define a contravariant functor
+Let $\mcal{C}$ be a category, and let $X \in \ob\prs{\mcal{C}}$. Define a (covariant) functor
 \begin{align*}
 h^X \colon \mcal{C} &\to \mathbf{Set} \\
 Y &\mapsto \hom_{\mcal{C}}\prs{X,Y} \\
@@ -2255,6 +2255,10 @@ F\prs{Y} \arrow[r, "\eta_Y"] & G\prs{Y}
 \]
 \end{definition}
 
+\begin{corollary}
+The collection $\mathbf{Fun}\prs{\mcal{C}, \mcal{D}}$ of functors $\mcal{C} \to \mcal{D}$ is a category together with natural transformations as morphisms.
+\end{corollary}
+
 \begin{example}
 Consider the functors $\id_{\mbb{F}\mathbf{-Vec}}$ and $\prs{\prs{-}^*}^*$ on the category of $\mbb{F}$-vector spaces. The canonical identification $V \cong \prs{V^*}^*$ is a natural transformation $\id_{\mbb{F}\mathbf{-Vec}} \to \prs{\prs{-}^*}^*$.
 \end{example}
@@ -2273,6 +2277,70 @@ is a bijection.
 \begin{corollary}
 Any $\mcal{C}$ is embedded as a subcategory of $\mathbf{Fun}\prs{\mcal{C}, \mathbf{Set}}$.
 \end{corollary}
+
+%29.12.21
+
+\begin{definition}[Yoneda Embedding]
+Define the \emph{Yoneda embedding} to be the contravariant functor
+\begin{align*}
+\mcal{C} &\to \mathbf{Fun}\prs{\mcal{C},\mathbf{Set}} \\
+X &\mapsto h^X \text{.}
+\end{align*}
+This is an \emph{embedding} due to Yoneda's lemma.
+\end{definition}
+
+\begin{remark}
+We saw that $X\prs{R}$ can be thought of as the solution of solutions defined in $\mbb{F}\brs{X}$ over $R$. This is a way to construct geometric objects from an $\mbb{F}$-algebra $R$.
+\end{remark}
+
+\begin{definition}[Corepresentable Functor]
+A functor $F \colon \mcal{C} \to \mathbf{Set}$ is \emph{corepresentable} if there's $X \in \ob\prs{\mcal{C}}$ such that $F \cong h^X$.
+\end{definition}
+
+\newcommand{\mbf}[1]{\mathbf{#1}}
+
+\begin{definition}[$\mbb{F}$-Affine Scheme]
+An \emph{$\mbb{F}$-affine scheme} is a corepresentable functor $X \colon \mbb{F}\mbf{-Alg} \to \mbf{Set}$.
+If $X$ is corepresentable by a finitely-generated object, we say $X$ is an \emph{algebraic scheme}.
+\end{definition}
+
+\begin{remark}
+Remembering our definition of affine varieties over $\mbb{F}$, the algebra of regular  functions has no non-trivial nilpotent elements. So, the case of $\mbb{F}$-schemes is more general, but one has a similar duality.
+\end{remark}
+
+\begin{definition}
+For an $\mbb{F}$-scheme $X \colon \mbb{F}\mbf{-Alg} \to \mbf{Set}$, let
+\[A_X \coloneqq \hom_{\mbb{F}}\prs{X, \mbb{A}^1}\]
+where $\mbb{A}^1 \coloneqq h^{\mbb{F}\brs{t}}$.
+\end{definition}
+
+Any $f \in \hom\prs{X,\mbb{A}^1}$ (a natural transformation between the functors) is composed of functions $f_R \colon X\prs{R} \to \mbb{A}^1\prs{R}$, such thatfor a morphism $t \colon R \to S$ the following diagram commutes.
+\[
+\begin{tikzcd}
+X\prs{R} \arrow[r, "f_R"] \arrow[d, "X\prs{t}"] & \mbb{A}^1\prs{R} \arrow[d, "t"] \\
+X\prs{S} \arrow[r, "f_S"] & S
+\end{tikzcd}
+\]
+In particular, $A_X$ is an $\mbb{F}$-algebra. We get a natural transformation
+\[\alpha^X \in \hom\prs{X, h^{A_X}}\]
+with
+\begin{align*}
+\alpha^X_R \colon X\prs{R} &\to \hom\prs{A_X, R} \\
+g &\mapsto \prs{f_R \mapsto f_R\prs{g}} \text{.}
+\end{align*}
+This is analogous to $\mrm{ev}_g$.
+
+\begin{proposition}
+$X \colon \mbb{F}\mbf{-Alg} \to \mbf{Set}$ is corepresentable (i.e. a scheme) if and only if $\alpha^X$ is an isomorphism.
+\end{proposition}
+
+\begin{proof}
+If $\alpha^X$ is an isomorphism, $X \cong h^{A_X}$ which is a scheme by definition.
+
+If $X \cong h^B$ then
+\[A_X = \hom\prs{h^B, h^{\mbb{F}\brs{t}}} \underset{\mrm{Yoneda}}{\cong} \hom\prs{\mbb{F}\brs{t}, B} \cong B \text{.}\]
+Hence $X \cong h^{A_X}$. Check that then $\alpha^X \in \hom\prs{h^{A_X}, h^{A_X}}$ is a natural isomorphism.
+\end{proof}
 
 \backmatter
 \end{document}
