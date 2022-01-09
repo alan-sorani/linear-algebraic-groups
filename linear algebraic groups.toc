@@ -32,3 +32,8 @@
 \contentsline {subsection}{\numberline {1.4.1}Definitions}{27}{subsection.1.4.1}%
 \contentsline {section}{\numberline {1.5}Categorical Approach to Algebraic Groups}{30}{section.1.5}%
 \contentsline {subsection}{\numberline {1.5.1}Definitions}{30}{subsection.1.5.1}%
+\contentsline {subsection}{\numberline {1.5.2}Interlude: General (Non-Affine) Schemes}{33}{subsection.1.5.2}%
+\contentsline {subsection}{\numberline {1.5.3}A Categorical Approach to Algebraic Groups}{33}{subsection.1.5.3}%
+\contentsline {subsubsection}{Definitions}{33}{section*.20}%
+\contentsline {subsubsection}{Concrete Application of the Categorical Approach}{35}{section*.21}%
+\contentsline {subsubsection}{Extension and Restriction of Scalars}{35}{section*.22}%

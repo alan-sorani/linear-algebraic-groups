@@ -2314,7 +2314,7 @@ For an $\mbb{F}$-scheme $X \colon \mbb{F}\mbf{-Alg} \to \mbf{Set}$, let
 where $\mbb{A}^1 \coloneqq h^{\mbb{F}\brs{t}}$.
 \end{definition}
 
-Any $f \in \hom\prs{X,\mbb{A}^1}$ (a natural transformation between the functors) is composed of functions $f_R \colon X\prs{R} \to \mbb{A}^1\prs{R}$, such thatfor a morphism $t \colon R \to S$ the following diagram commutes.
+Any $f \in \hom\prs{X,\mbb{A}^1}$ (a natural transformation between the functors) is composed of functions $f_R \colon X\prs{R} \to \mbb{A}^1\prs{R}$, such that for a morphism $t \colon R \to S$ the following diagram commutes.
 \[
 \begin{tikzcd}
 X\prs{R} \arrow[r, "f_R"] \arrow[d, "X\prs{t}"] & \mbb{A}^1\prs{R} \arrow[d, "t"] \\
@@ -2341,6 +2341,264 @@ If $X \cong h^B$ then
 \[A_X = \hom\prs{h^B, h^{\mbb{F}\brs{t}}} \underset{\mrm{Yoneda}}{\cong} \hom\prs{\mbb{F}\brs{t}, B} \cong B \text{.}\]
 Hence $X \cong h^{A_X}$. Check that then $\alpha^X \in \hom\prs{h^{A_X}, h^{A_X}}$ is a natural isomorphism.
 \end{proof}
+
+%LECTURE 30.12
+
+\subsection{Interlude: General (Non-Affine) Schemes}
+
+We defined affine schemes, but what are non-affine schemes?
+Similarly to our definition of an $\mbb{F}$-affine variety $\prs{X,A}$ where $X = \hom_{\mbb{F}\mbf{-Alg}}\prs{A,\mbb{F}}$, an affine scheme is a functor
+\[X \colon \mbb{F}\mbf{-Alg} \to \mbf{Set}\]
+where $X\prs{R} = \hom_{\mbb{F}\mbf{-Alg}}\prs{A,R}$, for some $\mbb{F}$-algebra $A$.
+But, there are in general non-affine spaces of algebraic interest which aren't affine. For example, there's projective space.
+
+\begin{example}
+We define the $n$-dimensional projective space $\mbb{P}^n\prs{\mbb{F}}$ as $\prs{\mbb{F}^{n+1} \setminus \set{0}} / \mbb{F}^\times$ under the $\mbb{F}^\times \acts \mbb{F}^{n+1} \setminus \set{0}$ action given by multiplication by the scalar.
+
+While projective space is \emph{not} affine, it is \emph{locally affine}.
+For example, removing $p_0 \coloneqq \brs{\prs{\alpha, 0}}$ from $\mbb{P}^1\prs{\mbb{F}}$, we get an algebraic variety isomorphic to $\mbb{F}$ via
+\[\prs{\alpha, \beta} \leftrightarrow \frac{\alpha}{\beta} \text{.}\]
+This fits the intuition of the Riemann sphere where $\mbb{P}^1\prs{\mbb{C}} \cong \mbb{C} \cup \set{\infty}$.
+We can get such identification by removing any other point, so one has $\mbb{P}^1\prs{\mbb{F}} = A_1 \cup A_2$ where the $A_i$ are open and isomorphic to $\mbb{F}$.
+
+Zariski closed subsets of $\mbb{P}^n$ (under the correct definition) are called \emph{projective varieties} and are locally isomorphic to affine varieties.
+This leads us to the general definition of an $\mbb{F}$-scheme.
+\end{example}
+
+\begin{definition}[Presheaf]
+A functor in $\mbf{Fun}\prs{\mcal{C},\mbf{Set}}$ is called a \emph{presheaf}.
+\end{definition}
+
+\begin{definition}
+A functor $X \colon \mbb{F}\mbf{-Alg} \to \mbf{Set}$ is an $\mbb{F}$-scheme if as a presheaf 
+\end{definition}
+
+We define a functor $X \colon \mbb{F}\mbf{-Alg} \to \mbf{Set}$ to be an algebraic $\mbb{F}$-scheme if the presheaf is ``locally corepresentable''. The Zariski to topology on affine $\mbb{F}$-varieties then gives a ``topology'' on $\mbb{F}\mbf{-Alg}$, called the \emph{Grothendieck topology}.
+With respect to this topology, one can say that $X \colon \mbb{F}\mbf{-Alg} \to \mbf{Set}$ is ``locally corepresentable'' if there are $\mbb{F}$-affine algebraic schemes $U_1, \ldots, U_k \colon \mbb{F}\mbf{-Alg} \to \mbf{Set}$ such that $U_i \rmono X$ are open embeddings (w.r.t. to the Grothendieck topology) and $X = \bigcup_{i \in [k]} U_i$.
+
+\subsection{A Categorical Approach to Algebraic Groups}
+
+\subsubsection{Definitions}
+
+\begin{definition}[Algebraic $\mbb{F}$-Affine Group-Scheme]
+An \emph{algebraic $\mbb{F}$-affine group scheme} is a functor $G \colon \mbb{F}\mbf{-Alg} \to \mbf{Group}$ such that $U \circ G$ is an algebraic $\mbb{F}$-affine scheme, where $U \colon \mbf{Group} \to \mbf{Set}$ is the forgetful functor.
+\end{definition}
+
+\begin{remark}
+An $\mbb{F}$-affine scheme is defined by an $\mbb{F}$-algebra $A$, being isomorphic to $h^A$. If $U \circ G \cong h^A$ we want to deduce something on $A$. In other words, we ask what $\mbb{F}$-algebras corepresent algebraic $\mbb{F}$-affine group-schemes. Such $\mbb{F}$-algebras are called \emph{Hopf algebras}.
+\end{remark}
+
+\begin{definition}
+For $\mbb{F}$-affine varieties $X_1, X_2 \colon \mbb{F}\mbf{-Alg} \to \mbf{Set}$ we define their product by
+\begin{align*}
+X_1 \times X_2 \colon \mbb{F}\mbf{-Alg} &\to \mbf{Set} \\
+R &\mapsto X_1\prs{R} \times X_2\prs{R} \text{.}
+\end{align*}
+\end{definition}
+
+\begin{remark}
+In the above definition one should show that $X_1 \times X_2$ is corepresentable. If $X_i$ is corepresented by $A_i$ one has $h^{A_1 \otimes A_2} \cong X_1 \times X_2$ since we've shown
+\[\hom\prs{A_1 \otimes A_2, R} \cong \hom\prs{A_1, R} \times \hom\prs{A_2, R} \text{.}\]
+\end{remark}
+
+Let $F$ be a group-scheme, and $t \colon R \to S$ an $\mbb{F}$-algebra homomorphism. Then $G\prs{R}, G\prs{S}$ are groups, and the following diagram commutes since $G \colon \mbb{F}\mbf{-Alg} \to \mbf{Group}$ is a functor.
+\[
+\begin{tikzcd}
+G\prs{R} \times \prs{S} \arrow[r, "m_R"] \arrow[d, "\prs{G \times G}\prs{t}"] & G\prs{R} \arrow[d, "G\prs{t}"] \\
+G\prs{S} \times G\prs{S} \arrow[r, "m_S"] & G\prs{S}
+\end{tikzcd}
+\]
+On the other hand, the collection $\prs{m_R}_{R \in \ob\prs{\mbb{F}\mbf{-Alg}}}$ defines a natural transformation $m \colon G \times G \to G$, and
+\begin{align*}
+m \in \Hom\prs{G \times G, G} &\cong \hom\prs{h^{A \otimes A}, h^A} \cong \hom_{\mbb{F}\mbf{-Alg}}\prs{A, A \otimes A} \text{.}
+\end{align*}
+The image $\Delta \coloneqq m^*$ of $m$ in $\hom_{\mbb{F}\mbf{-Alg}}\prs{A, A \otimes A}$ is called the comultiplication on $A$. If $A = \mbb{F}\brs{G}$ we have
+\begin{align*}
+\Delta = m^* \colon \mbb{F}\brs{G} &\to \mbb{F}\brs{G \times G} \\
+f &\mapsto \prs{\prs{g_1, g_2} \mapsto f\prs{g_1 g_2}} \text{.}
+\end{align*}
+
+We can write the comultiplication $\Delta$ in another way.
+We have
+\begin{align*}
+G\prs{R} \times G\prs{R} = \hom\prs{A,R} \times \hom\prs{A,R} \cong \hom\prs{A \otimes A, R} \xrightarrow{\ev \circ \Delta} \hom\prs{A,R} = G\prs{R}
+\end{align*}
+and via these morphisms $\Delta$ defines the multiplication structure on $G\prs{R}$.
+Associativity of the multiplication on $G\prs{R}$ for all $R$ gives the following equation.
+\[\prs{\id \otimes \Delta} \Delta = \prs{\Delta \otimes \id} \Delta \text{.}\]
+
+Similarly, we would like to describe all the properties defining a group strucutre on $G\prs{R}$ as properties of $A$.
+We have an identity element
+\[G_{\eps} \colon \mbb{F}\mbf{-Alg} \to \mbf{Group}\]
+with $G_{\eps} = h^{\mbb{F}}$, so that
+\[G_{\eps} = \hom_{\mbb{F}\mbf{-Alg}}\prs{\mbb{F}, R} = \set{e} \text{.}\]
+We have maps
+\[G_{\eps} \xrightarrow{\eps_R} G\prs{R} \xrightarrow{\eta_R} G_{\eps}\prs{R}\]
+where
+\[\eps_R\prs{g} = e \text{.}\]
+One can check that these maps $\eps_R, \eta_R$ coalesce into natural transformations
+\[G_\eta \xrightarrow{\eps} G \xrightarrow{\eta} G_\eps \text{.}\]
+Now $\eps \in \hom\prs{h^F, h^A} \cong \hom\prs{A,\mbb{F}}$ corresponds to evaluation at $e \in G$, i.e. $\eps = \ev_e$. (Check this!)
+The property $g = g \cdot e = e \cdot g$ for all $g \in G$ is then expressed as
+\begin{align*}
+\id &= \prs{\id \otimes \eps} \Delta \\
+\id &= \prs{\eps \otimes \id} \Delta \text{.}
+\end{align*}
+Now, $\prs{A, \Delta, \eps}$ is called a \emph{bi-algebra}: it has a comultiplication with counit, and also an algebra structure.
+
+We have the inverse map $i \colon g \mapsto g^{-1}$ which gives an homomorphism $S = i^* \colon A \to A$ called the \emph{antipode}. The properties $g g^{-1} = g^{-1} g = e$ can be expressed by the commutativity of the following diagram.
+\[
+\begin{tikzcd}
+& G \arrow[dl] \arrow[r, "g \mapsto \prs{g,g}"] & G \times G \arrow[dd, "\prs{g,h} \mapsto \prs{g, h^{-1}}"] \\
+\set{e} \arrow[dr] & & \\
+& G & G \times G \arrow[l, "gh \mapsfrom \prs{g,h}"]
+\end{tikzcd}
+\]
+In the algebras we get
+\begin{equation}\label{equation:hopf}
+m\prs{\id \otimes S} \Delta\prs{f} = m\prs{S \otimes \id} \Delta\prs{f} = \eps\prs{f} \cdot 1 \text{.}
+\end{equation}
+
+\begin{definition}
+An $\mbb{F}$-bialgebra with an antipode $S \colon A \to A$ satisfying condition \eqref{equation:hopf} is called a \emph{Hopf $\mbb{F}$-algebra}.
+\end{definition}
+
+One can check that a Hopf-algebra structure on $A$ gives a functor $\mbb{F}\mbf{-Alg} \to \mbf{Group}$ structure on $h^A$.
+
+\begin{remark}
+Given the above descriptions, we can think of $\mbb{F}$-algebraic groups in the following ways.
+
+\begin{itemize}
+\item  An $\mbb{F}$-affine variety with regular multiplication and inverse maps.
+\item A corepresentable functor $\mbb{F}\mbf{-Alg} \to \mbf{Set}$ together with a lift to a functor $\mbb{F}\mbf{-Alg} \to \mbf{Set}$.
+\item An Hopf $\mbb{F}$-algebra $A$.
+\end{itemize}
+\end{remark}
+
+\subsubsection{Concrete Application of the Categorical Approach}
+
+We can use the categorical approach to think of Lie algebras as a natural object.
+Consider the $\mbb{F}$-algebra $R \coloneqq \mbb{F}\brs{t} / \prs{t^2} \eqqcolon \mbb{F}\brs{\eps}$ with $\eps^2 = 0$. Then $R$ has a unique maximal ideal $\prs{0}$.
+There's an homomorphism
+\begin{align*}
+\phi \colon \mbb{F}\brs{\eps} &\to \mbb{F} \\
+\eps &\mapsto 0
+\end{align*}
+which induces a homomorphism
+\[\alpha \colon G\prs{\mbb{F}\brs{\eps}} \to G\prs{\mbb{F}} \text{.}\]
+For $p \in G\prs{F}$, if $v \in G\prs{\mbb{F}\brs{\eps}}$ is such that $\alpha\prs{v} = p$, we have
+\begin{align*}
+v \colon \mbb{F}\brs{G} &\to \mbb{F}\brs{\eps} \\
+f &\mapsto v_0\prs{f} \cdot 1 + v_1\prs{f} \cdot \eps
+\end{align*}
+and since $\alpha\prs{v} = p$ we get $v_0 = \ev_p$.
+One can also check that
+\[v_1 \colon \mbb{F}\brs{G} \to \mbb{F}\]
+is a derivation, hence in $T_p\prs{G}$.
+Then $\ker\prs{\alpha} = T_e\prs{G} = \Lie\prs{G}$ is a Lie algebra.
+
+%LECTURE 5.1.22
+
+\subsubsection{Extension and Restriction of Scalars}
+
+Let $E / F$ be a field extension. Any $E$-algebra is also naturally an $F$ algebra. If $G \colon F\mbf{-Alg} \to \mbf{Group}$ is an $F$-algebraic group, we get a restriction
+\[G_E \coloneqq \rest{G}{E\mbf{-Alg}} \colon E\mbf{-Alg} \to \mbf{Group} \text{.}\]
+
+\begin{example}
+We can consider $\mrm{SL}_n\prs{\mbb{C}}$ as an algebraic group over $\mbb{R}$.
+\end{example}
+
+We have to show that $G_E$ is actually an algebraic group. I.e. that forgetting the group structure gives a corepresentable functor.
+For every $E$-algebra $R$ we get
+\begin{align*}
+G_E\prs{R} &= \hom_{F\mbf{-Alg}}\prs{F\brs{G}, R}
+\\&\cong \hom_{E\mbf{-Alg}}\prs{E \otimes_F F\brs{G}, R} \text{.} 
+\end{align*}
+We describe the rightmost isomorphism.
+We send $\phi \colon F\brs{G} \to R$ to
+\begin{align*}
+\phi_E \colon E \otimes_F F\brs{G} &\to R \\
+e \otimes f &\mapsto e \cdot \phi\prs{f}
+\end{align*}
+where $e \in E$ and $f \in F\brs{G}$.
+
+\begin{example}
+The algebraic group $\prs{F,+}$ is denoted $\mbb{G}_a$ and is called \emph{the additive group}. This is the functor $G_a\prs{R} = R$. We have $\mbb{G}_a = h^{F\brs{t}}$.
+\end{example}
+
+\begin{example}
+The group $\prs{F^\times, \cdot}$ is denoted $\mrm{GL}_1$ or $\mbb{G}_m$ and is called \emph{the multiplicative group}. We have $\mbb{G}_m\prs{R} = R^\times$ and $\mbb{G}_m = h^{F\brs{t,t^{-1}}}$.
+
+Extending scalars we get $\mrm{GL}_1\prs{\mbb{Q}} \otimes_{\mbb{Q}} \mbb{R} \cong \mrm{GL}_1\prs{\mbb{R}}$. We have
+\begin{align*}
+\mbb{G}_m \colon \mbb{Q}\mbf{-Alg} \to \mbf{Group}
+\end{align*}
+and the extension of scalars is
+\[\prs{\mbb{G}_m}_{\mbb{R}} = h^{\mbb{R} \otimes \mbb{Q}\brs{t,t^{-1}}} \text{.}\]
+Here
+\[\mbb{R} \otimes \mbb{Q}\brs{t,t^{-1}} \cong \mbb{R}\brs{t,t^{-1}}\]
+are Laurent polynomials with coefficients in $\mbb{R}$.
+\end{example}
+
+\begin{example}[A Typical Application]
+Let $G$ be an $\mbb{F}$-algebraic group.
+It is sometimes easier to understand the extension of scalars $G_{\bar{\mbb{F}}}$ to the algebraic closure.
+
+Conversely, given an $\bar{\mbb{F}}$-algebraic group $G$ we want to understand those $G'$ which are $\mbb{F}$-algebraic such that $G \cong \prs{G'}_{\bar{\mbb{F}}}$. Such $G'$ is called an $\mbb{F}$-form of $G$.
+\end{example}
+
+\begin{example}[Orthogonal Groups]
+Any symmetric $Q \in M_n\prs{\mbb{R}}$ defines a bilinear form
+\[\trs{x,y}_Q = x^t Q y \text{.}\]
+We get an $\mbb{R}$-algebraic group
+\[\mcal{O}^{Q}\prs{\mbb{R}} \coloneqq \set{g \in \mrm{GL}_n\prs{\mbb{R}}}{gQg^t = Q} = \set{g \in \mrm{GL}_n\prs{\mbb{R}}}{\forall x,y \in \mbb{R}^n \colon \trs{gx,gy}_Q = \trs{x,y}_Q}\]
+and similarly a $\mbb{C}$-algebraic group
+\[O^Q\prs{\mbb{C}} \coloneqq \set{g \in \mrm{GL}_n\prs{\mbb{C}}}{gQg^t = Q} \text{.}\]
+If $\det Q \neq 0$, the form $\trs{,}_Q$ is non-degenerate.
+
+In $M_n\prs{\mbb{C}}$, for any such $Q_1, Q_2$ there's $g_0 \in \mrm{GL}_n\prs{\mbb{C}}$ such that
+\[g_0 Q_1 g_0^t = Q_2 \text{.}\]
+Then
+\[g_0 O^{Q_1}\prs{\mbb{C}} g_0^{-1} = O^{Q_2}\prs{\mbb{C}}\]
+so one denotes
+\[\mrm{O}_n \coloneqq \mrm{O}^I\]
+which is equal to any $\mrm{O}^Q$.
+
+Going back to $\mbb{R}$, we get that for any symmetric $Q$ one has
+\[\prs{\mrm{O}^Q}_{\mbb{C}} = \prs{\mrm{O}_n}_{\mbb{C}} \text{.}\]
+Over $\mbb{R}$ itself there can be non-equivalent forms, for example $Q_1 = I_n$ and $Q_2 = \pmat{I_k & \\ & -I_{\ell}}$ where $k+\ell = n$. Check that in this case $O^{Q_1}\prs{\mbb{R}} \cong O^{Q_2}\prs{\mbb{R}}$ as abstract groups.
+\end{example}
+
+\begin{example}
+Let
+\begin{align*}
+U_n \coloneqq \set{g \in \mrm{GL}_n\prs{\mbb{C}}}{g^t \cdot \bar{g} = I_n} \subseteq M_n\prs{\mbb{C}}
+\end{align*}
+be the unitary group.
+If $z \in \mbb{C}$, the conjugate $\bar{z}$ is not a polynomial, but if we treat this over $\mbb{R}$, it is. Hence $U_n$ is an $\mbb{R}$-algebraic group. We can embed $M_n\prs{\mbb{C}} \subseteq M_{2n}\prs{\mbb{R}} \subseteq M_{2n}\prs{\mbb{C}}$, and then ask what is $\prs{U_n}_{\mbb{C}}$.
+
+We embed
+\[s \colon M_n\prs{\mbb{C}} \rmono M_n\prs{\mbb{C}} \oplus M_n\prs{\mbb{C}}\]
+with $s\prs{A} = \prs{A, \bar{A}}$. This is $\mbb{R}$-linear and multiplicative, hence an embedding of $\mbb{R}$-algebras.
+In fact,
+\[M_n\prs{\mbb{C}} \oplus M_n\prs{\mbb{C}} = s\prs{M_n\prs{\mbb{C}}} \oplus i s\prs{M_n\prs{\mbb{C}}} \text{.}\]
+For example, \[\mbb{C} \oplus \mbb{C} = \set{\prs{z,\bar{z}}}{z \in \mbb{C}} \oplus \set{\prs{z, -\bar{z}}}{z \in \mbb{C}} \text{.}\]
+Now,
+\begin{align*}
+s\prs{U_n} &= s\prs{M_n\prs{\mbb{C}}} \cap \set{\prs{A,B}}{A^t B = I} = s\prs{M_n\prs{\mbb{C}}} \cap \set{\prs{A,\prs{A^t}^{-1}}}{A \in \mrm{GL}_n\prs{\mbb{C}}} \text{.}
+\end{align*}
+
+We get an embedding
+\begin{align*}
+\iota \colon \mrm{GL}_n\prs{\mbb{C}} &\rmono \mrm{GL}_n\prs{\mbb{C}} \times \mrm{GL}_n\prs{\mbb{C}} \\
+g &\mapsto \prs{g, \prs{g^t}^{-1}}
+\end{align*}
+such that
+\begin{align*}
+s\prs{U_n} &= s\prs{M_n\prs{\mbb{C}}} \cap \iota\prs{\mrm{GL}_n\prs{\mbb{C}}}
+\end{align*}
+and $\prs{U_n}_{\mbb{C}} \cong \mrm{GL}_n\prs{\mbb{C}}$.
+\end{example}
 
 \backmatter
 \end{document}

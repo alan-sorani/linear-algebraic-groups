@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.6.28) (preloaded format=xelatex 2021.11.4)  29 DEC 2021 10:23
+This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.6.28) (preloaded format=xelatex 2021.11.4)  9 JAN 2022 21:34
 entering extended mode
 **"./linear algebraic groups.tex"
 (linear algebraic groups.tex
@@ -1970,6 +1970,15 @@ heme \TU/CMUSerif(0)/m/n/10 is a corepresentable functor $\OML/cmm/m/it/10 X []
  []
 
 [32]
+Overfull \hbox (6.7483pt too wide) in paragraph at lines 2384--2385
+\TU/CMUSerif(0)/m/n/10 is a functor $\OML/cmm/m/it/10 G [] [] \U/msb/m/n/10 F[]
+ \OMS/cmsy/m/n/10 ! []$ \TU/CMUSerif(0)/m/n/10 such that $\OML/cmm/m/it/10 U \O
+MS/cmsy/m/n/10 ^^N \OML/cmm/m/it/10 G$ \TU/CMUSerif(0)/m/n/10 is an algebraic $
+\U/msb/m/n/10 F$\TU/CMUSerif(0)/m/n/10 -affine scheme, where $\OML/cmm/m/it/10 
+U [] [] [] \OMS/cmsy/m/n/10 !
+ []
+
+[33] [34] [35] [36]
 \tf@thm=\write7
 \openout7 = `"linear algebraic groups.thm"'.
 
@@ -1982,12 +1991,12 @@ ed.
 (rerunfilecheck)             Checksum: <no file>.
  ) 
 Here is how much of TeX's memory you used:
- 34628 strings out of 411254
- 716144 string characters out of 2828529
- 1277842 words of memory out of 3000000
- 54496 multiletter control sequences out of 15000+600000
+ 34729 strings out of 411254
+ 718590 string characters out of 2828529
+ 1276842 words of memory out of 3000000
+ 54597 multiletter control sequences out of 15000+600000
  410931 words of font info for 95 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  117i,20n,122p,624b,1058s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on linear algebraic groups.pdf (36 pages).
+Output written on linear algebraic groups.pdf (40 pages).
