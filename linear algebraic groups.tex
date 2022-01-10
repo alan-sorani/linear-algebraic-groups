@@ -2365,15 +2365,15 @@ Zariski closed subsets of $\mbb{P}^n$ (under the correct definition) are called 
 This leads us to the general definition of an $\mbb{F}$-scheme.
 \end{example}
 
-\begin{definition}[Presheaf]
-A functor in $\mbf{Fun}\prs{\mcal{C},\mbf{Set}}$ is called a \emph{presheaf}.
+\begin{definition}[Copresheaf]
+A functor in $\mbf{Fun}\prs{\mcal{C},\mbf{Set}}$ is called a \emph{copresheaf}.
 \end{definition}
 
 \begin{definition}
-A functor $X \colon \mbb{F}\mbf{-Alg} \to \mbf{Set}$ is an $\mbb{F}$-scheme if as a presheaf 
+A functor $X \colon \mbb{F}\mbf{-Alg} \to \mbf{Set}$ is an $\mbb{F}$-scheme if as a copresheaf 
 \end{definition}
 
-We define a functor $X \colon \mbb{F}\mbf{-Alg} \to \mbf{Set}$ to be an algebraic $\mbb{F}$-scheme if the presheaf is ``locally corepresentable''. The Zariski to topology on affine $\mbb{F}$-varieties then gives a ``topology'' on $\mbb{F}\mbf{-Alg}$, called the \emph{Grothendieck topology}.
+We define a functor $X \colon \mbb{F}\mbf{-Alg} \to \mbf{Set}$ to be an algebraic $\mbb{F}$-scheme if the copresheaf is ``locally corepresentable''. The Zariski to topology on affine $\mbb{F}$-varieties then gives a ``topology'' on $\mbb{F}\mbf{-Alg}$, called the \emph{Grothendieck topology}.
 With respect to this topology, one can say that $X \colon \mbb{F}\mbf{-Alg} \to \mbf{Set}$ is ``locally corepresentable'' if there are $\mbb{F}$-affine algebraic schemes $U_1, \ldots, U_k \colon \mbb{F}\mbf{-Alg} \to \mbf{Set}$ such that $U_i \rmono X$ are open embeddings (w.r.t. to the Grothendieck topology) and $X = \bigcup_{i \in [k]} U_i$.
 
 \subsection{A Categorical Approach to Algebraic Groups}
@@ -2608,6 +2608,225 @@ in which case we get
 \[\mrm{GL}_n\prs{\mbb{R}} \cong s\prs{M_n\prs{\mbb{R}}} \cap \ell\prs{\mrm{GL}_n\prs{\mbb{C}}}\]
 and $\prs{\mrm{GL}_n}_{\mbb{C}} \cong \mrm{GL}_n$.
 \end{example}
+
+%LECTURE 10.1.22
+
+\begin{example}
+We have
+\[U_1 \coloneqq \set{z \in \mbb{C}}{\abs{z}^2 = z \bar{z} = 1} \subseteq \mbb{C}\]
+which we identify with $S^1 \subseteq \mbb{R}^2$ under the identification $\mbb{C} \cong \mbb{R}^2$. Then $\prs{S^1}_{\mbb{C}} = \mbb{G}_m$.
+
+If we more generally consider $\mbb{T}^k \coloneqq \prs{S^1}^k$, we have $\prs{\mbb{T}^k}_{\mbb{C}} = \mbb{G}_m^k$. We think of the elements of this is diagonal matrices in $\mrm{GL}_k\prs{\mbb{C}}$ and call $\mbb{G}_m^k$ as an $\mbb{F}$-algebraic group a \emph{split algebraic torus}. Every $\mbb{F}$-algebraic group $G$ such that $G_E \cong \mbb{G}_m^k$ for some extension $E/\mbb{F}$ is called an \emph{algebraic torus}. For example, $S^1, \mbb{R}^\times$ are algebraic tori.
+\end{example}
+
+\begin{definition}[Restriction of Scalars]
+Let $E/F$ be a finite field extension and let $G$ be an $E$-algebraic group. We have
+\[G\prs{E} \leq \mrm{GL}_n\prs{E} \leq \mrm{GL}_{n d}\prs{F}\]
+for some $d \in \mbb{N}_+$.
+Define the \emph{restriction of $G$ to $F$}, denoted $\mrm{Res}_{E/F}\prs{G}$, as the $F$-algebraic group
+\[\mrm{Res}_{E/F}\prs{G} \colon F\mbf{-Alg} \to \mbf{Group}\]
+with
+\[\mrm{Res}_{E/F}\prs{G}\prs{R} = G\prs{E \otimes_F R} \text{.}\]
+\end{definition}
+
+\begin{remark}
+Again, one has to show that $\mrm{Res}_{E/F}\prs{G}$ is corepresentable.
+Set an $F$-basis $e_1, \ldots, e_d$ of $E$. Then every $\vec{x} \in E^n$ can be written in coordinates as $\prs{\vec{y}_1, \ldots, \vec{y}_d}$ for $\vec{y}_i \in F^n$. Write also
+\begin{align*}
+E\brs{G} &= E\brs{x_1, \ldots, x_n}/\prs{f_1, \ldots, f_k}
+\end{align*}
+where we can write
+\begin{align*}
+f_i\prs{\vec{x}} &= \sum_{j \in [d]} g_i^j \prs{\vec{y}_1, \ldots, \vec{y}_d} e_j
+\end{align*}
+for some
+$g_i^j \in F\brs{z_1, \ldots, z_{nd}}$.
+Taking
+\[A \coloneqq F\brs{z_1, \ldots, z_{nd}} / \prs{g_{i,j}}\]
+we get
+\[\hom_{{F}\mbf{-Alg}}\prs{A,R} \cong \hom_{E\mbf{-Alg}}\prs{E\brs{G}, E \otimes R} = \mrm{Res}_{E/F}\prs{G}\prs{R}\]
+so
+\[\mrm{Res}_{E/F}\prs{G} = h^A \text{.}\]
+\end{remark}
+
+\begin{example}
+We have $\mbb{R} \leq \mbb{C}$ so one can restrict
+$\mrm{Res}_{\mbb{C}/\mbb{R}}\prs{\mbb{G}_m}$.
+This is an $\mbb{R}$-torus.
+We have a group homomorphism
+\begin{align*}
+\mu \colon S^1  \times \mbb{R}^\times &\to \mbb{C}^\times \\
+\prs{z,w} &\mapsto z \cdot w
+\end{align*}
+which is surjective, but
+\[\ker\prs{\mu} = \set{\prs{1,1}, \prs{-1,-1}} \text{.}\]
+One can check that $\prs{\mrm{Res}_{\mbb{C}/\mbb{R}} \mbb{G}_m}_{\mbb{C}} \cong \mbb{G}_m^2$.
+\end{example}
+
+\section{Group Decompositions}
+
+\subsection{Motivation \& Definitions}
+
+We saw that an algebraic group $G$ has a normal connected subgroup $G^\circ$ such that $G/G^\circ$ is finite. We would like to use such ideas to imitate the Jordan-Chevalley decomposition in the case of groups.
+
+Assume $G$ is a connected algebraic group. If $G$ is unipotent, it is isomorphic to a subgroup of
+$\set{\pmat{1 & & * \\ & \ddots & \\ & & 1}}$.
+In general, for $G$ connected one can define a maximal unipotent normal subgroup $R_u\prs{G} \ideal G$, which is unique.
+This is called the \emph{unipotent radical of $G$}.
+The quotient $H \coloneqq G/R_u\prs{G}$ (which one has to show has the structure of an algebraic group) has no normal unipotent subgroups. This $H$ is called a \emph{connected reductive group} where it's connected since $R_u\prs{H} = \set{e}$.
+
+In the simplest case $H$ is a torus. THen $H_{\bar{\mbb{F}}} \cong \mbb{G}_m^k$.
+Any $G$ such that $G/R_u\prs{G}$ is a torus is called \emph{solvable}.
+If $H$ is also a \emph{split} torus the case is even simpler.
+
+For a general reductive group $H$, one can study $H$ by understanding a maximal closed toric subgroup $T \leq H$. Studying such $T$ one gets a classification of reductive groups. In the simple case where $T$ is a split torus, the classification is independent of the base field $\mbb{F}$. The more general classification includes arithmetic properties of the field $\mbb{F}$.
+
+\begin{example}
+Consider the group
+\[G \coloneqq \set{\pmat{A & B \\ 0 & C} \in \mrm{SL}_4\prs{\mbb{F}}} \leq \mrm{GL}_4\prs{\mbb{F}}\]
+of $\prs{2,2}$-block upper-triangular matrices.
+We have $G = G^\circ$ and
+\[R_u\prs{G} = \set{\pmat{I_2 & B \\ 0 & I_2}}{B \in M_2\prs{\mbb{F}}} \text{.}\]
+Then
+\[H \coloneqq G/R_u\prs{G} \cong \set{\pmat{A & 0 \\ 0 & C}}{\substack{A,C \in M_2\prs{\mbb{F}} \\ \det\prs{AC} = 1}} \text{.}\]
+Let
+\begin{align*}
+\phi \colon \mbb{G}_m \times \mrm{SL}_2\prs{\mbb{F}} \times  \mrm{SL}_2\prs{\mbb{F}} &\to H \\
+\prs{a,A,C} &\mapsto \pmat{aA & 0 \\ 0 & a^{-1} C} \text{,}
+\end{align*}
+we have that $\ker\phi$ is finite. The maximal torus $T \leq H$ is the subgroup of diagonal matrices.
+\end{example}
+
+\begin{definition}[Almost Simple Group]
+An $\mbb{F}$-algebraic group $G$ is called \emph{almost simple}\footnote{There are different definitions for ``almost simple'' groups and the terminology isn't always consistent.} if it has no nontrivial connected normal subgroups.
+\end{definition}
+
+\begin{example}
+Let $\mbb{F} = \mbb{C}$. The group $\mrm{SL}_n\prs{\mbb{F}}$ is almost simple. It contains $\mu_n I_n$ where $\mu_n$ is the set of $n$\textsuperscript{th} roots of unity. But, $\mu_n$ is not connected so this doesn't contradict $\mrm{SL}_n\prs{\mbb{F}}$ being almost simple.
+\end{example}
+
+Let $H$ be a connected reductive group, threre are almost-simple groups $G_1, \ldots, G_k$ such that $H$ is their product modulo some finite subgroup.
+
+\subsection{Unipotent Groups \& Reductive Groups}
+
+We saw that an algebraic group $G$ is unipotent if and only if it has no nontrivial simple rational representations
+\[\phi \colon G \to \mrm{GL}\prs{V} \text{.}\]
+For such groups, there can be non-trivial extensions. For example
+\[G = \set{\pmat{1 & a \\ 0 & 1}}{a \in \mbb{F}} \leq \mrm{GL}_2\prs{\mbb{F}}\]
+has a space $W \leq \mbb{F}^2$ such that the action $G \acts \mbb{F}^2 / W$ is trivial. Then $\mbb{F}^2 \not\cong W \oplus \mbb{F}^2/W$ as $G$-spaces.
+
+We saw in the exercises that for an algebraic group $G$ with a simple representation
+\[\phi \colon G \to \mrm{GL}\prs{V}\text{,}\]
+$\phi\prs{G}$ has no normal unipotent subgroups.
+In other words,
+$R_u\prs{G} \subseteq \ker\prs{\phi}$.
+It follows that if a representation $V$ of $G$ is a direct sum $V_1 \oplus \ldots \oplus V_k$ then $R_u\prs{G} \subseteq \ker\prs{\phi}$.
+Then every simple representation factors through the unipotent radical, and is therefore a representation of the reductive quotient.
+
+In fact, the opposite is also true. If $G$ is reductive, every rational representation $\phi \colon G \to \mrm{GL}\prs{V}$ is semi-simple:
+\[V \cong V_1 \oplus \ldots \oplus V_k\]
+for $V_i$ simple.
+This is a difficult theorem.
+It is an easier fact in the case of finite groups.
+
+\subsection{Split Tori}
+
+We now move to the study of split tori and their closed subgroups.
+We start the discussion with the study of characters.
+
+\begin{definition}[Character]
+Let $G$ be an algebraic group. A \emph{character of $G$} is a homomorphism $\chi \colon G \to \mbb{G}_m$. (i.e. a $1$-dimensional representation of $G$)
+\end{definition}
+
+The collection of characters of $G$, denoted $X^*\prs{G} \subseteq \mbb{F}\brs{G}$, is an abelian group:
+If $\chi_1, \chi_2 \in X^*\prs{G}$ one gets $\chi_1 \chi_2 \in X^*\prs{G}$.
+
+\begin{proposition}[Dedekind]
+The elements of $X^*\prs{G}$ are linearly independent in $\mbb{F}\brs{G}$.
+\end{proposition}
+
+\begin{proof}
+Assume towards a contradiction that there's linear dependence, and write a minimal relation
+\[\chi = \sum_{i \in [k]} c_i \chi_i \in X^*\prs{G}\]
+for $c_i \in \mbb{F}$ and such that $\chi_i \in X^*\prs{G}$ are independent.
+We get that
+$\set{\chi_i\prs{g} \chi_j\prs{h}}_{i,j \in [k]}$ are independent as functions on $G \times G$.
+For $g,h \in G$ we get
+\begin{align*}
+\sum_{i,j \in [k]} c_i c_j \chi_i\prs{g} \chi_j\prs{h}
+&=
+\chi\prs{g} \chi\prs{h} \\&= \chi\prs{gh} 
+\\&= \sum_{i \in [k]} \chi_i \prs{g} \chi_i\prs{h}
+\end{align*}
+so by comparing coefficients one gets $c_i c_j = \delta_{i,j} c_i$.
+
+Hence there's at most one $i_0 \in [k]$ such that $c_{i_0} \neq 0$. One gets $\chi = 0$ or $\chi = \chi_{i_0}$, in contradiction.
+\end{proof}
+
+We now examine $D_n \coloneqq \prs{\mbb{G}_m}^n$, which we think of as diagonal matrices.
+Now
+\begin{align*}
+\chi_i \colon D_n &\to \mbb{G}_m \\
+\mrm{diag}\prs{x_1, \ldots, x_n} &\mapsto x_i
+\end{align*}
+is a character, and
+\begin{align*}
+\mbb{F}\brs{D_n} &\cong \prs{\mbb{F}\brs{\mbb{G}_m}}^n \cong \mbb{F}\brs{\chi_1^{\pm 1}, \ldots, \chi_n^{\pm 1}} \text{.}
+\end{align*}
+
+\begin{proposition}
+Let $G$ be an $\mbb{F}$-algebraic group.
+The following are equivalent.
+
+\begin{enumerate}
+\item $G$ is isomorphic to a closed subgroup of $D_n$.
+\item $\mbb{F}\brs{G} = \spn_{\mbb{F}}X^*\prs{G}$.
+\item For every rational representation $\phi \colon G \to \mrm{GL}\prs{V}$ there's a basis of $V$ such that $\phi\prs{G} \leq D_n \leq \mrm{GL}_n\prs{\mbb{F}}$ with respect to this basis.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+\begin{description}
+\item[(3) $\implies$ (1):]
+This is immediate.
+\item[(1) $\implies$ (2):]
+The restriction of a character is a character. Now $G \leq D_n$ gives a map
+\[p \colon X^*\prs{D_n} \to X^*\prs{G} \text{.}\]
+This is a restriction of the quotient map $\mbb{F}\brs{D_n} \to \mbb{F}\brs{G}$.
+Since $X^*\prs{D_n}$ are a basis of $\mbb{F}\brs{D_n}$, we get that $p\prs{X^*\prs{D_n}}$ spans $\mbb{F}\brs{G}$.
+\item[(2) $\implies$ (3):]
+Assume $\phi \colon G \to \mrm{GL}_n\prs{\mbb{F}}$ is a rational representation of $G$. Write
+\[\phi\prs{g} = \prs{m_{i,j}\prs{g}}\]
+for all $g \in G$ where $m_{i,j} \in \mbb{F}\brs{G}$.
+We can write
+\[m_{i,j} = \sum_{\chi \in X^*\prs{G}} c_{i,j}^{\chi} \chi\]
+for $c_{i,j}^{\chi} \in \mbb{F}$.
+Then
+\[\phi\prs{g} = \sum_{\chi \in X^*\prs{G}} \chi\prs{g} A_\chi\]
+for $A_\chi = \prs{c_{i,j}^\chi}$.
+From $\phi\prs{gh} = \phi\prs{g} \phi\prs{h}$ we get, as in the previous proof, that
+\[A_{\chi_1} A_{\chi_2} = 0\]
+whenever $\chi_1 \neq \chi_2$, and $A_{\chi}^2 = A_\chi$.
+I.e. the $A_\chi$ represent orthogonal projections.
+Then
+\[\mbb{F}^n = \prs{\bigoplus_{\chi \in X^*\prs{G}} W_\chi} \oplus W_0\]
+for some $W_0$ and where $W_\chi = \im\prs{L_{A_\chi}}$.
+Changing bases to the union of the direct sum we get that the resulting $\tilde{\phi}\prs{g}$ is diagonal.
+\end{description}
+\end{proof}
+
+\begin{definition}[Diagonalizable Groups]
+An algebraic group $G$ satisfying the above equivalent conditions is called \emph{diagonalizable}.
+\end{definition}
+
+\begin{remark}
+We get by the above that $X^*\prs{G}$ is an abelian finitely-generated group, whenever $G$ is diagonalizable.
+
+Conversely, from a finitely-generated abelian group $M$ one can construct the Hopf algebra $\mbb{F}\brs{M}$ with $\mbb{F}\prs{M} \cong \mbb{F}\brs{G}$ for a diagonalizable group $G$. Then $M = X^*\prs{G}$.
+
+Hence the diagonalizable groups can be classified via the classification of finitely-generated abelian groups. One gets that such a group is of the form
+\[\mbb{G}_m^n \times \mu_{n_1} \times \ldots \times \mu_{n_k} \text{.}\]
+\end{remark}
 
 \backmatter
 \end{document}

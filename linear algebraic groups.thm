@@ -221,7 +221,7 @@
 \contentsline {proposition}{{Proposition}{1.5.{18}}{}}{32}{theoremx.1.5.18}%
 \contentsline {proof}{{Proof}{36}{}}{32}{proof.36}%
 \contentsline {example}{{Example}{38}{}}{33}{example.38}%
-\contentsline {definitionx}{{Definition}{1.5.{19}}{Presheaf}}{33}{theoremx.1.5.19}%
+\contentsline {definitionx}{{Definition}{1.5.{19}}{Copresheaf}}{33}{theoremx.1.5.19}%
 \contentsline {definitionx}{{Definition}{1.5.{20}}{}}{33}{theoremx.1.5.20}%
 \contentsline {definitionx}{{Definition}{1.5.{21}}{Algebraic $\mbb {F}$-Affine Group-Scheme}}{33}{theoremx.1.5.21}%
 \contentsline {remark}{{Remark}{1.5.{22}}{}}{33}{theoremx.1.5.22}%
@@ -235,3 +235,17 @@
 \contentsline {example}{{Example}{42}{A Typical Application}}{36}{example.42}%
 \contentsline {example}{{Example}{43}{Orthogonal Groups}}{36}{example.43}%
 \contentsline {example}{{Example}{44}{}}{36}{example.44}%
+\contentsline {example}{{Example}{45}{}}{37}{example.45}%
+\contentsline {definitionx}{{Definition}{1.5.{27}}{Restriction of Scalars}}{37}{theoremx.1.5.27}%
+\contentsline {remark}{{Remark}{1.5.{28}}{}}{37}{theoremx.1.5.28}%
+\contentsline {example}{{Example}{46}{}}{37}{example.46}%
+\contentsline {example}{{Example}{47}{}}{38}{example.47}%
+\contentsline {definitionx}{{Definition}{1.6.{1}}{Almost Simple Group}}{38}{theoremx.1.6.1}%
+\contentsline {example}{{Example}{48}{}}{38}{example.48}%
+\contentsline {definitionx}{{Definition}{1.6.{2}}{Character}}{39}{theoremx.1.6.2}%
+\contentsline {proposition}{{Proposition}{1.6.{3}}{Dedekind}}{39}{theoremx.1.6.3}%
+\contentsline {proof}{{Proof}{37}{}}{39}{proof.37}%
+\contentsline {proposition}{{Proposition}{1.6.{4}}{}}{40}{theoremx.1.6.4}%
+\contentsline {proof}{{Proof}{38}{}}{40}{proof.38}%
+\contentsline {definitionx}{{Definition}{1.6.{5}}{Diagonalizable Groups}}{40}{theoremx.1.6.5}%
+\contentsline {remark}{{Remark}{1.6.{6}}{}}{40}{theoremx.1.6.6}%

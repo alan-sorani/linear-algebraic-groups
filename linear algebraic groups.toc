@@ -37,3 +37,7 @@
 \contentsline {subsubsection}{Definitions}{33}{section*.20}%
 \contentsline {subsubsection}{Concrete Application of the Categorical Approach}{35}{section*.21}%
 \contentsline {subsubsection}{Extension and Restriction of Scalars}{35}{section*.22}%
+\contentsline {section}{\numberline {1.6}Group Decompositions}{38}{section.1.6}%
+\contentsline {subsection}{\numberline {1.6.1}Motivation \& Definitions}{38}{subsection.1.6.1}%
+\contentsline {subsection}{\numberline {1.6.2}Unipotent Groups \& Reductive Groups}{39}{subsection.1.6.2}%
+\contentsline {subsection}{\numberline {1.6.3}Split Tori}{39}{subsection.1.6.3}%
