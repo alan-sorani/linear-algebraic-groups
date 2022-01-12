@@ -2675,7 +2675,7 @@ In general, for $G$ connected one can define a maximal unipotent normal subgroup
 This is called the \emph{unipotent radical of $G$}.
 The quotient $H \coloneqq G/R_u\prs{G}$ (which one has to show has the structure of an algebraic group) has no normal unipotent subgroups. This $H$ is called a \emph{connected reductive group} where it's connected since $R_u\prs{H} = \set{e}$.
 
-In the simplest case $H$ is a torus. THen $H_{\bar{\mbb{F}}} \cong \mbb{G}_m^k$.
+In the simplest case $H$ is a torus. Then $H_{\bar{\mbb{F}}} \cong \mbb{G}_m^k$.
 Any $G$ such that $G/R_u\prs{G}$ is a torus is called \emph{solvable}.
 If $H$ is also a \emph{split} torus the case is even simpler.
 
@@ -2822,11 +2822,71 @@ An algebraic group $G$ satisfying the above equivalent conditions is called \emp
 \begin{remark}
 We get by the above that $X^*\prs{G}$ is an abelian finitely-generated group, whenever $G$ is diagonalizable.
 
-Conversely, from a finitely-generated abelian group $M$ one can construct the Hopf algebra $\mbb{F}\brs{M}$ with $\mbb{F}\prs{M} \cong \mbb{F}\brs{G}$ for a diagonalizable group $G$. Then $M = X^*\prs{G}$.
+Conversely, from a finitely-generated abelian group $M$ one can construct the Hopf algebra $\mbb{F}\brs{M}$ with $\mbb{F}\prs{M} \cong \mbb{F}\brs{G}$ for the diagonalizable group $G = h^{\mbb{F}\brs{M}}$. Then $M = X^*\prs{G}$. In fact, $G$ is an $\mbb{F}$-algebraic group by adding an Hopf-algebra structure on $\mbb{F}\brs{M}$.
+Take the comultiplication
+\begin{align*}
+\Delta \colon \mbb{F}\brs{M} &\to \mbb{F}\brs{M} \otimes \mbb{F}\brs{M} \\
+\delta_m &\mapsto \delta_m \otimes \delta_m
+\end{align*}
+and the antipode $S \prs{\delta_m} = \delta_{-m}$. The the counit
+$\eps \colon \mbb{F}\brs{M} \to F$ sending each $\delta_m$ to $1$.
+Denote this constructed $G$ by $\mcal{G}\prs{M}$.
+
+If we start with $G = \mcal{G}\prs{X^*\prs{G}}$ which is diagonalizable, one can see that
+\[\mbb{F}\brs{G} \cong \mbb{F}\brs{X^*\prs{G}} \text{.}\]
 
 Hence the diagonalizable groups can be classified via the classification of finitely-generated abelian groups. One gets that such a group is of the form
 \[\mbb{G}_m^n \times \mu_{n_1} \times \ldots \times \mu_{n_k} \text{.}\]
 \end{remark}
+
+\begin{proposition}
+$M \mapsto \mcal{G}\prs{M}$ and $G \mapsto X^*\prs{G}$ are inverse maps.
+\end{proposition}
+
+\begin{proof}
+If $M = M_1 \times M_2$, then
+$\mbb{F}\brs{M} \cong \mbb{F}\brs{M_1} \otimes \mbb{F}\brs{M_2}$
+so
+\[\mcal{G}\prs{M} \cong \mcal{G}\prs{M_1} \times \mcal{G}\prs{M_2}\]
+by our construction.
+Writing \[M \cong \mbb{Z}^n \times \mbb{Z}/n_1 \mbb{Z} \times \ldots \times \mbb{Z}/n_k \mbb{Z}\]
+it's enough to prove the statement for $M$ which is cyclic.
+
+Where $M = \mbb{Z}$ we have
+\[\mbb{F}\brs{\mbb{Z}} \cong \mbb{F}\brs{t,t^{-1}} \cong \mbb{F}\brs{\mbb{G}_m}\]
+so $\mcal{G}\prs{\mbb{Z}} = \mbb{G}_m$ since we can reconstruct the group from its group algebra (we have $G = h^{\mbb{F\brs{G}}}$ for all $G$).
+Where $M = \mbb{Z} / n\mbb{Z}$ we have
+\[\mbb{F}\brs{\mbb{Z}/n\mbb{Z}} = \mbb{F}\brs{t} / \prs{t^n - 1} = \mbb{F}\brs{\mu_n}\]
+where $\mu_n = \set{g \in \mbb{F}}{g^n = 1} \leq \mbb{G}_m$.
+One can check that the only algebraic homomorphism $\mbb{G}_m \to \mbb{G}_m$ are of the form $g \mapsto g^k$. Then $X^*\prs{\mbb{G}_m} \cong \mbb{Z}$ so $X^*\prs{\mu_n} \cong \mbb{Z}/n\mbb{Z}$.
+
+For a general field, one defines $\mbb{G}_m, \mu_n \colon \mbb{F}\mbf{-Alg} \to \mbf{Group}$ via
+\begin{align*}
+\mbb{G}_m\prs{R} &= R^\times \\
+\mu_n\prs{R} &= \set{a \in R}{a^n = 1} \text{.}
+\end{align*}
+This with the above gives the result.
+\end{proof}
+
+\begin{exercise}
+Check that the constructions
+\begin{align*}
+G &\mapsto X^*\prs{G} \\
+M &\mapsto \mcal{G}\prs{M}
+\end{align*}
+are functorial between $\mbb{F}$-groups and finitely-generated abelian groups.
+Show that both their compositions are categorical equivalences.
+\end{exercise}
+
+\begin{corollary}
+If $G$ is diagonalizable,
+\[G \cong \mbb{G}_m^n \times \mu_{n_1} \times \ldots \times \mu_{n_k} \text{.}\]
+In particular $G^{\circ} \cong \mbb{G}_m^n$ is a split torus.
+\end{corollary}
+
+\subsection{Quotients}
+
+Let $G$ be an $\mbb{F}$-affine group, and let $H \leq G$ be a closed subgroup. We want to be able to work with $G/H$. If $H \ideal G$ is normal, one can describe this as an $\mbb{F}$-affine group.
 
 \backmatter
 \end{document}
