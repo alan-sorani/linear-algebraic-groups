@@ -314,7 +314,7 @@ Assume that this doesn't end a finite point (for otherwise we're done). Denote b
 for some $x_1, \ldots, x_h \in A_{n-1}$.
 Let
 \[g \coloneqq f_{h+1} - \sum_{i \in [h]} x_i \cdot f_i \cdot x^{d_{h+1} - d_i} \in I \text{.}\]
-The coefficient of $x^{d_{h+1}}$ in $g$ vanishes so $\deg\prs{g} < d_{h+1}$ and $g \in \prs{f_1,\ ldots, f_h}$. Then also $f_{h+1} \in \prs{f_1, \ldots, f_h}$, in contradiction.
+The coefficient of $x^{d_{h+1}}$ in $g$ vanishes so $\deg\prs{g} < d_{h+1}$ and $g \in \prs{f_1,\ldots, f_h}$. Then also $f_{h+1} \in \prs{f_1, \ldots, f_h}$, in contradiction.
 \end{proof}
 
 \begin{definition}[Noetherian Topological Space]
@@ -899,7 +899,7 @@ The image $\im\prs{\phi} = \mbb{F} \setminus \set{0}$ is dense, non-closed and o
 \begin{example}
 Consider
 \begin{align*}
-\phi \colon \mrm{GL}_1\prs{\mbb{R}} \to \mrm{GL}_1\prs{\mbb{R}} \\
+\phi \colon \mrm{GL}_1\prs{\mbb{R}} &\to \mrm{GL}_1\prs{\mbb{R}} \\
 x &\mapsto x^2 \text{.}
 \end{align*}
 We have $\im\prs{\phi} = \set{y \in \mbb{R}}{y > 0}$ which is (Zariski) dense in $\mrm{GL}_1\prs{\mbb{R}}$ but doesn't contain an open set.
@@ -1560,7 +1560,7 @@ Define \emph{the tangent space of $X$ at $p$} to be
 T_p X \coloneqq \set{v \in \mbb{F}^n}{\frac{\del f_i}{\del v} \prs{p} = 0}
 \end{align*}
 where
-\[\frac{\del f}{\del v}\prs{p} = \sum_{i \in [n]} \frac{\diff f}{\diff x_i} c\dot v_i \text{.}\]
+\[\frac{\del f}{\del v}\prs{p} = \sum_{i \in [n]} \frac{\diff f}{\diff x_i} \cdot v_i \text{.}\]
 \end{definition}
 
 \begin{notation}
@@ -1747,7 +1747,7 @@ This is true since for every $j \in [k]$ it holds that
 \begin{corollary}
 For every $p \in X$ it holds that
 \begin{align*}
-T_o X \cong \mrm{der}_{\mbb{F}}\prs{\mbb{F}\brs{X}, \mbb{F}_p} \text{.}
+T_p X \cong \mrm{der}_{\mbb{F}}\prs{\mbb{F}\brs{X}, \mbb{F}_p} \text{.}
 \end{align*}
 \end{corollary}
 
@@ -2072,7 +2072,7 @@ In fact, we could define a Lie algebra structure on $T_e\prs{G}$ directly by
 \begin{equation}\label{equation:direct_lie_bracket}
 \brs{X,Y} \coloneqq \prs{X \otimes Y - Y \otimes X} \circ m^*
 \end{equation}
-for every $X,Y \in T_e\prs{G} = \Der_{\mbb{F}}\prs{\mbb{F}\brs{G}, \mbb{F}\prs{G}}$ and where $m \colon G \times G \to G$ is the group-multiplication. But, this might lack motivation.
+for every $X,Y \in T_e\prs{G} = \Der_{\mbb{F}}\prs{\mbb{F}\brs{G}, \mbb{F}\brs{G}}$ and where $m \colon G \times G \to G$ is the group-multiplication. But, this might lack motivation.
 
 From the above proposition, we can identify
 $T_e\prs{G} \cong \Lie\prs{G}$, and, pulling back this Lie-algebra structure we can define the bracket
