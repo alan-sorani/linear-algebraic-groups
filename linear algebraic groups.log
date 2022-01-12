@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.6.28) (preloaded format=xelatex 2021.11.4)  12 JAN 2022 10:27
+This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.6.28) (preloaded format=xelatex 2021.11.4)  12 JAN 2022 17:27
 entering extended mode
 **"./linear algebraic groups.tex"
 (linear algebraic groups.tex
@@ -1824,9 +1824,12 @@ LaTeX Info: Redefining \nameref on input line 74.
 \@outlinefile=\write5
 \openout5 = `"linear algebraic groups.out"'.
 
+
+
+Package hyperref Warning: Rerun to get /PageLabels entry.
+
 File: sources/front.jpg Graphic file (type bmp)
 <sources/front.jpg>
-
 [1
 
 
@@ -1991,10 +1994,10 @@ ed.
 (rerunfilecheck)             Checksum: <no file>.
  ) 
 Here is how much of TeX's memory you used:
- 34770 strings out of 411254
- 719363 string characters out of 2828529
+ 34772 strings out of 411254
+ 719409 string characters out of 2828529
  1277842 words of memory out of 3000000
- 54623 multiletter control sequences out of 15000+600000
+ 54625 multiletter control sequences out of 15000+600000
  415288 words of font info for 119 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  117i,20n,122p,624b,1058s stack positions out of 5000i,500n,10000p,200000b,80000s
