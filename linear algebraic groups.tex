@@ -71,6 +71,8 @@
 \newcommand{\Chm}[1]{{\catname{Ch}_{{-}}\catname{(mod-}R\catname{)}}}
 \newcommand{\Chp}[1]{{\catname{Ch}_{{+}}\catname{(mod-}R\catname{)}}}
 
+\DeclareMathOperator{\Stab}{Stab}
+
 \begin{document}
 \frontmatter
 \frontpage{front}{0.8\textwidth}{A cat.}
@@ -796,7 +798,7 @@ Now,
 g \circ f = \prs{\ev_{g^{-1}} \otimes \id}\prs{a^*\prs{f}} \text{.}
 \end{align*}
 
-\begin{proposition}
+\begin{proposition}\label{proposition:embedding_lemma}
 \begin{enumerate}
 \item If $V \subseteq \mbb{F}\brs{X}$ is a finite-dimensional $G$-invariant subspace, then
 \begin{align*}
@@ -2886,7 +2888,149 @@ In particular $G^{\circ} \cong \mbb{G}_m^n$ is a split torus.
 
 \subsection{Quotients}
 
-Let $G$ be an $\mbb{F}$-affine group, and let $H \leq G$ be a closed subgroup. We want to be able to work with $G/H$. If $H \ideal G$ is normal, one can describe this as an $\mbb{F}$-affine group.
+Let $G$ be an $\mbb{F}$-affine group, and let $H \leq G$ be a closed subgroup. We want to be able to work with $G/H$. If $H \ideal G$ is normal, this is a group which one can as an $\mbb{F}$-affine group. In general, this is a coset space which one can give a structure of an $\mbb{F}$-variety, not necessarily affine.
+
+Assuming for now that $\mbb{F}$ is algebraically closed, we examine $G\prs{\mbb{F}} / H\prs{\mbb{F}}$.
+We would like to have a representation
+\[\phi \colon G \to \mrm{GL}\prs{V}\]
+such that $\ker\prs{\phi} = H$.
+In this case \[\quot{G\prs{\mbb{F}}}{H\prs{\mbb{F}}} \cong \im\prs{\phi}\prs{\mbb{F}} \leq \mrm{GL}\prs{V}\prs{\mbb{F}} \text{.}\]
+Write $G,H$ instead of $G\prs{\mbb{F}}, H\prs{\mbb{F}}$ in the following discussion.
+
+However, for this  to happen, $H$ has to be normal.
+In general, we still find a representation $\phi \colon G \to \mrm{GL}\prs{V}$ and a vector $v_0 \in V$ such that
+\[H = \set{g \in G}{\phi\prs{g} v_0 \in \spn\set{v_0}} \text{.}\]
+This then gives a $G$-action on $\mbb{P}\prs{V}$ such that
+\[g \cdot \brs{v} = \brs{\phi\prs{g} v} \text{,}\]
+where
+\[H = \Stab_G\prs{\brs{v_0}} \text{.}\]
+Then the $G$-orbit $G \cdot \brs{v_0}$ is isomorphic to $G/H$: \[G \cdot \brs{v_0} \subseteq \mbb{P}\prs{V} \cong \quot{G\prs{\mbb{F}}}{\Stab_G\prs{\brs{v_0}}} = G/H\] as $G$-sets.
+Now \[\overline{G \cdot \brs{v_0}} \subseteq \mbb{P}\prs{V}\]
+is a projective variety (as a closed subset of projective space).
+The orbit $G \cdot \brs{v_0} \subseteq \overline{G \cdot \brs{v_0}}$ is open as an orbit inside its closure, over an algebraically-closed field. An open set in a projective variety is called quasi-projective, hence $G/H$ is quasi-projective.
+
+\begin{proposition}
+Let $\mbb{F}$ be an algebraically closed field, and let $G$ be an $\mbb{F}$-algebraic group and $H \leq G$ be a closed subgroup.
+There's a regular representation
+\[\phi \colon G \to \mrm{GL}\prs{V}\]
+and $v_0 \in V$,
+such that
+\[H\prs{\mbb{F}} = \set{g \in G\prs{\mbb{F}}}{\phi\prs{g} v_0 \in \spn\set{v_0}} \text{.}\]
+\end{proposition}
+
+\begin{proof}
+Write $I\prs{H} = \prs{f_1, \ldots, f_k} \ideal \mbb{F}\brs{G}$.
+Check that
+\[H = \set{g \in G}{\lambda_g I\prs{H} = I\prs{H}} \text{.}\]
+Choose $V \leq \mbb{F}\brs{G}$ be $G$-invariant finite-dimensional containing $f_1, \ldots, f_k$, which exists by Proposition \ref{proposition:embedding_lemma}.
+One gets a representation
+\[\phi \colon G \to \mrm{GL}\prs{V} \text{.}\]
+Taking $W \coloneqq V \cap I\prs{H} \leq V$, we get that
+\[H = \set{g \in G}{\phi\prs{g} W = W} \text{.}\]
+We want to get a $1$-dimensional space instead of $W$ in this expression.
+
+Consider the map
+\begin{align*}
+\nu \colon \End\prs{V} &\to \End\prs{\Lambda^d\prs{V}} \\
+T &\mapsto \tilde{T}
+\end{align*}
+with
+\[\tilde{T}\prs{v_1 \wedge \ldots \wedge v_d} = T\prs{v_1} \wedge \ldots \wedge T\prs{v_d}\]
+and where $\Lambda^d\prs{V}$ is the exterior algebra of $V$, consisting of elements $v_1 \wedge \ldots \wedge v_d$ where $\prs{v_i}_{i \in [d]} \subseteq V$. One can check that this is an $\mbb{F}$-algebra homomorphism.
+
+Consider now the composition
+\[\tilde{\phi} \colon G \to \mrm{GL}\prs{V} \to \mrm{GL}\prs{\Lambda^d\prs{V}}\]
+where $d \coloneqq \dim\prs{W}$.
+We claim that
+\[H = \set{g \in G}{\tilde{\phi}\prs{g}\prs{\Lambda^d\prs{W}} = \Lambda^d\prs{W}}\]
+which would finish the proof.
+
+If $h \in H$, we have $\phi\prs{h}\prs{W} = W$ by the above description of $H$. So, $\tilde{\phi}\prs{h} \prs{\Lambda^d\prs{W}} = \Lambda^d\prs{W}$.
+If $g \in G \ H$, write $W' \coloneqq \phi\prs{G}\prs{W} \neq W$. Let $\prs{v_1, \ldots, v_n}$ be a basis of $V$ such that $\prs{v_1, \ldots, v_d}$ is a basis for $W$ and $\prs{v_{\ell+1}, \ldots, v_{\ell + d}}$ is a basis for $W'$ Let $W^1, W^2 \leq V$ be such that
+\begin{align*}
+W &= \prs{W \cap W'} \oplus W^1 \\
+W' = \prs{W \cap W'} \oplus W^2 \text{.}
+\end{align*}
+Then
+\begin{align*}
+\tilde{\phi}\prs{g}\prs{\Lambda^d\prs{W}} &= \Lambda^d\prs{W'} \neq \Lambda^d\prs{W} \text{,}
+\end{align*}
+hence the result.
+\end{proof}
+
+\begin{proposition}
+Let $\mbb{F}$ be algebraically-closed. Let $H \ideal G$ be a normal subgroup of $G$, in the above notations. Then $G/H$ is an affine variety.
+\end{proposition}
+
+\begin{proof}
+Let
+\[\phi \colon G \to \mrm{GL}\prs{V}\]
+and $v_0 \in V$ such that \[H = \set{g \in G}{\phi\prs{g} v_0 \in \spn\set{v_0}} \text{,}\]
+as before.
+There is $\chi_0 \in X^*\prs{H}$ such that $\phi\prs{h} v_0 = \chi_0\prs{h} v_0$, for all $h \in H$ (this is a character because $\phi$ is a homomorphism).
+Let $\chi \in X^*\prs{G}$, let $g \in G$ and let $h \in H$. Then
+\[\chi^g\prs{h} \coloneqq \chi\prs{g^{-1} h g}\]
+defines a character $\chi^g \in X^*\prs{H}$.
+Now
+\[\phi\prs{h} \phi\prs{g} \prs{v_0} = \phi\prs{g} \phi\prs{g^{-1} h g} v_0 = \phi\prs{g} \chi^g\prs{h} v_0 = \chi^g\prs{h} \phi\prs{g} v_0 \text{.}\]
+For $\chi \in X^*\prs{H}$ define
+\[V_\chi \coloneqq \set{v \in V}{\phi\prs{h} v = \chi\prs{h} v} \leq V \text{.}\]
+Then he above computation gives
+\[\phi\prs{g} v_0 \in V_{\chi_0 g} \text{,}\]
+and the same argument gives
+\[\phi\prs{g}\prs{V_\chi} = V_{\chi^g}\]
+for all $\chi \in X^*\prs{H}$.
+
+Let $Z \coloneqq \bigoplus_{\chi \in X^*\prs{H}} V_\chi \leq V$, where the inner sum is direct, as an exercise.
+Now $Z$ is $\phi\prs{G}$-invariant and
+\[Y \coloneqq \bigoplus_{\chi \in X^*\prs{H}} \End\prs{V_\chi} \subseteq \End\prs{Z} \text{.}\]
+Let
+\begin{align*}
+\psi \colon G &\to \mrm{GL}\prs{Y} \\
+\psi\prs{g}\prs{T} &= \phi\prs{g} T \phi\prs{g}^{-1} \text{,}
+\end{align*}
+which one can check is a representation of $G$.
+For $h \in H$,
+\begin{align*}
+\phi\prs{h} = \bigoplus_{\chi \in X^*\prs{H}} \chi\prs{h} \id_{V_k} \text{.}
+\end{align*}
+In particular, every $V_\chi$ is $\phi\prs{h}$-invariant, so $\phi\prs{h} T = T \phi\prs{h}$ for all $T \in Y$, so $\psi\prs{h} = \id$ by definition of $\psi$.
+
+We want to show that $H = \ker\psi$, for which we need to show the other inclusion. Let $g \in \ker\prs{\psi}$, we have
+\[\phi\prs{g} T = T \phi\prs{g} \text{.}\]
+For $v \in V_\chi$ we have $\phi\prs{g} v \in \spn\set{v}$, which implies (since $\phi\prs{g} \prs{V_{\chi_0}} = V_{\chi_0 g}$, check this) that $\phi\prs{g}$ acts as a scalar on $V_{\chi_0}$. Then
+\[\phi\prs{g} v_0 = c v_0\]
+for some $c \in \mbb{F}$ on each $v_0 \in V_{\chi_0}$. Then $g \in H$.
+\end{proof}
+
+\begin{remark}
+We want to ask how unique the structure on $G/H$ is unique.
+It has to satisfy the following property:
+
+For any algebraic action $G \acts X$ and $x_0 \in X$ such that $H \subseteq \Stab_G\prs{x_0}$ there's a unique regular map
+\[\phi \colon G/H \to X\]
+such that $\phi\prs{gH} = g \cdot x_0$.
+\end{remark}
+
+\begin{remark}
+We later discuss more general fields $\mbb{F}$ where $G/H$ still has the structure of an algebraic variety, but sometimes
+\[G\prs{\mbb{F}}{H\prs{\mbb{F}}} \subsetneq \prs{G/H}\prs{\mbb{F}} \text{.}\]
+
+For example, consider $\mbb{G}_m$ over $\mbb{R}$. We have $\prs{\mbb{G}_m/\prs{\pm 1}}\prs{\mbb{R}} \cong \mbb{G}_m\prs{\mbb{R}}$ but $\mbb{R}^\times / \set{\pm 1} \subsetneq \mbb{G}_m\prs{\mbb{R}} = R^\times$.
+\end{remark}
+
+\section{Galois Descent}
+
+Let $E/F$ be a field extension. Let $G$ be an $F$-group. We want to classify and find $F$-groups $G'$ such that $G_E \cong G_E'$. We call such groups $E/F$-forms of $G$.
+This classification can be done via use of Galois groups and cohomology.
+
+Let $V$ be an $E$-vector space. $V_0$ such that $V = V_E \coloneqq E \otimes_F V_0$ isn't uniquely-determined. We say that an $F$-subspace $V_0 \leq V$ is an $F$-structure of $V$ if the map
+\begin{align*}
+E \otimes_F V_0 &\to V \\
+e \otimes v &\mapsto e \cdot v
+\end{align*}
+is an isomorphism of $E$-vector spaces.
+An $E$-basis of $V$ gives an isomorphism $V \cong E^n$, but $F^n \leq E^n$ isn't preserved by changing of bases.
 
 \backmatter
 \end{document}

@@ -42,3 +42,4 @@
 \contentsline {subsection}{\numberline {1.6.2}Unipotent Groups \& Reductive Groups}{39}{subsection.1.6.2}%
 \contentsline {subsection}{\numberline {1.6.3}Split Tori}{39}{subsection.1.6.3}%
 \contentsline {subsection}{\numberline {1.6.4}Quotients}{41}{subsection.1.6.4}%
+\contentsline {section}{\numberline {1.7}Galois Descent}{44}{section.1.7}%
